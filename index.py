@@ -5,11 +5,39 @@ import requests
 import os
 import time
 
-load_dotenv()
-bot = commands.Bot(intents=discord.Intents.default())
+IMGFLIP_URL='https://api.imgflip.com'
 
-# User template selection
-user_template_selection = {}
+load_dotenv()
+
+
+class CaptionModal(discord.ui.Modal):
+    def __init__(self, template_id:str):
+        super().__init__(title="Enter Meme Caption")
+        self.template_id = template_id
+
+        self.add_item(discord.ui.InputText(label="First Caption", placeholder="Enter top text"))
+        self.add_item(discord.ui.InputText(label="Second Caption", placeholder="Enter bottom text", required=False))
+
+    async def callback(self, interaction: discord.Interaction):
+        top_text = self.children[0].value
+        bottom_text = self.children[1].value
+
+        # Generate meme using Imgflip
+        response = requests.post(f"{IMGFLIP_URL}/caption_image", data={
+            "template_id": self.template_id,
+            "username": os.getenv("API_USERNAME"),
+            "password": os.getenv("API_PASSWORD"),
+            "text0": top_text,
+            "text1": bottom_text
+        })
+
+        data = response.json()
+        if data["success"]:
+            await interaction.response.send_message(data["data"]["url"])
+        else:
+            await interaction.response.send_message(
+                f"Error: {data.get('error_message', 'Unknown error')}", ephemeral=True
+            )
 
 class MemeTemplateCache:
     def __init__(self, refresh_interval=3600):
@@ -20,7 +48,7 @@ class MemeTemplateCache:
     def fetch_templates(self):
         if time.time() - self.last_updated < self.refresh_interval and self.templates:
             return self.templates
-        response = requests.get("https://api.imgflip.com/get_memes")
+        response = requests.get(f"{IMGFLIP_URL}/get_memes")
         data = response.json()
 
         if data["success"]:
@@ -57,7 +85,7 @@ class MemeGallery(discord.ui.View):
         return interaction.user.id == self.user_id
 
     @discord.ui.button(label="Previous", style=discord.ButtonStyle.secondary)
-    async def previous_button(self, button, interaction: discord.Interaction):
+    async def previous_button(self, button:discord.ui.Button, interaction: discord.Interaction):
         if self.index > 0:
             self.index -= 1
         else:
@@ -65,7 +93,7 @@ class MemeGallery(discord.ui.View):
         await interaction.response.edit_message(embed=self.create_embed(), view=self)
 
     @discord.ui.button(label="Next", style=discord.ButtonStyle.secondary)
-    async def next_button(self, button, interaction: discord.Interaction):
+    async def next_button(self, button:discord.ui.Button, interaction: discord.Interaction):
         if self.index < len(self.templates) - 1:
             self.index += 1
         else:
@@ -73,24 +101,18 @@ class MemeGallery(discord.ui.View):
         await interaction.response.edit_message(embed=self.create_embed(), view=self)
 
     @discord.ui.button(label="Select This", style=discord.ButtonStyle.success)
-    async def select_button(self, button, interaction: discord.Interaction):
-        print("select_button")
+    async def select_button(self, button:discord.ui.Button, interaction: discord.Interaction):
         selected_template = self.templates[self.index]
-        user_template_selection[self.user_id] = selected_template["id"]
 
         # Disable buttons
         for child in self.children:
             child.disabled = True
 
-        await interaction.response.edit_message(view=self)
-
-        await interaction.followup.send(
-            f"You selected **{selected_template['name']}**.\nUse `/caption` to add text!",
-            ephemeral=True
-        )
+        await interaction.response.send_modal(CaptionModal(selected_template["id"]))
 
         self.stop()
 
+bot = commands.Bot(intents=discord.Intents.default())
 
 @bot.slash_command(name="meme", description="Browse meme templates and select one")
 async def meme(ctx):
@@ -101,34 +123,9 @@ async def meme(ctx):
 
     view = MemeGallery(user_id=ctx.author.id, templates=templates)
     embed = view.create_embed()
-    await ctx.respond(embed=embed, view=view, ephemeral=True)
+    response = await ctx.respond(embed=embed, view=view, ephemeral=True)
 
-@bot.slash_command(name="caption", description="Create a meme from your selected template")
-async def caption(ctx: discord.ApplicationContext,
-                  text0: discord.Option(str, 'First Text'),
-                  text1: discord.Option(str,'Second Text', required=False),):
-    user_id = ctx.author.id
-    
-    if user_id not in user_template_selection:
-        await ctx.respond("Please select a meme template first using `/meme`.", ephemeral=True)
-        return
-
-    template_id = user_template_selection[user_id]
-
-    # Generate meme using Imgflip
-    response = requests.post("https://api.imgflip.com/caption_image", data={
-        "template_id": template_id,
-        "username": os.getenv("API_USERNAME"),
-        "password": os.getenv("API_PASSWORD"),
-        "text0": text0,
-        "text1": text1
-    })
-
-    data = response.json()
-    if data["success"]:
-        await ctx.respond(data["data"]["url"])
-    else:
-        await ctx.respond(f"Error: {data.get('error_message', 'Unknown error')}")
+    view.message = await response.original_response()
 
 @bot.slash_command(name="hello", description="Say hello to the bot")
 async def hello(ctx: discord.ApplicationContext):
