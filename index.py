@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import requests
 import os
 import time
+import random
 
 IMGFLIP_URL='https://api.imgflip.com'
 
@@ -130,6 +131,10 @@ async def meme(ctx):
 @bot.slash_command(name="hello", description="Say hello to the bot")
 async def hello(ctx: discord.ApplicationContext):
     await ctx.respond(f"Hello {ctx.author.mention}!")
+
+@bot.slash_command(name="roll", description="Roll between 1 and 100")
+async def roll(ctx: discord.ApplicationContext):
+    await ctx.respond(random.randint(1, 100))
 
 @bot.event
 async def on_ready():
