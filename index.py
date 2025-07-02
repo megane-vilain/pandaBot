@@ -136,6 +136,16 @@ async def hello(ctx: discord.ApplicationContext):
 async def roll(ctx: discord.ApplicationContext):
     await ctx.respond(random.randint(1, 100))
 
+@bot.slash_command(name="duck", description="Random duck image")
+async def duck_fact(ctx: discord.ApplicationContext):
+    response = requests.get('https://random-d.uk/api/v2/quack')
+
+    data = response.json()
+    if data["url"]:
+        await ctx.respond(data["url"])
+    else:
+        await ctx.respond("Something went wrong. No duck for you")
+
 @bot.event
 async def on_ready():
     print(f"{bot.user} is ready and online!")
