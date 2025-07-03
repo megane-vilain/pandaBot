@@ -133,7 +133,11 @@ class MemeGallery(discord.ui.View):
 bot = discord.Bot(intents=discord.Intents.default())
 
 @bot.slash_command(name="remindme", description="Set a reminder")
-async def remindme(ctx: discord.ApplicationContext, time: str, timezone: str, *, message: str):
+async def remindme(
+        ctx: discord.ApplicationContext,
+        time: discord.Option(str, "When to remind you (Format: mm/dd/yy hh:mm)"),
+        timezone: discord.Option(str, "Timezone abbreviation like BST, GMT, CET, CEST"),
+        message: discord.Option(str, "The reminder message")):
     timezone = TIMEZONES.get(timezone.upper())
     await ctx.defer(ephemeral=True)
     if not timezone:
