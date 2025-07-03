@@ -1,14 +1,31 @@
+import datetime
+from xmlrpc.client import DateTime
+
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
+from tinydb import TinyDB, Query
+from datetime import datetime, UTC
+from dateutil import parser as dateparser
+from dateutil.tz import gettz
 import requests
 import os
 import time
 import random
 
 IMGFLIP_URL='https://api.imgflip.com'
+TIMEZONES = {
+    "BST": gettz("Europe/London"),  # British Summer Time
+    "GMT": gettz("Europe/London"),
+    "CET": gettz("Europe/Paris"),   # Central European Time
+    "CEST": gettz("Europe/Paris"),
+}
 
 load_dotenv()
+
+db = TinyDB('reminders.json')
+reminders_table = db.table("reminders")
+Reminder = Query()
 
 
 class CaptionModal(discord.ui.Modal):
@@ -113,7 +130,50 @@ class MemeGallery(discord.ui.View):
 
         self.stop()
 
-bot = commands.Bot(intents=discord.Intents.default())
+bot = discord.Bot(intents=discord.Intents.default())
+
+@bot.slash_command(name="remindme", description="Set a reminder")
+async def remindme(ctx: discord.ApplicationContext, time: str, timezone: str, *, message: str):
+    timezone = TIMEZONES.get(timezone.upper())
+    await ctx.defer(ephemeral=True)
+    if not timezone:
+        await ctx.followup.send("Invalid timezone, use BTS, GMT, CET or CEST")
+        return
+
+    try:
+        local_dt = dateparser.parse(time)
+        aware_dt = local_dt.replace(tzinfo=timezone)
+
+        utc_dt = aware_dt.astimezone(gettz("UTC"))
+
+        reminders_table.insert({
+            "user_id": ctx.author.id,
+            "channel_id": ctx.channel.id,
+            "remind_at": utc_dt.isoformat(),
+            "message": message
+        })
+        await ctx.followup.send(f"✅ Reminder set for {aware_dt.strftime('%Y-%m-%d %H:%M %Z')}.")
+
+    except Exception as e:
+        await ctx.followup.send("❌ Could not parse date/time. Use format: `MM/DD/YY HH:MM TZ`")
+        print("Error:", e)
+
+@tasks.loop(seconds=10)
+async def check_reminders():
+    now = datetime.now(UTC).isoformat()
+    due_reminders = reminders_table.search(Reminder.remind_at <= now)
+
+    for reminder in due_reminders:
+        channel = bot.get_channel(reminder["channel_id"])
+        if channel:
+            try:
+                user = await bot.fetch_user(reminder["user_id"])
+                await channel.send(f"{user.mention} ⏰ Reminder: {reminder['message']}")
+            except Exception as e:
+                print(f"Failed to send reminder: {e}")
+
+        # Remove sent reminder
+        reminders_table.remove(doc_ids=[reminder.doc_id])
 
 @bot.slash_command(name="meme", description="Browse meme templates and select one")
 async def meme(ctx):
@@ -148,7 +208,9 @@ async def duck_fact(ctx: discord.ApplicationContext):
 
 @bot.event
 async def on_ready():
-    print(f"{bot.user} is ready and online!")
+    print(f"{bot.user} is online!")
+    check_reminders.start()
+    await bot.sync_commands()  # Automatically sync all slash commands
 
 # Initialize globally
 meme_cache = MemeTemplateCache()

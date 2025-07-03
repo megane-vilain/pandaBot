@@ -1,3 +1,6 @@
 py-cord
 dotenv
 requests
+tinydb
+asyncio
+python-dateutil
