@@ -141,7 +141,7 @@ async def remindme(
     timezone = TIMEZONES.get(timezone.upper())
     await ctx.defer(ephemeral=True)
     if not timezone:
-        await ctx.followup.send("Invalid timezone, use BTS, GMT, CET or CEST")
+        await ctx.followup.send("Invalid timezone, use BST, GMT, CET or CEST")
         return
 
     try:
