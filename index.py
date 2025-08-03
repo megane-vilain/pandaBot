@@ -130,6 +130,41 @@ class MemeGallery(discord.ui.View):
 
         self.stop()
 
+class ReminderDropdown(discord.ui.Select):
+    def __init__(self, reminders):
+        options = []
+        for reminder in reminders:
+            label = reminder["message"][:50]
+            date = reminder.get("remind_at").split("T")
+            dt_str = f'{date[0]} {date[1] [:5]}'
+            if reminder.get("remind_at"):
+                prefix = "🔁"
+            else:
+                prefix = "📅"
+            options.append(
+                discord.SelectOption(
+                    label=f"{prefix} {dt_str} - {label}",
+                    value=str(reminder.doc_id)
+                )
+            )
+            super().__init__(
+                placeholder="Select a reminder to delete",
+                min_values=1,
+                max_values=1,
+                options=options
+            )
+
+
+    async def callback(self, interaction: discord.Interaction):
+        doc_id = int(self.values[0])
+        reminders_table.remove(doc_ids=[doc_id])
+        await interaction.response.send_message("✅ Reminder deleted.", ephemeral=True)
+
+class ReminderView(discord.ui.View):
+    def __init__(self, reminders):
+        super().__init__(timeout=120)
+        self.add_item(ReminderDropdown(reminders))
+
 bot = discord.Bot(intents=discord.Intents.default())
 
 @bot.slash_command(name="remindme", description="Set a reminder")
@@ -137,7 +172,8 @@ async def remindme(
         ctx: discord.ApplicationContext,
         time: discord.Option(str, "When to remind you (Format: mm/dd/yy hh:mm)"),
         timezone: discord.Option(str, "Timezone abbreviation like BST, GMT, CET, CEST"),
-        message: discord.Option(str, "The reminder message")):
+        message: discord.Option(str, "The reminder message"),
+        repeat: discord.Option(bool, "Repeat the reminder", required=False)):
     timezone = TIMEZONES.get(timezone.upper())
     await ctx.defer(ephemeral=True)
     if not timezone:
@@ -154,7 +190,8 @@ async def remindme(
             "user_id": ctx.author.id,
             "channel_id": ctx.channel.id,
             "remind_at": utc_dt.isoformat(),
-            "message": message
+            "message": message,
+            "repeat": repeat
         })
         await ctx.followup.send(f"✅ Reminder set for {aware_dt.strftime('%Y-%m-%d %H:%M %Z')}.")
 
@@ -164,7 +201,8 @@ async def remindme(
 
 @tasks.loop(seconds=10)
 async def check_reminders():
-    now = datetime.now(UTC).isoformat()
+    now_date = datetime.now(UTC)
+    now = now_date.isoformat()
     due_reminders = reminders_table.search(Reminder.remind_at <= now)
 
     for reminder in due_reminders:
@@ -176,8 +214,25 @@ async def check_reminders():
             except Exception as e:
                 print(f"Failed to send reminder: {e}")
 
-        # Remove sent reminder
-        reminders_table.remove(doc_ids=[reminder.doc_id])
+        if reminder.get("repeat"):
+            future_date = now_date + datetime.timedelta(days=1)
+            reminders_table.update({reminder["remind_at"]: future_date},doc_ids=[reminder.doc_id])
+        else:
+            # Remove sent reminder
+            reminders_table.remove(doc_ids=[reminder.doc_id])
+
+
+@bot.slash_command(name="list_reminder", description="List active reminders")
+async def list_reminders(ctx: discord.ApplicationContext):
+    reminders = reminders_table.search(Reminder.user_id == ctx.author.id)
+
+    if not reminders:
+        await ctx.respond("No reminders found", ephemeral=True)
+        return
+
+    await ctx.respond("Select a reminder to delete:", view=ReminderView(reminders), ephemeral=True)
+
+
 
 @bot.slash_command(name="meme", description="Browse meme templates and select one")
 async def meme(ctx):
