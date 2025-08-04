@@ -216,7 +216,7 @@ async def check_reminders():
 
         if reminder.get("repeat"):
             future_date = now_date + datetime.timedelta(days=1)
-            reminders_table.update({reminder["remind_at"]: future_date},doc_ids=[reminder.doc_id])
+            reminders_table.update({"remind_at": future_date.isoformat()},doc_ids=[reminder.doc_id])
         else:
             # Remove sent reminder
             reminders_table.remove(doc_ids=[reminder.doc_id])
