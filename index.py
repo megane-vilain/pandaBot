@@ -5,7 +5,7 @@ import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from tinydb import TinyDB, Query
-from datetime import datetime, UTC
+from datetime import datetime, UTC, timedelta
 from dateutil import parser as dateparser
 from dateutil.tz import gettz
 import requests
@@ -215,7 +215,7 @@ async def check_reminders():
                 print(f"Failed to send reminder: {e}")
 
         if reminder.get("repeat"):
-            future_date = now_date + datetime.timedelta(days=1)
+            future_date = now_date + timedelta(days=1)
             reminders_table.update({"remind_at": future_date.isoformat()},doc_ids=[reminder.doc_id])
         else:
             # Remove sent reminder
