@@ -4,6 +4,8 @@ from discord.ext import commands, tasks
 from dateutil import parser as date_parser
 from dateutil.tz import gettz
 from datetime import UTC, datetime, timedelta
+from models import Reminder, Timezone
+from utils.db_utils import document_to_dataclass, dataclass_to_document
 import discord
 import logging
 
@@ -21,13 +23,13 @@ timezone_choices = [
 
 
 class ReminderDropdown(discord.ui.Select):
-    def __init__(self, reminders):
+    def __init__(self, reminders: list[Reminder]):
         options = []
         for reminder in reminders:
-            label = reminder["message"][:50]
-            date = reminder.get("remind_at").split("T")
+            label = reminder.message[:50]
+            date = reminder.remind_at.split("T")
             dt_str = f'{date[0]} {date[1] [:5]}'
-            if reminder.get("remind_at"):
+            if reminder.repeat:
                 prefix = "🔁"
             else:
                 prefix = "📅"
@@ -45,7 +47,8 @@ class ReminderDropdown(discord.ui.Select):
             )
 
 
-    async def callback(self, interaction: discord.Interaction):
+    async def callback(self,
+                       interaction: discord.Interaction):
         for child in self.view.children:
             child.disabled = True
         # Edit the original message to reflect the disabled view
@@ -63,7 +66,7 @@ class ReminderView(discord.ui.View):
         self.selected_doc_id = None
 
 
-class Reminder(commands.Cog):
+class ReminderCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.db = TinyDB("reminders.json")
@@ -79,8 +82,9 @@ class Reminder(commands.Cog):
         :return: The timezone string abbreviation
         """
         record = self.timezones_table.get(self.query.user_id == user_id)
-        if record:
-            return TIMEZONES.get(record.get("timezone"), None)
+        timezone = document_to_dataclass(record, Timezone)
+        if timezone:
+            return TIMEZONES.get(timezone.timezone, None)
         return None
 
     @staticmethod
@@ -95,7 +99,7 @@ class Reminder(commands.Cog):
             local_dt = date_parser.parse(time_str)
             aware_dt = local_dt.replace(tzinfo=tz)
             return aware_dt.astimezone(gettz("UTC"))
-        except ParserError as e:
+        except (TypeError, ValueError, ParserError) as e:
             logging.error(f"Error parsing datetime {time_str}: {e}")
             return None
 
@@ -118,20 +122,22 @@ class Reminder(commands.Cog):
             await ctx.followup.send(f"Could not parse date/time {time} . Use format: `MM/DD/YY HH:MM TZ`")
             return
 
-        self.reminders_table.insert({
-            "user_id": ctx.author.id,
-            "channel_id": ctx.channel.id,
-            "remind_at": utc_dt.isoformat(),
-            "message": message,
-            "repeat": repeat
-        })
+        reminder = Reminder(
+            user_id= ctx.author.id,
+            channel_id= ctx.channel.id,
+            remind_at= utc_dt.isoformat(),
+            message= message,
+            repeat= repeat
+        )
+
+        self.reminders_table.insert(dataclass_to_document(reminder))
         await ctx.followup.send(f"✅ Reminder set for {time}.")
 
 
     @commands.slash_command(name="list_reminder", description="List active reminders")
     async def list_reminders(self, ctx: discord.ApplicationContext):
         reminders = self.reminders_table.search(self.query.user_id == ctx.author.id)
-
+        reminders = [document_to_dataclass(reminder, Reminder) for reminder in reminders]
         if not reminders:
             await ctx.respond("No reminders found", ephemeral=True)
             return
@@ -152,18 +158,18 @@ class Reminder(commands.Cog):
 
         timezone = timezone.upper()
         user_id = ctx.author.id
-        timezone_obj = {
-            "user_id": ctx.author.id,
-            "timezone": timezone,
-        }
+        timezone = Timezone(
+            user_id= user_id,
+            timezone=timezone
+        )
 
         existing = self.timezones_table.search(self.query.user_id == user_id)
         if existing:
-            self.timezones_table.update(timezone_obj, self.query.user_id == user_id)
+            self.timezones_table.update(dataclass_to_document(timezone), self.query.user_id == user_id)
         else:
-            self.timezones_table.insert(timezone_obj)
+            self.timezones_table.insert(dataclass_to_document(timezone))
 
-        await ctx.followup.send(f"🌍 Timezone set for {timezone}.")
+        await ctx.followup.send(f"🌍 Timezone set to {timezone.timezone}.", ephemeral=True)
 
     @tasks.loop(seconds=10)
     async def check_reminders(self):
@@ -171,16 +177,17 @@ class Reminder(commands.Cog):
         now = now_date.isoformat()
         due_reminders = self.reminders_table.search(self.query.remind_at <= now)
 
-        for reminder in due_reminders:
-            channel = self.bot.get_channel(reminder["channel_id"])
+        reminders = [document_to_dataclass(reminder, Reminder) for reminder in due_reminders]
+        for reminder in reminders:
+            channel = self.bot.get_channel(reminder.channel_id)
             if channel:
                 try:
-                    user = await self.bot.fetch_user(reminder["user_id"])
-                    await channel.send(f"{user.mention} ⏰ Reminder: {reminder['message']}")
+                    user = await self.bot.fetch_user(reminder.user_id)
+                    await channel.send(f"{user.mention} ⏰ Reminder: {reminder.message}")
                 except Exception as e:
-                    logging.error(f"Failed to send reminder: {e}")
+                    logging.error(f"Failed to send reminder {reminder.message} for user {reminder.user_id}: {e}")
 
-            if reminder.get("repeat"):
+            if reminder.repeat:
                 future_date = now_date + timedelta(days=1)
                 self.reminders_table.update({"remind_at": future_date.isoformat()}, doc_ids=[reminder.doc_id])
             else:
@@ -193,4 +200,4 @@ class Reminder(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Reminder(bot))
+    bot.add_cog(ReminderCog(bot))
