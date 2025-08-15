@@ -55,12 +55,14 @@ class ReminderView(discord.ui.View):
         self.add_item(ReminderDropdown(reminders))
         self.selected_doc_id = None
 
+
 class Reminder(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.db = TinyDB("reminders.json")
         self.reminders_table = self.db.table("reminders")
-        self.reminder_query = Query()
+        self.timezones_table = self.db.table("timezones")
+        self.query = Query()
         self.check_reminders.start()
 
 
@@ -97,11 +99,47 @@ class Reminder(commands.Cog):
             await ctx.followup.send("❌ Could not parse date/time. Use format: `MM/DD/YY HH:MM TZ`")
             print("Error:", e)
 
+    @commands.slash_command(name="list_reminder", description="List active reminders")
+    async def list_reminders(self, ctx: discord.ApplicationContext):
+        reminders = self.reminders_table.search(self.query.user_id == ctx.author.id)
+
+        if not reminders:
+            await ctx.respond("No reminders found", ephemeral=True)
+            return
+
+        view = ReminderView(reminders)
+        await ctx.respond("Select a reminder to delete:", view=view, ephemeral=True)
+        await view.wait()
+        if view.selected_doc_id:
+            self.reminders_table.remove(doc_ids=[view.selected_doc_id])
+            await ctx.followup.send("✅ Reminder deleted.", ephemeral=True)
+
+
+    @commands.slash_command(name="timezone", description="Set a timezone")
+    async def set_timezone(self, ctx: discord.ApplicationContext, timezone: str):
+        await ctx.defer(ephemeral=True)
+
+        # timezone = TIMEZONES.get(timezone.upper())
+        timezone = timezone.upper()
+        user_id = ctx.author.id
+        timezone_obj = {
+            "user_id": ctx.author.id,
+            "timezone": timezone,
+        }
+
+        existing = self.timezones_table.search(self.query.user_id == user_id)
+        if existing:
+            self.timezones_table.update(timezone_obj, self.query.user_id == user_id)
+        else:
+            self.timezones_table.insert(timezone_obj)
+
+        await ctx.followup.send(f"🌍 Timezone set for {timezone}.")
+
     @tasks.loop(seconds=10)
     async def check_reminders(self):
         now_date = datetime.now(UTC)
         now = now_date.isoformat()
-        due_reminders = self.reminders_table.search(self.reminder_query.remind_at <= now)
+        due_reminders = self.reminders_table.search(self.query.remind_at <= now)
 
         for reminder in due_reminders:
             channel = self.bot.get_channel(reminder["channel_id"])
@@ -118,21 +156,6 @@ class Reminder(commands.Cog):
             else:
                 # Remove sent reminder
                 self.reminders_table.remove(doc_ids=[reminder.doc_id])
-
-    @commands.slash_command(name="list_reminder", description="List active reminders")
-    async def list_reminders(self, ctx: discord.ApplicationContext):
-        reminders = self.reminders_table.search(self.reminder_query.user_id == ctx.author.id)
-
-        if not reminders:
-            await ctx.respond("No reminders found", ephemeral=True)
-            return
-
-        view = ReminderView(reminders)
-        await ctx.respond("Select a reminder to delete:", view=view, ephemeral=True)
-        await view.wait()
-        if view.selected_doc_id:
-            self.reminders_table.remove(doc_ids=[view.selected_doc_id])
-            await ctx.followup.send("✅ Reminder deleted.", ephemeral=True)
 
 
     def cog_unload(self) -> None:
