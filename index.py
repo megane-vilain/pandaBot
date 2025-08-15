@@ -173,6 +173,7 @@ def main():
     reminders_table = db.table("reminders")
     reminder_query = Query()
     bot = discord.Bot(intents=discord.Intents.default())
+    bot.load_extension('cogs.greetings')
 
     @bot.slash_command(name="remindme", description="Set a reminder")
     async def remindme(
@@ -255,10 +256,6 @@ def main():
         response = await ctx.respond(embed=embed, view=view, ephemeral=True)
 
         view.message = await response.original_response()
-
-    @bot.slash_command(name="hello", description="Say hello to the bot")
-    async def hello(ctx: discord.ApplicationContext):
-        await ctx.respond(f"Hello {ctx.author.mention}!")
 
     @bot.slash_command(name="roll", description="Roll between 1 and 100")
     async def roll(ctx: discord.ApplicationContext):
