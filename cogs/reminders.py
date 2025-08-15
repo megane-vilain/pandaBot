@@ -1,9 +1,12 @@
+from tinydb import TinyDB, Query
+from dateutil.parser import ParserError
 from discord.ext import commands, tasks
 from dateutil import parser as date_parser
 from dateutil.tz import gettz
 from datetime import UTC, datetime, timedelta
 import discord
-from tinydb import TinyDB, Query
+import logging
+
 
 TIMEZONES = {  # British Summer Time
     "GMT": gettz("Europe/London"),
@@ -69,39 +72,61 @@ class Reminder(commands.Cog):
         self.query = Query()
         self.check_reminders.start()
 
+    def get_user_timezone(self, user_id: int):
+        """
+        Return the pytz timezone object for a given user, or None if not set.
+        :param user_id: ID of the discord user.
+        :return: The timezone string abbreviation
+        """
+        record = self.timezones_table.get(self.query.user_id == user_id)
+        if record:
+            return TIMEZONES.get(record.get("timezone"), None)
+        return None
+
+    @staticmethod
+    def parse_datetime_to_utc(time_str: str, tz):
+        """
+        Parse a string into a UTC datetime given a timezone.
+        :param time_str: The string to parse.
+        :param tz: The pytz timezone
+        :return: The UTC datetime parsed.
+        """
+        try:
+            local_dt = date_parser.parse(time_str)
+            aware_dt = local_dt.replace(tzinfo=tz)
+            return aware_dt.astimezone(gettz("UTC"))
+        except ParserError as e:
+            logging.error(f"Error parsing datetime {time_str}: {e}")
+            return None
 
     @commands.slash_command(name="remindme", description="Set a reminder")
     async def remindme(
             self,
             ctx: discord.ApplicationContext,
             time: discord.Option(str, "When to remind you (Format: mm/dd/yy hh:mm)"),
-            timezone: discord.Option(str, "Timezone abbreviation like BST, GMT, CET, CEST"),
             message: discord.Option(str, "The reminder message"),
             repeat: discord.Option(bool, "Repeat the reminder", required=False)):
-        timezone_tz = TIMEZONES.get(timezone.upper())
         await ctx.defer(ephemeral=True)
+
+        timezone_tz = self.get_user_timezone(ctx.author.id)
         if not timezone_tz:
-            await ctx.followup.send("Invalid timezone, use GMT or CET")
+            await ctx.respond("You need to set you timezone, by using the timezone command", ephemeral=True)
             return
 
-        try:
-            local_dt = date_parser.parse(time)
-            aware_dt = local_dt.replace(tzinfo=timezone_tz)
+        utc_dt = self.parse_datetime_to_utc(time, timezone_tz)
+        if not utc_dt:
+            await ctx.followup.send(f"Could not parse date/time {time} . Use format: `MM/DD/YY HH:MM TZ`")
+            return
 
-            utc_dt = aware_dt.astimezone(gettz("UTC"))
+        self.reminders_table.insert({
+            "user_id": ctx.author.id,
+            "channel_id": ctx.channel.id,
+            "remind_at": utc_dt.isoformat(),
+            "message": message,
+            "repeat": repeat
+        })
+        await ctx.followup.send(f"✅ Reminder set for {time}.")
 
-            self.reminders_table.insert({
-                "user_id": ctx.author.id,
-                "channel_id": ctx.channel.id,
-                "remind_at": utc_dt.isoformat(),
-                "message": message,
-                "repeat": repeat
-            })
-            await ctx.followup.send(f"✅ Reminder set for {aware_dt.strftime('%Y-%m-%d %H:%M %Z')}.")
-
-        except Exception as e:
-            await ctx.followup.send("❌ Could not parse date/time. Use format: `MM/DD/YY HH:MM TZ`")
-            print("Error:", e)
 
     @commands.slash_command(name="list_reminder", description="List active reminders")
     async def list_reminders(self, ctx: discord.ApplicationContext):
@@ -153,7 +178,7 @@ class Reminder(commands.Cog):
                     user = await self.bot.fetch_user(reminder["user_id"])
                     await channel.send(f"{user.mention} ⏰ Reminder: {reminder['message']}")
                 except Exception as e:
-                    print(f"Failed to send reminder: {e}")
+                    logging.error(f"Failed to send reminder: {e}")
 
             if reminder.get("repeat"):
                 future_date = now_date + timedelta(days=1)
