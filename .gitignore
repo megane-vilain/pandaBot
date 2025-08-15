@@ -5,3 +5,4 @@ lib/
 lib64/
 *.cfg
 reminders.json
+**/__pycache__/
