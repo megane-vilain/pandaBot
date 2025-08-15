@@ -5,12 +5,16 @@ from datetime import UTC, datetime, timedelta
 import discord
 from tinydb import TinyDB, Query
 
-TIMEZONES = {
-    "BST": gettz("Europe/London"),  # British Summer Time
+TIMEZONES = {  # British Summer Time
     "GMT": gettz("Europe/London"),
-    "CET": gettz("Europe/Paris"),   # Central European Time
-    "CEST": gettz("Europe/Paris"),
+    "CET": gettz("Europe/Paris")
 }
+
+# Create a list of discord.OptionChoice
+timezone_choices = [
+    discord.OptionChoice(name=f"{abbr} ({name})", value=abbr)
+    for abbr, name in TIMEZONES.items()
+]
 
 
 class ReminderDropdown(discord.ui.Select):
@@ -74,15 +78,15 @@ class Reminder(commands.Cog):
             timezone: discord.Option(str, "Timezone abbreviation like BST, GMT, CET, CEST"),
             message: discord.Option(str, "The reminder message"),
             repeat: discord.Option(bool, "Repeat the reminder", required=False)):
-        timezone = TIMEZONES.get(timezone.upper())
+        timezone_tz = TIMEZONES.get(timezone.upper())
         await ctx.defer(ephemeral=True)
-        if not timezone:
-            await ctx.followup.send("Invalid timezone, use BST, GMT, CET or CEST")
+        if not timezone_tz:
+            await ctx.followup.send("Invalid timezone, use GMT or CET")
             return
 
         try:
             local_dt = date_parser.parse(time)
-            aware_dt = local_dt.replace(tzinfo=timezone)
+            aware_dt = local_dt.replace(tzinfo=timezone_tz)
 
             utc_dt = aware_dt.astimezone(gettz("UTC"))
 
@@ -116,10 +120,11 @@ class Reminder(commands.Cog):
 
 
     @commands.slash_command(name="timezone", description="Set a timezone")
-    async def set_timezone(self, ctx: discord.ApplicationContext, timezone: str):
+    async def set_timezone(self,
+                           ctx: discord.ApplicationContext,
+                           timezone: discord.Option(str, "Select your timezone", choices=timezone_choices)):
         await ctx.defer(ephemeral=True)
 
-        # timezone = TIMEZONES.get(timezone.upper())
         timezone = timezone.upper()
         user_id = ctx.author.id
         timezone_obj = {
