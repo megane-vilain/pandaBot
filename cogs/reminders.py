@@ -3,17 +3,19 @@ from dateutil.parser import ParserError
 from discord.ext import commands, tasks
 from dateutil import parser as date_parser
 from dateutil.tz import gettz
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime, timedelta, tzinfo
 from models import Reminder, Timezone
 from utils.db_utils import document_to_dataclass, dataclass_to_document
 import discord
 import logging
 
+M_D_Y_M_H_FORMAT = "%m/%d/%y %H:%M"
 
 TIMEZONES = {  # British Summer Time
     "GMT": gettz("Europe/London"),
     "CET": gettz("Europe/Paris")
 }
+DEFAULT_TIMEZONE = "UTC"
 
 # Create a list of discord.OptionChoice
 timezone_choices = [
@@ -27,15 +29,13 @@ class ReminderDropdown(discord.ui.Select):
         options = []
         for reminder in reminders:
             label = reminder.message[:50]
-            date = reminder.remind_at.split("T")
-            dt_str = f'{date[0]} {date[1] [:5]}'
             if reminder.repeat:
                 prefix = "🔁"
             else:
                 prefix = "📅"
             options.append(
                 discord.SelectOption(
-                    label=f"{prefix} {dt_str} - {label}",
+                    label=f"{prefix} {reminder.remind_at} - {label}",
                     value=str(reminder.doc_id)
                 )
             )
@@ -88,7 +88,7 @@ class ReminderCog(commands.Cog):
         return None
 
     @staticmethod
-    def parse_datetime_to_utc(time_str: str, tz):
+    def parse_datetime_to_utc(time_str: str, tz: tzinfo):
         """
         Parse a string into a UTC datetime given a timezone.
         :param time_str: The string to parse.
@@ -98,7 +98,23 @@ class ReminderCog(commands.Cog):
         try:
             local_dt = date_parser.parse(time_str)
             aware_dt = local_dt.replace(tzinfo=tz)
-            return aware_dt.astimezone(gettz("UTC"))
+            return aware_dt.astimezone(gettz(DEFAULT_TIMEZONE))
+        except (TypeError, ValueError, ParserError) as e:
+            logging.error(f"Error parsing datetime {time_str}: {e}")
+            return None
+
+    @staticmethod
+    def parse_datetime_to_tz(time_str: str, tz: tzinfo):
+        """
+        Convert to the timezone and returns the date formatted.
+        :param time_str: The string to parse.
+        :param tz: The pytz timezone
+        :return: The date formatted.
+        """
+        try:
+            local_dt = date_parser.parse(time_str)
+            aware_dt = local_dt.replace(tzinfo=tz)
+            return aware_dt.strftime(M_D_Y_M_H_FORMAT)
         except (TypeError, ValueError, ParserError) as e:
             logging.error(f"Error parsing datetime {time_str}: {e}")
             return None
@@ -135,9 +151,13 @@ class ReminderCog(commands.Cog):
 
 
     @commands.slash_command(name="list_reminder", description="List active reminders")
-    async def list_reminders(self, ctx: discord.ApplicationContext):
+    async def list_reminders(self,
+                             ctx: discord.ApplicationContext):
         reminders = self.reminders_table.search(self.query.user_id == ctx.author.id)
         reminders = [document_to_dataclass(reminder, Reminder) for reminder in reminders]
+        timezone_tz = self.get_user_timezone(ctx.author.id)
+        for reminder in reminders:
+            reminder.remind_at = self.parse_datetime_to_tz(reminder.remind_at, timezone_tz)
         if not reminders:
             await ctx.respond("No reminders found", ephemeral=True)
             return
