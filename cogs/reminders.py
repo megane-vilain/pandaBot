@@ -113,8 +113,9 @@ class ReminderCog(commands.Cog):
         """
         try:
             local_dt = date_parser.parse(time_str)
-            aware_dt = local_dt.replace(tzinfo=tz)
-            return aware_dt.strftime(M_D_Y_M_H_FORMAT)
+            local_dt = local_dt.replace(tzinfo=gettz(DEFAULT_TIMEZONE))
+            converted_dt = local_dt.astimezone(tz)
+            return converted_dt.strftime(M_D_Y_M_H_FORMAT)
         except (TypeError, ValueError, ParserError) as e:
             logging.error(f"Error parsing datetime {time_str}: {e}")
             return None
