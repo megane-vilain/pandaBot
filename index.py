@@ -1,11 +1,9 @@
 from utils.logging_config import init_logging
-from dotenv import load_dotenv
 import discord
 import os
 
 
 def main():
-    load_dotenv()
     init_logging()
 
     bot = discord.Bot(intents=discord.Intents.default())
