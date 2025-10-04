@@ -1,0 +1,12 @@
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build container
+        run: podman build -t panda_bot -f Containerfile .
+
+      - name: Run container with secret
+        run: podman run -e TOKEN=${{ secrets.TOKEN }} panda_bot
