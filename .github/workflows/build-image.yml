@@ -10,5 +10,13 @@ jobs:
       - name: Build container
         run: podman build -t panda_bot -f Containerfile .
 
-      - name: Run container with secret
-        run: podman run -e TOKEN=${{ secrets.TOKEN }} panda_bot
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Push container
+        run: podman push ghcr.io/megane-vilain/panda_bot:latest
+
