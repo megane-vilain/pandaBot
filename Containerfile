@@ -1,4 +1,4 @@
-FROM docker.io/python:3.11-slim
+FROM --platform=linux/arm64 docker.io/python:3.11-slim
 
 
 COPY .  /app
