@@ -1,7 +1,10 @@
+name: Build Container image
+
 on:
   workflow_dispatch:
+  
 jobs:
-  build-and-run:
+  build:
     runs-on: ubuntu-22.04-arm
     steps:
       - name: Checkout code
@@ -19,4 +22,3 @@ jobs:
       
       - name: Push container
         run: podman push ghcr.io/megane-vilain/panda_bot:latest
-
