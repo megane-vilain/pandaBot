@@ -1,13 +1,14 @@
 from tinydb import TinyDB, Query
 from dateutil.parser import ParserError
 from discord.ext import commands, tasks
-from dateutil import parser as date_parser
+from dateutil import parser as dateutil_parser
 from dateutil.tz import gettz
 from datetime import UTC, datetime, timedelta, tzinfo
 from models import Reminder, Timezone
 from utils.db_utils import document_to_dataclass, dataclass_to_document
 import discord
 import logging
+import dateparser
 
 M_D_Y_M_H_FORMAT = "%m/%d/%y %H:%M"
 
@@ -96,7 +97,7 @@ class ReminderCog(commands.Cog):
         :return: The UTC datetime parsed.
         """
         try:
-            local_dt = date_parser.parse(time_str)
+            local_dt = dateparser.parse(time_str)
             aware_dt = local_dt.replace(tzinfo=tz)
             return aware_dt.astimezone(gettz(DEFAULT_TIMEZONE))
         except (TypeError, ValueError, ParserError) as e:
@@ -112,7 +113,7 @@ class ReminderCog(commands.Cog):
         :return: The date formatted.
         """
         try:
-            local_dt = date_parser.parse(time_str)
+            local_dt = dateutil_parser.parse(time_str)
             local_dt = local_dt.replace(tzinfo=gettz(DEFAULT_TIMEZONE))
             converted_dt = local_dt.astimezone(tz)
             return converted_dt.strftime(M_D_Y_M_H_FORMAT)
@@ -124,9 +125,9 @@ class ReminderCog(commands.Cog):
     async def remindme(
             self,
             ctx: discord.ApplicationContext,
-            time: discord.Option(str, "When to remind you (Format: mm/dd/yy hh:mm)"),
-            message: discord.Option(str, "The reminder message"),
-            repeat: discord.Option(bool, "Repeat the reminder", required=False)):
+            time: discord.Option(str, "When to remind you (Format: mm/dd/yy hh:mm)"), # type: ignore
+            message: discord.Option(str, "The reminder message"), # type: ignore
+            repeat: discord.Option(bool, "Repeat the reminder", required=False)): # type: ignore
         await ctx.defer(ephemeral=True)
 
         timezone_tz = self.get_user_timezone(ctx.author.id)
@@ -174,7 +175,7 @@ class ReminderCog(commands.Cog):
     @commands.slash_command(name="timezone", description="Set a timezone")
     async def set_timezone(self,
                            ctx: discord.ApplicationContext,
-                           timezone: discord.Option(str, "Select your timezone", choices=timezone_choices)):
+                           timezone: discord.Option(str, "Select your timezone", choices=timezone_choices)): # type: ignore
         await ctx.defer(ephemeral=True)
 
         timezone = timezone.upper()
