@@ -12,18 +12,16 @@ import dateparser
 
 M_D_Y_M_H_FORMAT = "%m/%d/%y %H:%M"
 
-TIMEZONES = {  # British Summer Time
-    "GMT": gettz("Europe/London"),
-    "CET": gettz("Europe/Paris")
+TIMEZONES = {
+    "GMT": "Europe/London",
+    "CET": "Europe/Paris"
 }
-DEFAULT_TIMEZONE = "UTC"
 
 # Create a list of discord.OptionChoice
 timezone_choices = [
-    discord.OptionChoice(name=f"{abbr} ({name})", value=abbr)
+    discord.OptionChoice(name=name, value=abbr)
     for abbr, name in TIMEZONES.items()
 ]
-
 
 class ReminderDropdown(discord.ui.Select):
     def __init__(self, reminders: list[Reminder]):
@@ -89,17 +87,19 @@ class ReminderCog(commands.Cog):
         return None
 
     @staticmethod
-    def parse_datetime_to_utc(time_str: str, tz: tzinfo):
+    def parse_datetime_to_utc(time_str: str, user_timezone_str: str):
         """
         Parse a string into a UTC datetime given a timezone.
         :param time_str: The string to parse.
-        :param tz: The pytz timezone
+        :param user_timezone_str: The pytz timezone
         :return: The UTC datetime parsed.
         """
         try:
-            local_dt = dateparser.parse(time_str)
-            aware_dt = local_dt.replace(tzinfo=tz)
-            return aware_dt.astimezone(gettz(DEFAULT_TIMEZONE))
+            date = dateparser.parse(time_str, settings={
+                'TIMEZONE': user_timezone_str,
+                'RETURN_AS_TIMEZONE_AWARE': True}
+            )
+            return date.astimezone(UTC)
         except (TypeError, ValueError, ParserError) as e:
             logging.error(f"Error parsing datetime {time_str}: {e}")
             return None
@@ -114,7 +114,7 @@ class ReminderCog(commands.Cog):
         """
         try:
             local_dt = dateutil_parser.parse(time_str)
-            local_dt = local_dt.replace(tzinfo=gettz(DEFAULT_TIMEZONE))
+            local_dt = local_dt.replace(tzinfo=UTC)
             converted_dt = local_dt.astimezone(tz)
             return converted_dt.strftime(M_D_Y_M_H_FORMAT)
         except (TypeError, ValueError, ParserError) as e:
@@ -130,12 +130,12 @@ class ReminderCog(commands.Cog):
             repeat: discord.Option(bool, "Repeat the reminder", required=False)): # type: ignore
         await ctx.defer(ephemeral=True)
 
-        timezone_tz = self.get_user_timezone(ctx.author.id)
-        if not timezone_tz:
+        user_timezone_str = self.get_user_timezone(ctx.author.id)
+        if not user_timezone_str:
             await ctx.respond("You need to set you timezone, by using the timezone command", ephemeral=True)
             return
 
-        utc_dt = self.parse_datetime_to_utc(time, timezone_tz)
+        utc_dt = self.parse_datetime_to_utc(time, user_timezone_str)
         if not utc_dt:
             await ctx.followup.send(f"Could not parse date/time {time} . Use format: `MM/DD/YY HH:MM TZ`")
             return
