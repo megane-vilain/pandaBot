@@ -158,9 +158,9 @@ class ReminderCog(commands.Cog):
                              ctx: discord.ApplicationContext):
         reminders = self.reminders_table.search(self.query.user_id == ctx.author.id)
         reminders = [document_to_dataclass(reminder, Reminder) for reminder in reminders]
-        timezone_tz = self.get_user_timezone(ctx.author.id)
+        timezone_str = self.get_user_timezone(ctx.author.id)
         for reminder in reminders:
-            reminder.remind_at = self.parse_datetime_to_tz(reminder.remind_at, timezone_tz)
+            reminder.remind_at = self.parse_datetime_to_tz(reminder.remind_at, gettz(timezone_str))
         if not reminders:
             await ctx.respond("No reminders found", ephemeral=True)
             return
