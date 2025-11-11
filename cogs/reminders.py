@@ -149,7 +149,8 @@ class ReminderCog(commands.Cog):
         )
 
         self.reminders_table.insert(dataclass_to_document(reminder))
-        await ctx.followup.send(f"✅ Reminder set for {time}.")
+        time_str = utc_dt.strftime(D_M_Y_M_H_FORMAT)
+        await ctx.followup.send(f"✅ Reminder set for {time_str}.")
 
 
     @commands.slash_command(name="list_reminder", description="List active reminders")
