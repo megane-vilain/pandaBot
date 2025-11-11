@@ -10,7 +10,7 @@ import discord
 import logging
 import dateparser
 
-M_D_Y_M_H_FORMAT = "%m/%d/%y %H:%M"
+D_M_Y_M_H_FORMAT = "%d/%m/%y %H:%M"
 
 TIMEZONES = {
     "GMT": "Europe/London",
@@ -116,7 +116,7 @@ class ReminderCog(commands.Cog):
             local_dt = dateutil_parser.parse(time_str)
             local_dt = local_dt.replace(tzinfo=UTC)
             converted_dt = local_dt.astimezone(tz)
-            return converted_dt.strftime(M_D_Y_M_H_FORMAT)
+            return converted_dt.strftime(D_M_Y_M_H_FORMAT)
         except (TypeError, ValueError, ParserError) as e:
             logging.error(f"Error parsing datetime {time_str}: {e}")
             return None
