@@ -81,10 +81,12 @@ class ReminderCog(commands.Cog):
         :return: The timezone string abbreviation
         """
         record = self.timezones_table.get(self.query.user_id == user_id)
+
+        if not record:
+            return None
+
         timezone = document_to_dataclass(record, Timezone)
-        if timezone:
-            return TIMEZONES.get(timezone.timezone, None)
-        return None
+        return TIMEZONES.get(timezone.timezone, None)
 
     @staticmethod
     def parse_datetime_to_utc(time_str: str, user_timezone_str: str):
