@@ -1,6 +1,8 @@
-py-cord
+discord.py
 requests
 tinydb
 asyncio
 python-dateutil
 dateparser
+garlandtools
+pillow

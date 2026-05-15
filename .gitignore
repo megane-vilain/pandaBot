@@ -4,6 +4,6 @@ bin/
 lib/
 lib64/
 *.cfg
-reminders.json
+*.json
 **/__pycache__/
 *.log
