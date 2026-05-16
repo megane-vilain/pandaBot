@@ -1,11 +1,14 @@
-from discord.ext import commands
+from zoneinfo import ZoneInfo
+from discord.ext import commands, tasks
 from discord import app_commands
-from models import GatheringItemConfig
+from models import GatheringItemConfig, GatheringReminder
 from garlandtools import GarlandTools
 from urllib.parse import quote
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
-from utils.et_time import convert
+from services.gt_reminder_service import GtAlertService
+from services.timezone_service import TimezoneService
+from utils.et_time import convert, format_et_hours, build_reminder_text, should_notify
 from utils.garland_tools import get_gathering_item
 import requests
 import discord
@@ -21,21 +24,105 @@ def ffxiv_to_pixels(x, y, map_size=2048):
 
     return int(pixel_x), int(pixel_y)
 
-class MyView(discord.ui.View):
-    def __init__(self):
-        super().__init__()
 
-    @discord.ui.button(label="Remind me", style=discord.ButtonStyle.secondary)# noqa
-    async def remind_button(self, button: discord.ui.Button, interaction: discord.Interaction):
-        await interaction.response.send_message(# noqa
-            "Reminder registered (logic not implemented yet)",
-            ephemeral=True
+def _build_alert_text(reminder: GatheringReminder) -> str:
+    et_str = format_et_hours(reminder.et_hours)
+    item_label = f"{reminder.item_name}"
+
+    lines = [
+        f"### {item_label}",
+        f"Spawns at **{et_str}** · Reminder **{reminder.alert_before_minutes} min** before",
+    ]
+
+    return "\n".join(lines)
+
+class ToggleButton(discord.ui.Button["AlertsView"]):
+    def __init__(self, doc_id: int, is_enabled: bool) -> None:
+        super().__init__(
+            label="⏸ Pause" if is_enabled else "▶ Resume",
+            style=discord.ButtonStyle.secondary,# noqa
+            custom_id=f"alert_toggle:{doc_id}",
+        )
+        self.doc_id = doc_id
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        await self.view.gt_alert_service.toggle_reminder(self.doc_id)
+        await self.view._refresh(interaction)# noqa
+
+
+class RemoveButton(discord.ui.Button["AlertsView"]):
+    def __init__(self, doc_id: int) -> None:
+        super().__init__(
+            label="🗑 Remove",
+            style=discord.ButtonStyle.danger,# noqa
+            custom_id=f"alert_remove:{doc_id}",
+        )
+        self.doc_id = doc_id
+
+    async def callback(self, interaction: discord.Interaction) -> None:
+        await self.view.gt_alert_service.delete_reminder(self.doc_id)
+        await self.view._refresh(interaction)# noqa
+
+
+class AlertActionRow(discord.ui.ActionRow["AlertsView"]):
+    def __init__(self, doc_id: int, is_enabled: bool) -> None:
+        super().__init__(
+            ToggleButton(doc_id, is_enabled),
+            RemoveButton(doc_id),
         )
 
-class Garland(commands.Cog):
-    def __init__(self, bot):
+
+
+class AlertsView(discord.ui.LayoutView):
+    def __init__(
+        self,
+        reminders: list,
+        user: discord.User | discord.Member,
+        gt_alert_service: GtAlertService,
+        timeout: float = 120.0,
+    ) -> None:
+        super().__init__(timeout=timeout)
+        self.user = user
+        self.gt_alert_service = gt_alert_service
+        self._build(reminders)
+
+    def _build(self, reminders: list) -> None:
+        self.clear_items()
+
+        if not reminders:
+            self.add_item(discord.ui.TextDisplay(
+                "You have no gathering alerts set up.\nUse `/notify` to create one!"
+            ))
+            return
+
+        self.add_item(discord.ui.TextDisplay("## Your Gathering Alerts"))
+        self.add_item(discord.ui.Separator(visible=True, spacing=discord.SeparatorSpacing.small))# noqa
+
+        for i, reminder in enumerate(reminders):
+            self.add_item(discord.ui.TextDisplay(_build_alert_text(reminder)))
+            self.add_item(AlertActionRow(reminder.doc_id, reminder.enable))
+
+            if i < len(reminders) - 1:
+                self.add_item(discord.ui.Separator(visible=False, spacing=discord.SeparatorSpacing.large))# noqa
+
+    async def interaction_check(self, interaction: discord.Interaction) -> bool:
+        if interaction.user.id != self.user.id:
+            await interaction.response.send_message("These are not your alerts.", ephemeral=True)# noqa
+            return False
+        return True
+
+    async def _refresh(self, interaction: discord.Interaction) -> None:
+        updated = await self.gt_alert_service.get_user_alerts(self.user.id)
+        self._build(updated)
+        await interaction.response.edit_message(view=self)# noqa
+
+class GarlandCog(commands.Cog):
+    def __init__(self, bot, gt_reminder_service: GtAlertService, timezone_service: TimezoneService):
         self.bot = bot
+        self.gt_reminder_service = gt_reminder_service
+        self.timezone_service = timezone_service
         self.api = GarlandTools()
+        self.reminder_loop.start()
         self.GATHERING_ITEMS = [
             GatheringItemConfig(item_id=43923, name="Rarefied Ash Soil", zone_map="Unlost World/Living Memory"),
             GatheringItemConfig(item_id=43932, name="Brightwind Ore", zone_map="Unlost World/Living Memory"),
@@ -44,23 +131,48 @@ class Garland(commands.Cog):
             GatheringItemConfig(item_id=44135, name="Harmonite Ore", zone_map="Unlost World/Living Memory"),
             GatheringItemConfig(item_id=49212, name="Windspath Water", zone_map="Unlost World/Living Memory"),
             GatheringItemConfig(item_id=44138, name="Blackseed Cotton Boll", zone_map="Unlost World/Living Memory"),
+            GatheringItemConfig(item_id=43930, name="Rarefied Windsbalm Bay Leaf", zone_map="Unlost World/Living Memory"),
             GatheringItemConfig(item_id=49210, name="Carnauba Leaf", zone_map="Yok Tural/Kozama'uka")
 
 
         ]
         self.BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+    def cog_unload(self) -> None:
+        self.reminder_loop.cancel()
+
+
+    @tasks.loop(seconds=30)
+    async def reminder_loop(self) -> None:
+        alerts = self.gt_reminder_service.get_all_enabled()
+
+
+        for alert in alerts:
+            user_timezone = self.timezone_service.get_user_timezone(alert.user_id)
+            user_zone_info = ZoneInfo(user_timezone)
+            if not should_notify(alert, user_zone_info):
+                continue
+
+            channel = self.bot.get_channel(alert.channel_id)
+            if channel is None:
+                continue
+
+            await channel.send(
+                f"<@{alert.user_id}> ⏰ Your node is spawning soon!\n"
+                f"{build_reminder_text(alert)}"
+            )
+
+            self.gt_reminder_service.update_last_notification(alert.doc_id, user_zone_info)
+
+    @reminder_loop.before_loop
+    async def before_reminder_loop(self) -> None:
+        await self.bot.wait_until_ready()
+
+
+
     async def gathering_node_autocomplete(
             self, interaction: discord.Interaction, current: str):
         user_input = current.lower()
-
-        # if len(user_input) < 3:
-        #     return [
-        #         app_commands.Choice(
-        #             name="Keep typing...",
-        #             value="0"
-        #         )
-        #     ]
 
         results = []
         for node in self.GATHERING_ITEMS:
@@ -80,7 +192,7 @@ class Garland(commands.Cog):
     @app_commands.command(name="gather")
     async def gather(self, interaction: discord.Interaction, resource: str):
 
-        await interaction.response.defer()
+        await interaction.response.defer()# noqa
 
         selected_id = int(resource)
 
@@ -93,7 +205,9 @@ class Garland(commands.Cog):
         gathering_node = gathering_item.node
 
         node_type = "Mining" if gathering_node.type == 0 or gathering_node.type == 1 else "Botany"
-        next_occurrence, remaining = convert(gathering_node.time, gathering_node.node_duration)
+
+        user_timezone = self.timezone_service.get_user_timezone(interaction.user.id)
+        next_occurrence, remaining = convert(gathering_node.time, gathering_node.node_duration, ZoneInfo(user_timezone))
         coordinates = gathering_node.coordinates
         icon_url= f"https://www.garlandtools.org/files/icons/item/{gathering_item.icon}.png"
 
@@ -216,21 +330,17 @@ class Garland(commands.Cog):
                     content=(
                         f"# [{gathering_item.name}]"
                         f"(https://garlandtools.org/db/#item/{selected_id})"
-                    )
+                    ),
                 ),
                 discord.ui.TextDisplay(content=f"{gathering_item.description}"),
+                discord.ui.TextDisplay(
+                    f"**Eorzean time**: {gathering_node.time_formatted}\n"
+                    f"**Next Occurrence**: {next_occurrence}\n"
+                    f"**Remaining Time**: {remaining}"
+                ),
                 accessory=discord.ui.Thumbnail(
                     media=icon_url
                 )
-            ),
-            discord.ui.TextDisplay(
-                content=f"**Eorzean time**: {gathering_node.time_formatted}"
-            ),
-            discord.ui.TextDisplay(
-                content=f"**Next Occurrence**: {next_occurrence}"
-            ),
-            discord.ui.TextDisplay(
-                content=f"**Remaining Time**: {remaining}"
             ),
             discord.ui.MediaGallery(
                 discord.MediaGalleryItem(
@@ -241,7 +351,7 @@ class Garland(commands.Cog):
                 discord.ui.Button(
                     label="Remind me",
                     emoji="🔔",
-                    style=discord.ButtonStyle.secondary,
+                    style=discord.ButtonStyle.secondary,# noqa
                     custom_id=f"reminder_{selected_id}"
                 )
             ),
@@ -258,9 +368,48 @@ class Garland(commands.Cog):
     @app_commands.autocomplete(resource=gathering_node_autocomplete)
     @app_commands.command(name="notify")
     async def notify(self, interaction: discord.Interaction, resource: str):
-        await interaction.response.defer()
-        await interaction.followup.send("test")
+        await interaction.response.defer()# noqa
 
-# This is required so the bot can load the cog
-async def setup(bot):
-    await bot.add_cog(Garland(bot))
+        selected_id = int(resource)
+
+        gathering_item = next(
+            n for n in self.GATHERING_ITEMS
+            if n.id == selected_id
+        )
+
+        gathering_item = get_gathering_item(self.api, selected_id, gathering_item.map)
+
+        gathering_item_reminder = GatheringReminder(
+            user_id=interaction.user.id,
+            channel_id=interaction.channel_id,
+            item_id=selected_id,
+            item_name=gathering_item.name,
+            et_hours=gathering_item.node.time,
+            duration_et_hours=gathering_item.node.node_duration,
+            alert_before_minutes=5,
+            enable=True,
+            last_notification_ts=""
+        )
+
+        self.gt_reminder_service.create_alert(gathering_item_reminder)
+
+        await interaction.followup.send(f"🔔 Alerts on for {gathering_item.name}")
+
+    @app_commands.command(name="alerts")
+    async def alerts(self, interaction: discord.Interaction):  # noqa
+        alerts = await self.gt_reminder_service.get_user_alerts(interaction.user.id)
+
+        async def handle_toggle(inter: discord.Interaction, doc_id: int) -> None:
+            await self.gt_reminder_service.toggle_reminder(doc_id)# noqa
+            updated = await self.gt_reminder_service.get_user_alerts(inter.user.id)
+            new_view = AlertsView(updated, handle_toggle, handle_remove, inter.user)# noqa
+            await inter.response.edit_message(view=new_view)# noqa
+
+        async def handle_remove(inter: discord.Interaction, doc_id: int) -> None:
+            await self.gt_reminder_service.delete_reminder(doc_id)
+            updated = await self.gt_reminder_service.get_user_alerts(inter.user.id)
+            new_view = AlertsView(updated, handle_toggle, handle_remove, inter.user)# noqa
+            await inter.response.edit_message(view=new_view)# noqa
+
+        view = AlertsView(alerts, interaction.user, self.gt_reminder_service)# noqa
+        await interaction.response.send_message(view=view, ephemeral=True)# noqa

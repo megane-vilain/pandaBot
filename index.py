@@ -1,7 +1,8 @@
 from tinydb import TinyDB
-
+from cogs.garland import GarlandCog
 from cogs.reminders import ReminderCog
 from cogs.timezone import TimezoneCog
+from services.gt_reminder_service import GtAlertService
 from services.reminder_service import ReminderService
 from services.timezone_service import TimezoneService
 from utils.logging_config import init_logging
@@ -24,6 +25,9 @@ async def main():
     reminders_table = db.table('reminders')
     reminder_service = ReminderService(reminders_table)
 
+    gt_reminders_table = db.table('gt_reminders')
+    gt_reminder_service = GtAlertService(gt_reminders_table)
+
     @bot.event
     async def on_ready():
         print(f"{bot.user} is online!")
@@ -34,7 +38,7 @@ async def main():
         await bot.load_extension('cogs.misc')
         await bot.add_cog(ReminderCog(bot, timezone_service, reminder_service))
         await bot.add_cog(TimezoneCog(bot, timezone_service))
-        await bot.load_extension('cogs.garland')
+        await bot.add_cog(GarlandCog(bot, gt_reminder_service, timezone_service))
 
         await bot.start(os.getenv('TOKEN'))
 

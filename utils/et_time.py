@@ -1,20 +1,15 @@
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+
+from models import GatheringReminder
 
 ET_MULTIPLIER = 3600 / 175
 
 LOCAL_TZ = ZoneInfo("Europe/Paris")
 
 
-
-def _format_remaining(delta):
-    total_seconds = int(delta.total_seconds())
-
-    hours, remainder = divmod(total_seconds, 3600)
-    minutes, seconds = divmod(remainder, 60)
-
-    return f"{hours:02}:{minutes:02}:{seconds:02}"
-
+def format_et_hours(et_hours: set[int]) -> str:
+    return " & ".join(f"{h} ET" for h in et_hours)
 
 def _current_et_datetime():
     now_real_ts = datetime.now(timezone.utc).timestamp()
@@ -25,14 +20,71 @@ def _current_et_datetime():
         tz=timezone.utc
     )
 
+def _min_spawn_gap_real(et_hours: list[int]) -> float:
+    """
+    Returns the smallest gap between spawns in real seconds.
+    Used to detect when a new spawn window has opened.
+    """
+    if len(et_hours) == 1:
+        # Only one spawn per ET day
+        return 86400 / ET_MULTIPLIER
+
+    gaps_et = []
+    sorted_hours = sorted(et_hours)
+    for i in range(len(sorted_hours)):
+        next_hour = sorted_hours[(i + 1) % len(sorted_hours)]
+        current_hour = sorted_hours[i]
+        gap = (next_hour - current_hour) % 24
+        gaps_et.append(gap * 3600)
+
+    min_gap_et = min(gaps_et)
+    return min_gap_et / ET_MULTIPLIER
+
+def should_notify(reminder, user_timezone) -> bool:
+    now_real = datetime.now(user_timezone)
+    now_ts = now_real.timestamp()
+
+    # Don't fire if we already notified within the last ET day
+    # (prevents double-firing on the same spawn)
+    if reminder.last_notification_ts:
+        last_dt = datetime.fromisoformat(reminder.last_notification_ts)
+        last_ts = last_dt.timestamp()
+        et_day_in_real_seconds = 86400 / ET_MULTIPLIER
+        if now_ts - last_ts < et_day_in_real_seconds:
+            # Still within the same ET day — check it's a different spawn
+            # by seeing if enough real time has passed for a new window
+            min_gap = _min_spawn_gap_real(reminder.et_hours)
+            if now_ts - last_ts < min_gap * 0.9:
+                return False
+
+    # Check if any spawn is within alert_before_minutes (real time)
+    for et_hour in reminder.et_hours:
+        next_spawn = _et_to_timezone(et_hour, user_timezone)
+        seconds_until = (next_spawn - now_real).total_seconds()
+
+        alert_window_real = reminder.alert_before_minutes * 60
+
+        if 0 <= seconds_until <= alert_window_real:
+            return True
+
+    return False
+
+def build_reminder_text(alert: GatheringReminder) -> str:
+    et_str = format_et_hours(alert.et_hours)
+    item_label = f"Item #{alert.item_name}"
+    return (
+        f"**{item_label}** spawns at **{et_str}**\n"
+        f"Window: **{alert.duration_et_hours}h ET**"
+    )
+
 def _discord_timestamp(timestamp: int) -> str:
     return f"<t:{timestamp}:R>"
 
 def _et_hours_to_real_seconds(et_seconds: float) -> float:
     return et_seconds / ET_MULTIPLIER
 
-def _et_to_local(target_hour):
-    now_real = datetime.now(timezone.utc)
+def _et_to_timezone(target_hour, user_timezone: ZoneInfo):
+    now_real = datetime.now(user_timezone)
     now_real_ts = now_real.timestamp()
 
     current_et = _current_et_datetime()
@@ -60,7 +112,7 @@ def _et_to_local(target_hour):
     # Next real timestamp
     next_real_ts = now_real_ts + real_delta_seconds
 
-    return datetime.fromtimestamp(next_real_ts,tz=LOCAL_TZ)
+    return datetime.fromtimestamp(next_real_ts,tz=user_timezone)
 
 def _check_active(et_times: list[int], duration_et_hours: int):
     """
@@ -95,26 +147,7 @@ def _check_active(et_times: list[int], duration_et_hours: int):
 
     return False, None
 
-def convert(et_times, duration_et_hours):
-    """
-    Convert ET spawn times to the next local occurrence,
-    or report if the node is currently active.
-
-    Args:
-        et_times (list[int]):
-            One or two ET hours. Example: [0] or [0, 12]
-        duration_et_hours (int):
-            How long the node stays active in ET hours (2 or 4).
-
-    Returns:
-        If active:
-            ("active", remaining_formatted: str)
-            e.g. ("active", "01:23:45")
-        If not active:
-            (formatted_local_datetime: str, discord_timestamp: str)
-            e.g. ("18:42:00 CEST", "<t:1234567890:R>")
-    """
-
+def convert(et_times, duration_et_hours, user_timezone: ZoneInfo):
     if not isinstance(et_times, list):
         raise TypeError("et_times must be a list")
     if len(et_times) < 1 or len(et_times) > 2:
@@ -127,7 +160,7 @@ def convert(et_times, duration_et_hours):
     if is_active:
         return "Currently active", f"End {_discord_timestamp(end_time)}"
 
-    occurrences = [_et_to_local(hour) for hour in et_times]
+    occurrences = [_et_to_timezone(hour, user_timezone) for hour in et_times]
     next_occurrence = min(occurrences)
 
 

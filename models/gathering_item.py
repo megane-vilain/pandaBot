@@ -34,6 +34,18 @@ class GatheringItemConfig:
         self.name_lower = name.lower()
         self.map = zone_map
 
+@dataclass
+class GatheringReminder:
+    user_id: int
+    channel_id: int
+    item_id: int
+    item_name: str
+    et_hours: set[int]
+    duration_et_hours: int
+    alert_before_minutes: int
+    enable: bool
+    last_notification_ts: str
+    doc_id: Optional[int] = None
 
 
 

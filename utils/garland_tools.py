@@ -17,8 +17,6 @@ def get_gathering_item(api: GarlandTools, item_id: int, map_path: str):
 
     gathering_node = node_json["node"]
 
-
-
     if "Ephemeral" == node_type:
         node_duration = 4
     else:
