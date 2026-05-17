@@ -1,15 +1,14 @@
 from zoneinfo import ZoneInfo
 from discord.ext import commands, tasks
 from discord import app_commands
-from models import GatheringItemConfig, GatheringReminder, GatheringItem
-from garlandtools import GarlandTools
+from models import GatheringReminder, GatheringItem
 from urllib.parse import quote
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 from services.gt_reminder_service import GtAlertService
 from services.timezone_service import TimezoneService
 from utils.et_time import convert, format_et_hours, should_notify
-from utils.garland_tools import get_gathering_item
+from utils.garland_tools import load_gathering_items
 import requests
 import discord
 import os
@@ -240,68 +239,20 @@ class GarlandCog(commands.Cog):
         self.bot = bot
         self.gt_reminder_service = gt_reminder_service
         self.timezone_service = timezone_service
-        self.api = GarlandTools()
         self.reminder_loop.start()
-        self.GATHERING_ITEMS = [
-            GatheringItemConfig(item_id=43923, name="Rarefied Ash Soil", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=43932, name="Brightwind Ore", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=46247, name="Levin Quartz", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=44845, name="Alexandrian Ore", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=44135, name="Harmonite Ore", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=49212, name="Windspath Water", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=44138, name="Blackseed Cotton Boll", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=44844, name="Optical Fibergrass", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=46248, name="Calamus Root", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=43934, name="Volcanic Grass", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=43930, name="Rarefied Windsbalm Bay Leaf", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=49207, name="Fulgurpine Log", zone_map="Unlost World/Living Memory"),
-            GatheringItemConfig(item_id=49208, name="Dense Aluminum Ore", zone_map="Xak Tural/Heritage Found"),
-            GatheringItemConfig(item_id=43931, name="Electrocoal", zone_map="Xak Tural/Heritage Found"),
-            GatheringItemConfig(item_id=43922, name="Rarefied Ra'Kaznar Ore", zone_map="Xak Tural/Heritage Found"),
-            GatheringItemConfig(item_id=43922, name="Rarefied White Gold Ore", zone_map="Xak Tural/Heritage Found"),
-            GatheringItemConfig(item_id=46244, name="Desert Lapis Ore", zone_map="Xak Tural/Heritage Found"),
-            GatheringItemConfig(item_id=45973, name="Fulgurite", zone_map="Xak Tural/Heritage Found"),
-            GatheringItemConfig(item_id=45972, name="Cochineal Pigment", zone_map="Xak Tural/Heritage Found"),
-            GatheringItemConfig(item_id=43921, name="Rarefied Magnesite Ore", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=43920, name="Rarefied Titanium Gold Ore", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=44136, name="Fine Silver Ore", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=49209, name="Rose Garnet Ore", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=43933, name="Goldbranch", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=44140, name="Nopaliflower", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=44234, name="Rarefied Acacia Bark", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=43929, name="Rarefied Acacia Log", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=45971, name="Shaaloani Coffee", zone_map="Xak Tural/Shaaloani"),
-            GatheringItemConfig(item_id=45970, name="Raw Rhodochrosite", zone_map="Yok Tural/Kozama'uka"),
-            GatheringItemConfig(item_id=43919, name="Rarefied Raw Dark Amber", zone_map="Yok Tural/Kozama'uka"),
-            GatheringItemConfig(item_id=49210, name="Carnauba Leaf", zone_map="Yok Tural/Kozama'uka"),
-            GatheringItemConfig(item_id=44137, name="Ipe Log", zone_map="Yok Tural/Kozama'uka"),
-            GatheringItemConfig(item_id=45969, name="Octahedrite", zone_map="Yok Tural/Yak T'el"),
-            GatheringItemConfig(item_id=43928, name="Rarefied Dark Mahogany Log", zone_map="Yok Tural/Yak T'el"),
-            GatheringItemConfig(item_id=43927, name="Rarefied Sweet Kukuru Bean", zone_map="Yok Tural/Yak T'el"),
-            GatheringItemConfig(item_id=45968, name="Cordia Log", zone_map="Yok Tural/Yak T'el"),
-            GatheringItemConfig(item_id=46243, name="Cordia Log", zone_map="Yok Tural/Yak T'el"),
-            GatheringItemConfig(item_id=44139, name="Turali Alumen", zone_map="Yok Tural/Urqopacha"),
-            GatheringItemConfig(item_id=49211, name="Urqopacha Flax", zone_map="Yok Tural/Urqopacha"),
-            GatheringItemConfig(item_id=43926, name="Rarefied Mountain Flax", zone_map="Yok Tural/Urqopacha"),
-        ]
+        self.gathering_items, self.gathering_items_by_id = load_gathering_items()
         self.BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
     def cog_unload(self) -> None:
         self.reminder_loop.cancel()
 
-    async def get_gathering_item_config(self, resource_id: int) -> GatheringItemConfig:
-        gathering_item = next(
-            n for n in self.GATHERING_ITEMS
-            if n.id == resource_id
-        )
-        return gathering_item
 
     async def gathering_node_autocomplete(
             self, interaction: discord.Interaction, current: str):
         user_input = current.lower()
 
         results = []
-        for node in self.GATHERING_ITEMS:
+        for node in self.gathering_items:
             if user_input in node.name_lower:
                 results.append(
                     app_commands.Choice(
@@ -330,8 +281,7 @@ class GarlandCog(commands.Cog):
             if channel is None:
                 continue
 
-            gathering_item_config = await self.get_gathering_item_config(alert.item_id)
-            gathering_item = get_gathering_item(self.api, alert.item_id, gathering_item_config.map)
+            gathering_item = self.gathering_items_by_id[alert.item_id]
             gathering_item.alert = alert
 
             map_output = await self.get_zone_map(gathering_item)
@@ -355,8 +305,7 @@ class GarlandCog(commands.Cog):
         await interaction.response.defer()# noqa
 
         selected_id = int(resource)
-        gathering_item_config = await self.get_gathering_item_config(selected_id)
-        gathering_item = get_gathering_item(self.api, selected_id, gathering_item_config.map)
+        gathering_item = self.gathering_items_by_id[selected_id]
         gathering_item.alert =  self.gt_reminder_service.get_item_alert_for_user(interaction.user.id, selected_id)
         user_timezone = self.timezone_service.get_user_timezone(interaction.user.id)
 
@@ -490,9 +439,9 @@ class GarlandCog(commands.Cog):
 
         selected_id = int(resource)
 
-        gathering_item = await self.get_gathering_item_config(selected_id)
+        gathering_item = self.gathering_items_by_id[selected_id]
 
-        gathering_item = get_gathering_item(self.api, selected_id, gathering_item.map)
+        gathering_item = self.gathering_items_by_id[selected_id]
 
         gathering_item_reminder = GatheringReminder(
             user_id=interaction.user.id,

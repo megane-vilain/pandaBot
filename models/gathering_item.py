@@ -30,22 +30,10 @@ class GatheringNode:
 class GatheringItem:
     id: int
     name: str
+    name_lower: str
     description: str
     map:str
     zone: str
     node: GatheringNode
     icon_id: int
     alert: Optional[GatheringReminder] = None
-
-@dataclass
-class GatheringItemConfig:
-    id: int
-    name: str
-    name_lower:str
-    map:str
-
-    def __init__(self, item_id: int, name: str, zone_map: str):
-        self.id = item_id
-        self.name = name
-        self.name_lower = name.lower()
-        self.map = zone_map

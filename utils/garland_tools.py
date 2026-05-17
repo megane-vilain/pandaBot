@@ -1,62 +1,8 @@
-from garlandtools import GarlandTools
-from et_time import format_et_hours
+from utils.et_time import format_et_hours
 from models import GatheringItem, GatheringNode
 import json
 
 GATHERING_ITEMS_PATH = "gathering_items.json"
-
-def get_gathering_item(api: GarlandTools, item_id: int, map_path: str):
-    item_response = api.item(item_id)
-    item_json = item_response.json()
-    map_name = map_path.split("/", 1)[1]
-
-    node_partial = next(
-        p for p in item_json["partials"]
-        if p["type"] == "node"
-    )
-    node_type = node_partial["obj"]["lt"]
-
-    node_response = api.node(node_partial['id'])
-    node_json = node_response.json()
-
-    gathering_node = node_json["node"]
-
-    if "Ephemeral" == node_type:
-        node_duration = 4
-    else:
-        node_duration = 2
-
-    gathering_times = gathering_node["time"]
-    gathering_times = sorted(gathering_times)
-
-    if len(gathering_times) == 1:
-        time_formatted = f"{gathering_times[0]} ET"
-    else:
-        time_formatted = f"{gathering_times[0]} - {gathering_times[1]} ET"
-
-    gathering_node = GatheringNode(
-        name = gathering_node["name"],
-        id = gathering_node["id"],
-        coordinates = gathering_node["coords"],
-        type = gathering_node['type'],
-        time = gathering_node["time"],
-        time_formatted = time_formatted,
-        node_duration = node_duration
-
-    )
-
-    item = item_json["item"]
-    gathering_item = GatheringItem(
-        id = item["id"],
-        name = item["name"],
-        description = item["description"],
-        icon_id= item["icon"],
-        map = map_path,
-        zone = map_name,
-        node = gathering_node
-    )
-
-    return gathering_item
 
 def load_gathering_items(
     path: str = GATHERING_ITEMS_PATH,
@@ -80,13 +26,14 @@ def load_gathering_items(
             coordinates=entry["node_coordinates"],
             type=entry["node_type"],
             node_duration=entry["duration_et_hours"],
-            time=set(et_times),
+            time=et_times,
             time_formatted=format_et_hours(et_times),
         )
 
         item = GatheringItem(
             id=entry["item_id"],
             name=entry["name"],
+            name_lower=entry["name"].lower(),
             description=entry["description"],
             map=entry["zone_map"],
             zone=entry["zone_name"],

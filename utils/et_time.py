@@ -163,8 +163,6 @@ def convert(et_times, duration_et_hours, user_timezone: ZoneInfo):
         raise TypeError("et_times must be a list")
     if len(et_times) < 1 or len(et_times) > 2:
         raise ValueError("et_times must contain 1 or 2 ET hours")
-    if duration_et_hours not in (2, 4):
-        raise ValueError("duration_et_hours must be 2 or 4")
 
     is_active, end_time = _check_active(et_times, duration_et_hours)
 
