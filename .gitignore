@@ -4,6 +4,8 @@ bin/
 lib/
 lib64/
 *.cfg
-*.json
+panda_bot.json
+settings.json
+*.sqlite
 **/__pycache__/
 *.log

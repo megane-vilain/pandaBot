@@ -1,0 +1,6613 @@
+[
+  {
+    "item_id": 5395,
+    "name": "Spruce Log",
+    "description": "A rough-cut log of spruce timber.",
+    "icon_id": 22413,
+    "node_id": 211,
+    "node_name": "Providence Point",
+    "node_type": 2,
+    "node_coordinates": [
+      29.17,
+      12.79
+    ],
+    "zone_id": 63,
+    "zone_map": "Coerthas/Coerthas Central Highlands",
+    "zone_name": "Coerthas Central Highlands",
+    "et_times": [
+      9
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5547,
+    "name": "Vampire Plant",
+    "description": "This rare variety of parasitic plant is known to suck the lifeblood from all flora with which it comes in contact.",
+    "icon_id": 25001,
+    "node_id": 212,
+    "node_name": "Dragonhead",
+    "node_type": 2,
+    "node_coordinates": [
+      26.58,
+      24.44
+    ],
+    "zone_id": 63,
+    "zone_map": "Coerthas/Coerthas Central Highlands",
+    "zone_name": "Coerthas Central Highlands",
+    "et_times": [
+      13
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5537,
+    "name": "Thavnairian Mistletoe",
+    "description": "A variety of parasitic plant that is commonly found growing on the stout acacia trees of Thavnair. The inhabitants of Thavnair's capital city of Radz–at–Han have a strange custom that states if two people meet underneath a sprig of mistletoe, they must each give the other one of their shoes.",
+    "icon_id": 25001,
+    "node_id": 213,
+    "node_name": "Whitebrim",
+    "node_type": 2,
+    "node_coordinates": [
+      8.47,
+      13.35
+    ],
+    "zone_id": 63,
+    "zone_map": "Coerthas/Coerthas Central Highlands",
+    "zone_name": "Coerthas Central Highlands",
+    "et_times": [
+      17
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 4816,
+    "name": "Prickly Pineapple",
+    "description": "A sweet and tangy fruit covered in a thick, spike-laden skin.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25303,
+    "node_id": 214,
+    "node_name": "Bloodshore",
+    "node_type": 2,
+    "node_coordinates": [
+      30.71,
+      27.01
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      9
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7734,
+    "name": "Prickly Pineapple Seeds",
+    "description": "Prickly pineapple seeds suitable for garden cultivation.",
+    "icon_id": 27457,
+    "node_id": 214,
+    "node_name": "Bloodshore",
+    "node_type": 2,
+    "node_coordinates": [
+      30.71,
+      27.01
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      9
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5350,
+    "name": "Silkworm Cocoon",
+    "description": "The lightweight cocoon of the elusive silkworm.",
+    "icon_id": 21661,
+    "node_id": 216,
+    "node_name": "Nine Ivies",
+    "node_type": 3,
+    "node_coordinates": [
+      22.0,
+      26.46
+    ],
+    "zone_id": 55,
+    "zone_map": "The Black Shroud/East Shroud",
+    "zone_name": "East Shroud",
+    "et_times": [
+      1
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5545,
+    "name": "Trillium",
+    "description": "A beautiful, white, tripetaloid flower.",
+    "icon_id": 22627,
+    "node_id": 217,
+    "node_name": "The Bramble Patch",
+    "node_type": 3,
+    "node_coordinates": [
+      17.68,
+      19.32
+    ],
+    "zone_id": 55,
+    "zone_map": "The Black Shroud/East Shroud",
+    "zone_name": "East Shroud",
+    "et_times": [
+      5
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5546,
+    "name": "Trillium Bulb",
+    "description": "If planted and tended with loving care, this bulb should grow into a lovely trillium plant.",
+    "icon_id": 22623,
+    "node_id": 218,
+    "node_name": "The Honey Yard",
+    "node_type": 3,
+    "node_coordinates": [
+      13.81,
+      23.84
+    ],
+    "zone_id": 55,
+    "zone_map": "The Black Shroud/East Shroud",
+    "zone_name": "East Shroud",
+    "et_times": [
+      21
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 6209,
+    "name": "Kidragora",
+    "description": "Even in space, everyone can hear this seedkin scream.<br><br>Use item to acquire the kidragora minion.",
+    "icon_id": 59442,
+    "node_id": 218,
+    "node_name": "The Honey Yard",
+    "node_type": 3,
+    "node_coordinates": [
+      13.81,
+      23.84
+    ],
+    "zone_id": 55,
+    "zone_map": "The Black Shroud/East Shroud",
+    "zone_name": "East Shroud",
+    "et_times": [
+      21
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 6147,
+    "name": "Honey Lemon",
+    "description": "This rare type of lemon native to the continent of Othard is so sweet, it can be eaten raw.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25305,
+    "node_id": 219,
+    "node_name": "Bloodshore",
+    "node_type": 3,
+    "node_coordinates": [
+      27.49,
+      32.79
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      5
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7733,
+    "name": "Honey Lemon Seeds",
+    "description": "Honey lemon seeds suitable for garden cultivation.",
+    "icon_id": 27457,
+    "node_id": 219,
+    "node_name": "Bloodshore",
+    "node_type": 3,
+    "node_coordinates": [
+      27.49,
+      32.79
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      5
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 6148,
+    "name": "Dzemael Tomato",
+    "description": "A rare crossbreed of ruby tomato developed and perfected by House Dzemael botanists.",
+    "icon_id": 25209,
+    "node_id": 220,
+    "node_name": "Raincatcher Gully",
+    "node_type": 3,
+    "node_coordinates": [
+      17.56,
+      27.61
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      13
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7724,
+    "name": "Dzemael Tomato Seeds",
+    "description": "Dzemael tomato seeds suitable for garden cultivation.",
+    "icon_id": 27455,
+    "node_id": 220,
+    "node_name": "Raincatcher Gully",
+    "node_type": 3,
+    "node_coordinates": [
+      17.56,
+      27.61
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      13
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 4800,
+    "name": "Black Truffle",
+    "description": "A rare black mushroom that grows in the soil, rather than above it, making the specimen almost impossible to locate. It is treasured as a delicacy for its unique aroma.",
+    "icon_id": 25403,
+    "node_id": 221,
+    "node_name": "Drybone",
+    "node_type": 3,
+    "node_coordinates": [
+      12.35,
+      15.89
+    ],
+    "zone_id": 44,
+    "zone_map": "Thanalan/Eastern Thanalan",
+    "zone_name": "Eastern Thanalan",
+    "et_times": [
+      13
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5121,
+    "name": "Darksteel Ore",
+    "description": "A decent-sized piece of rock containing the metal darksteel.",
+    "icon_id": 21205,
+    "node_id": 222,
+    "node_name": "Dragonhead",
+    "node_type": 0,
+    "node_coordinates": [
+      27.61,
+      19.96
+    ],
+    "zone_id": 63,
+    "zone_map": "Coerthas/Coerthas Central Highlands",
+    "zone_name": "Coerthas Central Highlands",
+    "et_times": [
+      1
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5118,
+    "name": "Gold Ore",
+    "description": "A decent-sized piece of rock containing the precious metal gold.",
+    "icon_id": 21212,
+    "node_id": 223,
+    "node_name": "The Burning Wall",
+    "node_type": 0,
+    "node_coordinates": [
+      28.09,
+      21.74
+    ],
+    "zone_id": 44,
+    "zone_map": "Thanalan/Eastern Thanalan",
+    "zone_name": "Eastern Thanalan",
+    "et_times": [
+      9
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 6199,
+    "name": "Coblyn Larva",
+    "description": "Too dangerous to allow to grow any larger...too adorable to condemn to the furnace.<br><br>Use item to acquire the coblyn larva minion.",
+    "icon_id": 59433,
+    "node_id": 223,
+    "node_name": "The Burning Wall",
+    "node_type": 0,
+    "node_coordinates": [
+      28.09,
+      21.74
+    ],
+    "zone_id": 44,
+    "zone_map": "Thanalan/Eastern Thanalan",
+    "zone_name": "Eastern Thanalan",
+    "et_times": [
+      9
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 6152,
+    "name": "Volcanic Rock Salt",
+    "description": "The red hue of this rock salt is said to come from the volcanic soil of O'Ghomoro.",
+    "icon_id": 22617,
+    "node_id": 224,
+    "node_name": "Raincatcher Gully",
+    "node_type": 1,
+    "node_coordinates": [
+      19.36,
+      33.09
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      17
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5158,
+    "name": "Astral Rock",
+    "description": "An uncut, unpolished stone imbued with an unbalanced elemental aspect tipping towards astral.",
+    "icon_id": 21251,
+    "node_id": 225,
+    "node_name": "Dragonhead",
+    "node_type": 1,
+    "node_coordinates": [
+      23.4,
+      24.68
+    ],
+    "zone_id": 63,
+    "zone_map": "Coerthas/Coerthas Central Highlands",
+    "zone_name": "Coerthas Central Highlands",
+    "et_times": [
+      21
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5273,
+    "name": "Gold Sand",
+    "description": "Glittering sand consisting of tiny grains of gold.",
+    "icon_id": 21214,
+    "node_id": 226,
+    "node_name": "Yugr'am River",
+    "node_type": 1,
+    "node_coordinates": [
+      25.58,
+      23.24
+    ],
+    "zone_id": 44,
+    "zone_map": "Thanalan/Eastern Thanalan",
+    "zone_name": "Eastern Thanalan",
+    "et_times": [
+      5
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7590,
+    "name": "Scarlet Sap",
+    "description": "Its color reminiscent of blood, this sap is used in the working of aged lumber.",
+    "icon_id": 22601,
+    "node_id": 230,
+    "node_name": "Alder Springs",
+    "node_type": 2,
+    "node_coordinates": [
+      16.62,
+      27.61
+    ],
+    "zone_id": 57,
+    "zone_map": "The Black Shroud/North Shroud",
+    "zone_name": "North Shroud",
+    "et_times": [
+      3
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7592,
+    "name": "Apricot",
+    "description": "A variety of stone fruit borne over from the Near East. Its orange flesh is at once sweet and tart.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25317,
+    "node_id": 231,
+    "node_name": "Summerford",
+    "node_type": 2,
+    "node_coordinates": [
+      18.66,
+      16.48
+    ],
+    "zone_id": 30,
+    "zone_map": "La Noscea/Middle La Noscea",
+    "zone_name": "Middle La Noscea",
+    "et_times": [
+      9
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7595,
+    "name": "Blood Orange",
+    "description": "A rare variety of orange grown in La Noscea, named for its unusual red flesh.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25312,
+    "node_id": 232,
+    "node_name": "Bronze Lake",
+    "node_type": 2,
+    "node_coordinates": [
+      29.13,
+      25.48
+    ],
+    "zone_id": 34,
+    "zone_map": "La Noscea/Upper La Noscea",
+    "zone_name": "Upper La Noscea",
+    "et_times": [
+      7
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5365,
+    "name": "Bamboo Stick",
+    "description": "A cut and dried piece of thick bamboo.",
+    "icon_id": 22451,
+    "node_id": 232,
+    "node_name": "Bronze Lake",
+    "node_type": 2,
+    "node_coordinates": [
+      29.13,
+      25.48
+    ],
+    "zone_id": 34,
+    "zone_map": "La Noscea/Upper La Noscea",
+    "zone_name": "Upper La Noscea",
+    "et_times": [
+      7
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7591,
+    "name": "Shroud Tea Leaves",
+    "description": "Picked from plants that grow wild in the Black Shroud, these leaves are extremely bitter and are not ideal for brewing tea.",
+    "icon_id": 25020,
+    "node_id": 233,
+    "node_name": "Sorrel Haven",
+    "node_type": 3,
+    "node_coordinates": [
+      15.91,
+      20.5
+    ],
+    "zone_id": 54,
+    "zone_map": "The Black Shroud/Central Shroud",
+    "zone_name": "Central Shroud",
+    "et_times": [
+      2
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7593,
+    "name": "La Noscean Leek",
+    "description": "A rare variety of leek, typically harvested young for a milder flavor.",
+    "icon_id": 25216,
+    "node_id": 234,
+    "node_name": "Quarterstone",
+    "node_type": 3,
+    "node_coordinates": [
+      34.29,
+      28.33
+    ],
+    "zone_id": 33,
+    "zone_map": "La Noscea/Western La Noscea",
+    "zone_name": "Western La Noscea",
+    "et_times": [
+      8
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 8024,
+    "name": "Waterfowl Feather",
+    "description": "Unlike those of tree-dwelling cloudkin, waterfowl feathers are exceptional at trapping in heat while keeping out water.",
+    "icon_id": 21902,
+    "node_id": 234,
+    "node_name": "Quarterstone",
+    "node_type": 3,
+    "node_coordinates": [
+      34.29,
+      28.33
+    ],
+    "zone_id": 33,
+    "zone_map": "La Noscea/Western La Noscea",
+    "zone_name": "Western La Noscea",
+    "et_times": [
+      8
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7594,
+    "name": "Young Cieldalaes Spinach",
+    "description": "This bunch of Cieldalaes spinach has been picked young to reduce bitterness.",
+    "icon_id": 25206,
+    "node_id": 235,
+    "node_name": "Cedarwood",
+    "node_type": 3,
+    "node_coordinates": [
+      32.55,
+      12.99
+    ],
+    "zone_id": 31,
+    "zone_map": "La Noscea/Lower La Noscea",
+    "zone_name": "Lower La Noscea",
+    "et_times": [
+      6
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7588,
+    "name": "Ferberite",
+    "description": "A jet black mineral with alluring luster.",
+    "icon_id": 21203,
+    "node_id": 236,
+    "node_name": "Raubahn's Push",
+    "node_type": 0,
+    "node_coordinates": [
+      17.34,
+      20.18
+    ],
+    "zone_id": 46,
+    "zone_map": "Thanalan/Northern Thanalan",
+    "zone_name": "Northern Thanalan",
+    "et_times": [
+      3
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5150,
+    "name": "Raw Iolite",
+    "description": "An uncut, unpolished stone containing what appears to be iolite.",
+    "icon_id": 21453,
+    "node_id": 236,
+    "node_name": "Raubahn's Push",
+    "node_type": 0,
+    "node_coordinates": [
+      17.34,
+      20.18
+    ],
+    "zone_id": 46,
+    "zone_map": "Thanalan/Northern Thanalan",
+    "zone_name": "Northern Thanalan",
+    "et_times": [
+      3
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5149,
+    "name": "Raw Topaz",
+    "description": "An uncut, unpolished stone containing what appears to be topaz.",
+    "icon_id": 21453,
+    "node_id": 236,
+    "node_name": "Raubahn's Push",
+    "node_type": 0,
+    "node_coordinates": [
+      17.34,
+      20.18
+    ],
+    "zone_id": 46,
+    "zone_map": "Thanalan/Northern Thanalan",
+    "zone_name": "Northern Thanalan",
+    "et_times": [
+      3
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7589,
+    "name": "Native Gold",
+    "description": "A high-purity, naturally occurring nugget of gold.",
+    "icon_id": 20816,
+    "node_id": 237,
+    "node_name": "Black Brush",
+    "node_type": 0,
+    "node_coordinates": [
+      25.24,
+      15.89
+    ],
+    "zone_id": 43,
+    "zone_map": "Thanalan/Central Thanalan",
+    "zone_name": "Central Thanalan",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5147,
+    "name": "Raw Diamond",
+    "description": "An uncut, unpolished stone containing what appears to be diamond.",
+    "icon_id": 21453,
+    "node_id": 237,
+    "node_name": "Black Brush",
+    "node_type": 0,
+    "node_coordinates": [
+      25.24,
+      15.89
+    ],
+    "zone_id": 43,
+    "zone_map": "Thanalan/Central Thanalan",
+    "zone_name": "Central Thanalan",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5148,
+    "name": "Raw Emerald",
+    "description": "An uncut, unpolished stone containing what appears to be emerald.",
+    "icon_id": 21453,
+    "node_id": 237,
+    "node_name": "Black Brush",
+    "node_type": 0,
+    "node_coordinates": [
+      25.24,
+      15.89
+    ],
+    "zone_id": 43,
+    "zone_map": "Thanalan/Central Thanalan",
+    "zone_name": "Central Thanalan",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5146,
+    "name": "Raw Ruby",
+    "description": "An uncut, unpolished stone containing what appears to be ruby.",
+    "icon_id": 21453,
+    "node_id": 238,
+    "node_name": "Moraby Bay",
+    "node_type": 0,
+    "node_coordinates": [
+      23.76,
+      21.64
+    ],
+    "zone_id": 31,
+    "zone_map": "La Noscea/Lower La Noscea",
+    "zone_name": "Lower La Noscea",
+    "et_times": [
+      18
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5151,
+    "name": "Raw Sapphire",
+    "description": "An uncut, unpolished stone containing what appears to be sapphire.",
+    "icon_id": 21453,
+    "node_id": 238,
+    "node_name": "Moraby Bay",
+    "node_type": 0,
+    "node_coordinates": [
+      23.76,
+      21.64
+    ],
+    "zone_id": 31,
+    "zone_map": "La Noscea/Lower La Noscea",
+    "zone_name": "Lower La Noscea",
+    "et_times": [
+      18
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7760,
+    "name": "Grade 3 La Noscean Topsoil",
+    "description": "Grade 3 topsoil obtained in the La Noscean region. Increases the likelihood that plants will yield higher quality crops.",
+    "icon_id": 27403,
+    "node_id": 239,
+    "node_name": "Zephyr Drift",
+    "node_type": 1,
+    "node_coordinates": [
+      24.34,
+      27.03
+    ],
+    "zone_id": 30,
+    "zone_map": "La Noscea/Middle La Noscea",
+    "zone_name": "Middle La Noscea",
+    "et_times": [
+      19
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7763,
+    "name": "Grade 3 Shroud Topsoil",
+    "description": "Grade 3 topsoil obtained in the Black Shroud region. Increases the likelihood that plants will yield more crops.",
+    "icon_id": 27406,
+    "node_id": 240,
+    "node_name": "Lower Paths",
+    "node_type": 1,
+    "node_coordinates": [
+      16.8,
+      30.67
+    ],
+    "zone_id": 56,
+    "zone_map": "The Black Shroud/South Shroud",
+    "zone_name": "South Shroud",
+    "et_times": [
+      6
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7610,
+    "name": "Umbral Rock",
+    "description": "A rock with an elemental aspect leaning heavily towards umbral.",
+    "icon_id": 21213,
+    "node_id": 240,
+    "node_name": "Lower Paths",
+    "node_type": 1,
+    "node_coordinates": [
+      16.8,
+      30.67
+    ],
+    "zone_id": 56,
+    "zone_map": "The Black Shroud/South Shroud",
+    "zone_name": "South Shroud",
+    "et_times": [
+      6
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7766,
+    "name": "Grade 3 Thanalan Topsoil",
+    "description": "Grade 3 topsoil obtained in the Thanalan region. Increases the likelihood that plants will intercross with one another.",
+    "icon_id": 27409,
+    "node_id": 241,
+    "node_name": "Hammerlea",
+    "node_type": 1,
+    "node_coordinates": [
+      18.92,
+      28.39
+    ],
+    "zone_id": 42,
+    "zone_map": "Thanalan/Western Thanalan",
+    "zone_name": "Western Thanalan",
+    "et_times": [
+      5
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 7611,
+    "name": "Fragrant Log",
+    "description": "A pleasant-smelling log obtained in the Black Shroud.",
+    "icon_id": 22415,
+    "node_id": 242,
+    "node_name": "Upper Paths",
+    "node_type": 2,
+    "node_coordinates": [
+      17.5,
+      23.08
+    ],
+    "zone_id": 56,
+    "zone_map": "The Black Shroud/South Shroud",
+    "zone_name": "South Shroud",
+    "et_times": [
+      2
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 8031,
+    "name": "Redolent Log",
+    "description": "An unforgettably pleasant-smelling log obtained in the Black Shroud.",
+    "icon_id": 22415,
+    "node_id": 245,
+    "node_name": "Greentear",
+    "node_type": 2,
+    "node_coordinates": [
+      30.59,
+      20.18
+    ],
+    "zone_id": 54,
+    "zone_map": "The Black Shroud/Central Shroud",
+    "zone_name": "Central Shroud",
+    "et_times": [
+      6
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 8030,
+    "name": "Antumbral Rock",
+    "description": "A rock with an elemental aspect leaning unnaturally towards umbral.",
+    "icon_id": 21213,
+    "node_id": 246,
+    "node_name": "Wellwick Wood",
+    "node_type": 1,
+    "node_coordinates": [
+      26.87,
+      18.56
+    ],
+    "zone_id": 44,
+    "zone_map": "Thanalan/Eastern Thanalan",
+    "zone_name": "Eastern Thanalan",
+    "et_times": [
+      2
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5120,
+    "name": "Platinum Ore",
+    "description": "A decent-sized piece of rock containing the precious metal platinum.",
+    "icon_id": 21213,
+    "node_id": 247,
+    "node_name": "Broken Water",
+    "node_type": 0,
+    "node_coordinates": [
+      17.18,
+      10.59
+    ],
+    "zone_id": 45,
+    "zone_map": "Thanalan/Southern Thanalan",
+    "zone_name": "Southern Thanalan",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5394,
+    "name": "Ebony Log",
+    "description": "A rough-cut log of ebony timber.",
+    "icon_id": 22402,
+    "node_id": 248,
+    "node_name": "Zephyr Drift",
+    "node_type": 2,
+    "node_coordinates": [
+      24.38,
+      26.42
+    ],
+    "zone_id": 30,
+    "zone_map": "La Noscea/Middle La Noscea",
+    "zone_name": "Middle La Noscea",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 9518,
+    "name": "Cypress Log",
+    "description": "A rough-cut log of cypress timber.",
+    "icon_id": 22415,
+    "node_id": 249,
+    "node_name": "Bentbranch",
+    "node_type": 2,
+    "node_coordinates": [
+      24.8,
+      29.63
+    ],
+    "zone_id": 54,
+    "zone_map": "The Black Shroud/Central Shroud",
+    "zone_name": "Central Shroud",
+    "et_times": [
+      10
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 9519,
+    "name": "Pumice",
+    "description": "Volcanic rock riddled with countless tiny holes which make the stone remarkably lighter than it appears. Parchment makers rub the pieces on vellum to prepare the pages for receiving ink.",
+    "icon_id": 21454,
+    "node_id": 250,
+    "node_name": "Red Mantis Falls",
+    "node_type": 1,
+    "node_coordinates": [
+      17.56,
+      27.53
+    ],
+    "zone_id": 32,
+    "zone_map": "La Noscea/Eastern La Noscea",
+    "zone_name": "Eastern La Noscea",
+    "et_times": [
+      1
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 10096,
+    "name": "Rosemary",
+    "description": "A savory herb treasured for its ability to enhance focus and concentration.",
+    "icon_id": 25002,
+    "node_id": 251,
+    "node_name": "Nine Ivies",
+    "node_type": 3,
+    "node_coordinates": [
+      22.72,
+      30.59
+    ],
+    "zone_id": 55,
+    "zone_map": "The Black Shroud/East Shroud",
+    "zone_name": "East Shroud",
+    "et_times": [
+      17
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 10093,
+    "name": "Virgin Basilisk Egg",
+    "description": "While all eggs a basilisk lays contain traces of rare ore, the first egg laid in life is thought to contain the highest concentration, making it highly sought after by potion mixers and alchemists.",
+    "icon_id": 21215,
+    "node_id": 252,
+    "node_name": "Bluefog",
+    "node_type": 0,
+    "node_coordinates": [
+      23.08,
+      24.3
+    ],
+    "zone_id": 46,
+    "zone_map": "Thanalan/Northern Thanalan",
+    "zone_name": "Northern Thanalan",
+    "et_times": [
+      17
+    ],
+    "duration_et_hours": 3,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32970,
+    "name": "Rarefied Pyrite",
+    "description": "Though widely disparaged as fool's gold, there are certain obsessive miners who would trade sacks of genuine precious metal for this glorious hunk of iron and sulphur.<br><br>※For collectable submissions only.",
+    "icon_id": 21207,
+    "node_id": 306,
+    "node_name": "The Smoldering Wastes",
+    "node_type": 0,
+    "node_coordinates": [
+      30.06,
+      31.62
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32971,
+    "name": "Rarefied Chalcocite",
+    "description": "“If you can't recognize the beauty inherent in its orthorhombic crystal system, then we can't be friends.”<br><br>※For collectable submissions only.",
+    "icon_id": 21209,
+    "node_id": 306,
+    "node_name": "The Smoldering Wastes",
+    "node_type": 0,
+    "node_coordinates": [
+      30.06,
+      31.62
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32972,
+    "name": "Rarefied Limonite",
+    "description": "Artistic collectors will swoon over the lustrous ochre pigment that can be produced from this seemingly unremarkable rock of iron ore.<br><br>※For collectable submissions only.",
+    "icon_id": 21206,
+    "node_id": 306,
+    "node_name": "The Smoldering Wastes",
+    "node_type": 0,
+    "node_coordinates": [
+      30.06,
+      31.62
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32973,
+    "name": "Rarefied Abalathian Spring Water",
+    "description": "Vanu shamans collect spring water to make the paste they apply to their beaks before rituals. Some Vanu shamans are very, <span class=\"emphasis\">very</span> particular about their spring water.<br><br>※For collectable submissions only.",
+    "icon_id": 22614,
+    "node_id": 308,
+    "node_name": "The Blue Window",
+    "node_type": 0,
+    "node_coordinates": [
+      19.46,
+      9.93
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32974,
+    "name": "Rarefied Aurum Regis Sand",
+    "description": "When the aether of one's opus must <span class=\"emphasis\">flow</span> unimpeded, one cannot skimp on the conductive component of one's ink.<br><br>※For collectable submissions only.",
+    "icon_id": 21220,
+    "node_id": 308,
+    "node_name": "The Blue Window",
+    "node_type": 0,
+    "node_coordinates": [
+      19.46,
+      9.93
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32975,
+    "name": "Rarefied Raw Triphane",
+    "description": "The potential value of this uncut stone is obvious to the practiced eye. Especially if you love yellow.<br><br>※For collectable submissions only.",
+    "icon_id": 21474,
+    "node_id": 310,
+    "node_name": "Mirage Creek",
+    "node_type": 0,
+    "node_coordinates": [
+      29.63,
+      12.93
+    ],
+    "zone_id": 2406,
+    "zone_map": "Gyr Abania/The Fringes",
+    "zone_name": "The Fringes",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32977,
+    "name": "Rarefied Raw Kyanite",
+    "description": "“If I can cut this just so, it will provide the perfect accent for a rather rakish turban I've been weaving...”<br><br>※For collectable submissions only.",
+    "icon_id": 21472,
+    "node_id": 310,
+    "node_name": "Mirage Creek",
+    "node_type": 0,
+    "node_coordinates": [
+      29.63,
+      12.93
+    ],
+    "zone_id": 2406,
+    "zone_map": "Gyr Abania/The Fringes",
+    "zone_name": "The Fringes",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32976,
+    "name": "Rarefied Raw Star Spinel",
+    "description": "Rubies are red. Sapphires are blue. Star spinels are more of a violet, though, and that's the hue glinting from within this promising stone.<br><br>※For collectable submissions only.",
+    "icon_id": 21475,
+    "node_id": 312,
+    "node_name": "The Crab Pots",
+    "node_type": 0,
+    "node_coordinates": [
+      21.2,
+      34.35
+    ],
+    "zone_id": 2409,
+    "zone_map": "Othard/The Ruby Sea",
+    "zone_name": "The Ruby Sea",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32978,
+    "name": "Rarefied Raw Azurite",
+    "description": "Be sure to don your swimming trunks before losing yourself in the deep, deep blue of this entrancing raw gemstone.<br><br>※For collectable submissions only.",
+    "icon_id": 21472,
+    "node_id": 328,
+    "node_name": "The Sea of Blades",
+    "node_type": 0,
+    "node_coordinates": [
+      36.01,
+      26.42
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32979,
+    "name": "Rarefied Silvergrace Ore",
+    "description": "“It's beautiful! Stunning! Magnificent! Now find me three more.”<br><br>※For collectable submissions only.",
+    "icon_id": 21213,
+    "node_id": 328,
+    "node_name": "The Sea of Blades",
+    "node_type": 0,
+    "node_coordinates": [
+      36.01,
+      26.42
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32980,
+    "name": "Rarefied Titancopper Ore",
+    "description": "Never has titanium and copper existed in a more harmonious blend of minerals. It promises to make a wonderful teapot.<br><br>※For collectable submissions only.",
+    "icon_id": 21202,
+    "node_id": 330,
+    "node_name": "The Belt",
+    "node_type": 0,
+    "node_coordinates": [
+      31.25,
+      24.14
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32982,
+    "name": "Rarefied Raw Petalite",
+    "description": "Not quite clear and not quite white, you're not quite sure why the jewel hiding in this rock is so valuable.<br><br>※For collectable submissions only.",
+    "icon_id": 21477,
+    "node_id": 330,
+    "node_name": "The Belt",
+    "node_type": 0,
+    "node_coordinates": [
+      31.25,
+      24.14
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32981,
+    "name": "Rarefied Raw Lazurite",
+    "description": "One day, this unfinished gemstone of clearest blue could grace an elegant ring or an exquisite necklace or a face-smashing fist weapon. Possibilities!<br><br>※For collectable submissions only.",
+    "icon_id": 21472,
+    "node_id": 332,
+    "node_name": "Cleric",
+    "node_type": 0,
+    "node_coordinates": [
+      16.5,
+      18.18
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32983,
+    "name": "Rarefied Sea Salt",
+    "description": "“Don't you <span class=\"emphasis\">dare</span> throw that over your shoulder. Here, use the table salt.”<br><br>※For collectable submissions only.",
+    "icon_id": 22617,
+    "node_id": 334,
+    "node_name": "The Norvrandt Slope",
+    "node_type": 0,
+    "node_coordinates": [
+      25.12,
+      4.48
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32985,
+    "name": "Rarefied Raw Onyx",
+    "description": "Even in its rough, natural form, the shimmering blackness of this jewel is almost dangerously captivating. So...pretty...<br><br>※For collectable submissions only.",
+    "icon_id": 21231,
+    "node_id": 334,
+    "node_name": "The Norvrandt Slope",
+    "node_type": 0,
+    "node_coordinates": [
+      25.12,
+      4.48
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12901,
+    "name": "Abalathian Rock Salt",
+    "description": "Mined from veins found in Abalathia's Spine, this pinkish salt has a high mineral content which adds depth to its flavor.",
+    "icon_id": 22617,
+    "node_id": 318,
+    "node_name": "The Gauntlet",
+    "node_type": 1,
+    "node_coordinates": [
+      5.91,
+      5.74
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5159,
+    "name": "Red Quartz",
+    "description": "Several small pieces of deep red unpolished quartz.",
+    "icon_id": 21456,
+    "node_id": 318,
+    "node_name": "The Gauntlet",
+    "node_type": 1,
+    "node_coordinates": [
+      5.91,
+      5.74
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12538,
+    "name": "Adamantite Ore",
+    "description": "A decent-sized piece of rock containing the rare metal adamantite.",
+    "icon_id": 21224,
+    "node_id": 320,
+    "node_name": "Beta Quadrant",
+    "node_type": 0,
+    "node_coordinates": [
+      22.74,
+      3.99
+    ],
+    "zone_id": 2101,
+    "zone_map": "Abalathia's Spine/Azys Lla",
+    "zone_name": "Azys Lla",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 5226,
+    "name": "Astral Moraine",
+    "description": "Gravel with an unbalanced elemental aspect tipping towards astral.",
+    "icon_id": 21463,
+    "node_id": 321,
+    "node_name": "Riversmeet",
+    "node_type": 1,
+    "node_coordinates": [
+      37.05,
+      16.29
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 5163,
+    "name": "Violet Quartz",
+    "description": "Several small pieces of deep purple unpolished quartz.",
+    "icon_id": 21461,
+    "node_id": 321,
+    "node_name": "Riversmeet",
+    "node_type": 1,
+    "node_coordinates": [
+      37.05,
+      16.29
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 12536,
+    "name": "Aurum Regis Ore",
+    "description": "A decent-sized piece of rock containing the rare metal aurum regis.",
+    "icon_id": 21225,
+    "node_id": 323,
+    "node_name": "Greensward",
+    "node_type": 0,
+    "node_coordinates": [
+      7.87,
+      36.61
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 14148,
+    "name": "Lumythrite Ore",
+    "description": "An uncut, unpolished stone containing what appears to be lumythrite.",
+    "icon_id": 21221,
+    "node_id": 323,
+    "node_name": "Greensward",
+    "node_type": 0,
+    "node_coordinates": [
+      7.87,
+      36.61
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 12540,
+    "name": "Sun Mica",
+    "description": "A decent-sized chunk of rock made up of what appears to be thousands of thin sheets of golden crystal compacted together into a single mass.",
+    "icon_id": 21227,
+    "node_id": 324,
+    "node_name": "Voor Sian Siran",
+    "node_type": 1,
+    "node_coordinates": [
+      36.04,
+      37.43
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 5160,
+    "name": "Blue Quartz",
+    "description": "Several small pieces of deep blue unpolished quartz.",
+    "icon_id": 21457,
+    "node_id": 325,
+    "node_name": "The Answering Quarter",
+    "node_type": 1,
+    "node_coordinates": [
+      9.95,
+      14.57
+    ],
+    "zone_id": 2001,
+    "zone_map": "Dravania/The Dravanian Hinterlands",
+    "zone_name": "The Dravanian Hinterlands",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 12945,
+    "name": "Red Alumen",
+    "description": "A reddish variety of the mineral used by leatherworkers to tan animal hides. It lacks the deodorizing properties of its lighter counterpart.",
+    "icon_id": 22656,
+    "node_id": 326,
+    "node_name": "The Habisphere",
+    "node_type": 0,
+    "node_coordinates": [
+      35.7,
+      13.96
+    ],
+    "zone_id": 2101,
+    "zone_map": "Abalathia's Spine/Azys Lla",
+    "zone_name": "Azys Lla",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 20010,
+    "name": "Perlite",
+    "description": "A strange, pearlescent volcanic rock that expands tenfold upon heating in a kiln or forge.",
+    "icon_id": 21463,
+    "node_id": 492,
+    "node_name": "Valley of the Fallen Rainbow",
+    "node_type": 1,
+    "node_coordinates": [
+      28.97,
+      6.71
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      20
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 33152,
+    "name": "Dacite",
+    "description": "A solid piece of cooled lava, its burning fury in a dormant state.",
+    "icon_id": 21458,
+    "node_id": 492,
+    "node_name": "Valley of the Fallen Rainbow",
+    "node_type": 1,
+    "node_coordinates": [
+      28.97,
+      6.71
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      20
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 12877,
+    "name": "Pearl Sprouts",
+    "description": "Tiny cabbage-like vegetables native to the highlands of Coerthas.",
+    "icon_id": 25208,
+    "node_id": 339,
+    "node_name": "Riversmeet",
+    "node_type": 3,
+    "node_coordinates": [
+      30.52,
+      17.69
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12882,
+    "name": "Coerthan Tea Leaves",
+    "description": "Considerably smaller than Thanalan tea leaves, more than double the amount of Ishgardian tea leaves are required to brew a single cup of tea.",
+    "icon_id": 25020,
+    "node_id": 339,
+    "node_name": "Riversmeet",
+    "node_type": 3,
+    "node_coordinates": [
+      30.52,
+      17.69
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12884,
+    "name": "Chives",
+    "description": "A thin green onion used in many Ishgardian dishes.",
+    "icon_id": 25035,
+    "node_id": 339,
+    "node_name": "Riversmeet",
+    "node_type": 3,
+    "node_coordinates": [
+      30.52,
+      17.69
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 13767,
+    "name": "Pearl Sprout Seeds",
+    "description": "Pearl sprout seeds suitable for garden cultivation.",
+    "icon_id": 27455,
+    "node_id": 339,
+    "node_name": "Riversmeet",
+    "node_type": 3,
+    "node_coordinates": [
+      30.52,
+      17.69
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 13768,
+    "name": "Coerthan Tea Seeds",
+    "description": "Coerthan tea seeds suitable for garden cultivation.",
+    "icon_id": 27451,
+    "node_id": 339,
+    "node_name": "Riversmeet",
+    "node_type": 3,
+    "node_coordinates": [
+      30.52,
+      17.69
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12896,
+    "name": "Old World Fig",
+    "description": "A symbol of long life and femininity, this autumn fruit was originally brought from their homeland to Eorzea by the Sharlayans.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25318,
+    "node_id": 340,
+    "node_name": "Chocobo Forest",
+    "node_type": 3,
+    "node_coordinates": [
+      25.76,
+      11.76
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 13765,
+    "name": "Old World Fig Seeds",
+    "description": "Old World fig seeds suitable for garden cultivation.",
+    "icon_id": 27457,
+    "node_id": 340,
+    "node_name": "Chocobo Forest",
+    "node_type": 3,
+    "node_coordinates": [
+      25.76,
+      11.76
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12899,
+    "name": "Porcini",
+    "description": "A large fragrant mushroom popular in Coerthan cuisine.",
+    "icon_id": 25401,
+    "node_id": 341,
+    "node_name": "Ohl Tahn",
+    "node_type": 2,
+    "node_coordinates": [
+      25.04,
+      7.02
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12943,
+    "name": "Dravanian Mistletoe",
+    "description": "A variety of parasitic plant found growing on trees in the Churning Mists.",
+    "icon_id": 25001,
+    "node_id": 341,
+    "node_name": "Ohl Tahn",
+    "node_type": 2,
+    "node_coordinates": [
+      25.04,
+      7.02
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12889,
+    "name": "Heavens Lemon",
+    "description": "Possibly due to the increased sunlight it receives growing above the clouds, heavens lemons lack the acidity of normal sun lemons.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25305,
+    "node_id": 342,
+    "node_name": "Vundu Ok' Bendu",
+    "node_type": 2,
+    "node_coordinates": [
+      35.49,
+      20.28
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12944,
+    "name": "Abalathian Mistletoe",
+    "description": "A variety of parasitic plant found growing on trees in the Sea of Clouds.",
+    "icon_id": 25001,
+    "node_id": 342,
+    "node_name": "Vundu Ok' Bendu",
+    "node_type": 2,
+    "node_coordinates": [
+      35.49,
+      20.28
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12897,
+    "name": "Cloud Banana",
+    "description": "Though it resembles a tree, cloud bananas actually grow from an oversized herb. That does not, however, make them any less sweet.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25319,
+    "node_id": 343,
+    "node_name": "The Ruling Quarter",
+    "node_type": 2,
+    "node_coordinates": [
+      14.65,
+      36.86
+    ],
+    "zone_id": 2001,
+    "zone_map": "Dravania/The Dravanian Hinterlands",
+    "zone_name": "The Dravanian Hinterlands",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12898,
+    "name": "Morel",
+    "description": "This rare mushroom with an oblong webbed cap is highly sought after by culinarians the realm over.",
+    "icon_id": 25408,
+    "node_id": 343,
+    "node_name": "The Ruling Quarter",
+    "node_type": 2,
+    "node_coordinates": [
+      14.65,
+      36.86
+    ],
+    "zone_id": 2001,
+    "zone_map": "Dravania/The Dravanian Hinterlands",
+    "zone_name": "The Dravanian Hinterlands",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 12900,
+    "name": "Chysahl Greens",
+    "description": "Though nearly identical in shape and color to gysahl greens, chysahl greens have a deeper, earthier flavor that chocobos (and man) seem to prefer.",
+    "icon_id": 25222,
+    "node_id": 344,
+    "node_name": "Twinpools",
+    "node_type": 3,
+    "node_coordinates": [
+      6.96,
+      8.73
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 4833,
+    "name": "Vanilla Beans",
+    "description": "A sweet-smelling spice made from the dried pod of the rare vanilla plant. It is often used in the making of confectionaries as well as medicines.",
+    "icon_id": 25014,
+    "node_id": 345,
+    "node_name": "Twinpools",
+    "node_type": 3,
+    "node_coordinates": [
+      21.33,
+      20.36
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 12903,
+    "name": "Dravanian Paprika",
+    "description": "A rare pepper that is more sweet than it is spicy.",
+    "icon_id": 25018,
+    "node_id": 345,
+    "node_name": "Twinpools",
+    "node_type": 3,
+    "node_coordinates": [
+      21.33,
+      20.36
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 14154,
+    "name": "Frost Cotton Boll",
+    "description": "A soft and fluffy variety of cotton named for its resemblance to morning hoarfrost.",
+    "icon_id": 25032,
+    "node_id": 345,
+    "node_name": "Twinpools",
+    "node_type": 3,
+    "node_coordinates": [
+      21.33,
+      20.36
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 20011,
+    "name": "Almandine",
+    "description": "A garnet-like mineral that, due to its extreme hardness, is used in grinding wheels.",
+    "icon_id": 21471,
+    "node_id": 494,
+    "node_name": "The High Bank",
+    "node_type": 0,
+    "node_coordinates": [
+      13.25,
+      27.39
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 33153,
+    "name": "Rhodolite",
+    "description": "A particularly radiant uncut gemstone.",
+    "icon_id": 21474,
+    "node_id": 494,
+    "node_name": "The High Bank",
+    "node_type": 0,
+    "node_coordinates": [
+      13.25,
+      27.39
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 12634,
+    "name": "Seventh Heaven",
+    "description": "A rare flower that has an elemental aspect tipped severely in the direction of astral.",
+    "icon_id": 22627,
+    "node_id": 347,
+    "node_name": "Greensward",
+    "node_type": 3,
+    "node_coordinates": [
+      16.29,
+      36.67
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 12902,
+    "name": "Honeydew Almonds",
+    "description": "A sweet variety of rare white almonds.",
+    "icon_id": 25017,
+    "node_id": 348,
+    "node_name": "The Gauntlet",
+    "node_type": 2,
+    "node_coordinates": [
+      21.16,
+      4.45
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 12904,
+    "name": "Snurbleberry",
+    "description": "This sweet, yet tart red berry is covered in tiny soft hairs that can be removed by lightly rubbing the fruit between one's palms.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25306,
+    "node_id": 349,
+    "node_name": "The Makers' Quarter",
+    "node_type": 3,
+    "node_coordinates": [
+      38.72,
+      22.79
+    ],
+    "zone_id": 2001,
+    "zone_map": "Dravania/The Dravanian Hinterlands",
+    "zone_name": "The Dravanian Hinterlands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 12587,
+    "name": "Wattle Bark",
+    "description": "This bark, when boiled down, produces large amounts of tannin─a substance used by leatherworkers to tan hides.",
+    "icon_id": 23001,
+    "node_id": 350,
+    "node_name": "Beta Quadrant",
+    "node_type": 2,
+    "node_coordinates": [
+      21.98,
+      7.38
+    ],
+    "zone_id": 2101,
+    "zone_map": "Abalathia's Spine/Azys Lla",
+    "zone_name": "Azys Lla",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 14957,
+    "name": "Old-growth Camphorwood Log",
+    "description": "A glance at a cross section of this log reveals that a mere glance isn't enough to count the hundreds, perhaps thousands, of rings present.",
+    "icon_id": 22414,
+    "node_id": 395,
+    "node_name": "Ohl Tahn",
+    "node_type": 2,
+    "node_coordinates": [
+      8.29,
+      7.99
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 15647,
+    "name": "Crystallized Sap",
+    "description": "Tree sap that has crystallized and hardened into a small cluster.",
+    "icon_id": 20018,
+    "node_id": 395,
+    "node_name": "Ohl Tahn",
+    "node_type": 2,
+    "node_coordinates": [
+      8.29,
+      7.99
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 20009,
+    "name": "Schorl",
+    "description": "A blackish mineral possibly containing trace amounts of the precious stone tourmaline.",
+    "icon_id": 21476,
+    "node_id": 496,
+    "node_name": "Ragill's Reckoning",
+    "node_type": 0,
+    "node_coordinates": [
+      34.77,
+      24.5
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      12
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 14151,
+    "name": "Smithsonite Ore",
+    "description": "This slightly lustrous ore is characterized by its extremely high zinc content.",
+    "icon_id": 21473,
+    "node_id": 397,
+    "node_name": "The Gauntlet",
+    "node_type": 0,
+    "node_coordinates": [
+      37.26,
+      13.09
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 15646,
+    "name": "Meteorite",
+    "description": "A glossy rock of sable black said to have fallen from the heavens.",
+    "icon_id": 21203,
+    "node_id": 397,
+    "node_name": "The Gauntlet",
+    "node_type": 0,
+    "node_coordinates": [
+      37.26,
+      13.09
+    ],
+    "zone_id": 2100,
+    "zone_map": "Abalathia's Spine/The Sea of Clouds",
+    "zone_name": "The Sea of Clouds",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32984,
+    "name": "Rarefied Reef Rock",
+    "description": "They say reef rock has been procured for restoration projects in a certain snowbound city. Perhaps this perfectly porous piece is destined for a structure of “holey” importance.<br><br>※For collectable submissions only.",
+    "icon_id": 21203,
+    "node_id": 766,
+    "node_name": "The Ondo Cups",
+    "node_type": 0,
+    "node_coordinates": [
+      32.73,
+      20.58
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32986,
+    "name": "Rarefied Tungsten Ore",
+    "description": "A truly precious find for one invested in the finest facets of tungsten-based fabrication.<br><br>※For collectable submissions only.",
+    "icon_id": 21203,
+    "node_id": 766,
+    "node_name": "The Ondo Cups",
+    "node_type": 0,
+    "node_coordinates": [
+      32.73,
+      20.58
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32987,
+    "name": "Rarefied Gyr Abanian Alumen",
+    "description": "“Well, tan my hide! You must have spent <span class=\"emphasis\">weeks</span> in the mountains of Eastern Aldenard looking for this stuff.” <br><br>※For collectable submissions only.",
+    "icon_id": 22644,
+    "node_id": 767,
+    "node_name": "Virdjala",
+    "node_type": 0,
+    "node_coordinates": [
+      31.59,
+      31.41
+    ],
+    "zone_id": 2406,
+    "zone_map": "Gyr Abania/The Fringes",
+    "zone_name": "The Fringes",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32992,
+    "name": "Rarefied Dark Chestnut Sap",
+    "description": "Rather than experiment with amusing applications for this superior sticky substance, it's perhaps best to relinquish it to a tree sap professional.<br><br>※For collectable submissions only.",
+    "icon_id": 22654,
+    "node_id": 768,
+    "node_name": "The Smoldering Wastes",
+    "node_type": 2,
+    "node_coordinates": [
+      28.48,
+      29.4
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32993,
+    "name": "Rarefied Dark Chestnut Log",
+    "description": "Gazing upon this rough-cut log, you cannot help but wonder if its lustrous lumber is destined for a valiant knight's lance or a bilge-bottomed buccaneer's bar stool. Anyone's guess, really.<br><br>※For collectable submissions only.",
+    "icon_id": 22420,
+    "node_id": 768,
+    "node_name": "The Smoldering Wastes",
+    "node_type": 2,
+    "node_coordinates": [
+      28.48,
+      29.4
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32994,
+    "name": "Rarefied Dark Chestnut Branch",
+    "description": "“Aye, 'twould make a fine sentinel's longbow. But see, I have this prior commission to craft a fishing rod. N-No, that's not my penmanship!”<br><br>※For collectable submissions only.",
+    "icon_id": 22416,
+    "node_id": 768,
+    "node_name": "The Smoldering Wastes",
+    "node_type": 2,
+    "node_coordinates": [
+      28.48,
+      29.4
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32995,
+    "name": "Rarefied Dark Chestnut",
+    "description": "A champion among chestnuts, predestined for the summit of a Sohm Al tart.<br><br>※For collectable submissions only.",
+    "icon_id": 25302,
+    "node_id": 769,
+    "node_name": "Avalonia Fallen",
+    "node_type": 2,
+    "node_coordinates": [
+      14.74,
+      36.15
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32996,
+    "name": "Rarefied Dark Chestnut Resin",
+    "description": "The viscous lifeblood you extracted from a vigorous yet defenseless chestnut tree. You monster.<br><br>※For collectable submissions only.",
+    "icon_id": 22674,
+    "node_id": 769,
+    "node_name": "Avalonia Fallen",
+    "node_type": 2,
+    "node_coordinates": [
+      14.74,
+      36.15
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19937,
+    "name": "Torreya Branch",
+    "description": "The thick branch of a torreya tree.",
+    "icon_id": 22416,
+    "node_id": 515,
+    "node_name": "The Queen's Gardens",
+    "node_type": 2,
+    "node_coordinates": [
+      31.07,
+      26.97
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 16724,
+    "name": "Tungstite",
+    "description": "A bright-yellow mineral formed by the weathering of scheelite.",
+    "icon_id": 21209,
+    "node_id": 289,
+    "node_name": "Twinpools",
+    "node_type": 0,
+    "node_coordinates": [
+      8.54,
+      7.72
+    ],
+    "zone_id": 2200,
+    "zone_map": "Coerthas/Coerthas Western Highlands",
+    "zone_name": "Coerthas Western Highlands",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 16726,
+    "name": "Zeolite Ore",
+    "description": "A porous silicate that adsorbs poisons, making it invaluable in myriad alchemical and medical concoctions.",
+    "icon_id": 21210,
+    "node_id": 290,
+    "node_name": "The Ruling Quarter",
+    "node_type": 1,
+    "node_coordinates": [
+      15.18,
+      29.61
+    ],
+    "zone_id": 2001,
+    "zone_map": "Dravania/The Dravanian Hinterlands",
+    "zone_name": "The Dravanian Hinterlands",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 16725,
+    "name": "Luminium Ore",
+    "description": "A decent-sized piece of rock containing the precious metal luminium.",
+    "icon_id": 21227,
+    "node_id": 291,
+    "node_name": "Alpha Quadrant",
+    "node_type": 0,
+    "node_coordinates": [
+      3.5,
+      14.95
+    ],
+    "zone_id": 2101,
+    "zone_map": "Abalathia's Spine/Azys Lla",
+    "zone_name": "Azys Lla",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 5392,
+    "name": "Teak Log",
+    "description": "A rough-cut log of teak timber.",
+    "icon_id": 22403,
+    "node_id": 292,
+    "node_name": "The Answering Quarter",
+    "node_type": 2,
+    "node_coordinates": [
+      5.84,
+      27.32
+    ],
+    "zone_id": 2001,
+    "zone_map": "Dravania/The Dravanian Hinterlands",
+    "zone_name": "The Dravanian Hinterlands",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 16721,
+    "name": "Star Cotton Boll",
+    "description": "A rare variety of cotton which produces nitid fibers that, when struck by light, coruscate like the very stars in the heavens.",
+    "icon_id": 25032,
+    "node_id": 293,
+    "node_name": "Delta Quadrant",
+    "node_type": 3,
+    "node_coordinates": [
+      6.16,
+      29.55
+    ],
+    "zone_id": 2101,
+    "zone_map": "Abalathia's Spine/Azys Lla",
+    "zone_name": "Azys Lla",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 16722,
+    "name": "Brown Mushroom",
+    "description": "An earthen fungus that can commonly be found sprouting beneath trees growing in the Churning Mists.",
+    "icon_id": 25405,
+    "node_id": 299,
+    "node_name": "Greensward",
+    "node_type": 2,
+    "node_coordinates": [
+      8.67,
+      37.89
+    ],
+    "zone_id": 2002,
+    "zone_map": "Dravania/The Churning Mists",
+    "zone_name": "The Churning Mists",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 16723,
+    "name": "Noble Sage",
+    "description": "A fragrant herb used in medicines, perfumes, and cooking. Its deep blue flowers set it apart from its cousin, clary sage.",
+    "icon_id": 25002,
+    "node_id": 301,
+    "node_name": "Chocobo Forest",
+    "node_type": 3,
+    "node_coordinates": [
+      34.31,
+      28.22
+    ],
+    "zone_id": 2000,
+    "zone_map": "Dravania/The Dravanian Forelands",
+    "zone_name": "The Dravanian Forelands",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 19968,
+    "name": "Raw Triphane",
+    "description": "An uncut, unpolished stone containing what appears to be triphane.",
+    "icon_id": 21474,
+    "node_id": 497,
+    "node_name": "The Striped Hills",
+    "node_type": 0,
+    "node_coordinates": [
+      25.26,
+      8.29
+    ],
+    "zone_id": 2406,
+    "zone_map": "Gyr Abania/The Fringes",
+    "zone_name": "The Fringes",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19970,
+    "name": "Raw Star Spinel",
+    "description": "An uncut, unpolished stone containing what appears to be star spinel.",
+    "icon_id": 21475,
+    "node_id": 498,
+    "node_name": "East Othard Coastline",
+    "node_type": 0,
+    "node_coordinates": [
+      14.91,
+      5.04
+    ],
+    "zone_id": 2409,
+    "zone_map": "Othard/The Ruby Sea",
+    "zone_name": "The Ruby Sea",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19973,
+    "name": "Raw Rhodonite",
+    "description": "An uncut, unpolished stone containing what appears to be rhodonite.",
+    "icon_id": 21471,
+    "node_id": 499,
+    "node_name": "Rustrock",
+    "node_type": 0,
+    "node_coordinates": [
+      27.01,
+      12.61
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 17944,
+    "name": "Pummelite",
+    "description": "This oddly named ore was dubbed such by early Gyr Abanian settlers who believed the chunks of colorful mineral to be pieces of a larger rock shattered by a single blow of the Destroyer's fist.<br><br>※Not included in the gathering log.",
+    "icon_id": 21209,
+    "node_id": 499,
+    "node_name": "Rustrock",
+    "node_type": 0,
+    "node_coordinates": [
+      27.01,
+      12.61
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19972,
+    "name": "Raw Imperial Jade",
+    "description": "An uncut, unpolished stone containing what appears to be imperial jade.",
+    "icon_id": 21252,
+    "node_id": 500,
+    "node_name": "Valley of the Fallen Rainbow",
+    "node_type": 0,
+    "node_coordinates": [
+      29.87,
+      9.35
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19971,
+    "name": "Raw Azurite",
+    "description": "An uncut, unpolished stone containing what appears to be azurite.",
+    "icon_id": 21472,
+    "node_id": 501,
+    "node_name": "The Towering Still",
+    "node_type": 0,
+    "node_coordinates": [
+      4.94,
+      29.55
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19907,
+    "name": "Ala Mhigan Salt Crystal",
+    "description": "These pinkish crystals grow naturally on the shores of Loch Seld.",
+    "icon_id": 22617,
+    "node_id": 502,
+    "node_name": "Loch Seld",
+    "node_type": 1,
+    "node_coordinates": [
+      21.2,
+      28.95
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19959,
+    "name": "Chromite Ore",
+    "description": "A decent-sized piece of rock containing the metal chromium.",
+    "icon_id": 21205,
+    "node_id": 503,
+    "node_name": "Wightrock",
+    "node_type": 0,
+    "node_coordinates": [
+      15.93,
+      33.95
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 21085,
+    "name": "Gyr Abanian Spring Water",
+    "description": "Cold, clear mountain water harvested from hidden springs located in the highlands of Gyr Abania.",
+    "icon_id": 22614,
+    "node_id": 503,
+    "node_name": "Wightrock",
+    "node_type": 0,
+    "node_coordinates": [
+      15.93,
+      33.95
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 19958,
+    "name": "Palladium Ore",
+    "description": "A decent-sized piece of rock containing the metal palladium.",
+    "icon_id": 21217,
+    "node_id": 504,
+    "node_name": "Doma",
+    "node_type": 0,
+    "node_coordinates": [
+      20.46,
+      9.71
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 19916,
+    "name": "Windtea Leaves",
+    "description": "When steeped in boiling water, the leaves of this rare perennial change color, turning a bright bluish green.",
+    "icon_id": 25022,
+    "node_id": 518,
+    "node_name": "The Glittering Basin",
+    "node_type": 3,
+    "node_coordinates": [
+      32.09,
+      26.69
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      16
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 33151,
+    "name": "Countess Tea Leaves",
+    "description": "Once consumed exclusively by the upper classes but now available to the hoi polloi.",
+    "icon_id": 25015,
+    "node_id": 518,
+    "node_name": "The Glittering Basin",
+    "node_type": 3,
+    "node_coordinates": [
+      32.09,
+      26.69
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      16
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 20012,
+    "name": "Doman Yellow",
+    "description": "A soft, clay-like soil believed to be formed of compacted yellow dust carried on the wind from faraway lands.",
+    "icon_id": 27407,
+    "node_id": 520,
+    "node_name": "Nhaama's Retreat",
+    "node_type": 3,
+    "node_coordinates": [
+      25.74,
+      29.85
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      8
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 19860,
+    "name": "Bamboo Shoot",
+    "description": "If removed from the ground when less than a fulm in length, bamboo shoots can be peeled and the fleshy interior eaten. A popular ingredient in Far Eastern stews and stir-fries.",
+    "icon_id": 25229,
+    "node_id": 522,
+    "node_name": "The Glittering Basin",
+    "node_type": 2,
+    "node_coordinates": [
+      28.83,
+      25.58
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19852,
+    "name": "Othardian Plum",
+    "description": "A greenish pink plum common across the eastern continent of Othard.<br><br><span class=\"highlight-green\">EXP Bonus:</span> +3% <span class=\"highlight-green\">Duration:</span> 30m<br>(Duration can be extended to 60m by consuming multiple servings)",
+    "icon_id": 25311,
+    "node_id": 523,
+    "node_name": "Onsal Hakair",
+    "node_type": 2,
+    "node_coordinates": [
+      27.19,
+      16.29
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19918,
+    "name": "Hallowed Basil",
+    "description": "A herb with an aroma so heavenly, the gods themselves must have blessed it (or so say merchants who would see you buy their stock).",
+    "icon_id": 25010,
+    "node_id": 524,
+    "node_name": "Rustrock",
+    "node_type": 3,
+    "node_coordinates": [
+      24.08,
+      16.56
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19865,
+    "name": "Lotus Root",
+    "description": "Though they appear solid from the outside, the cylindrical root nodules of the lotus flower are riddled with holes, possibly to accommodate for the waterlogged environments in which the plant grows.",
+    "icon_id": 25226,
+    "node_id": 525,
+    "node_name": "Valley of the Fallen Rainbow",
+    "node_type": 3,
+    "node_coordinates": [
+      28.09,
+      7.79
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19857,
+    "name": "Jhammel Ginger",
+    "description": "Jhammel ginger's bulbous, aromatic roots can be sliced fresh and added to stews and seafood dishes to remove gaminess, ground and steeped in hot water to cure head colds, or dried and ground into a powder to use as a spice for breads and cookies.",
+    "icon_id": 25012,
+    "node_id": 526,
+    "node_name": "Abalathia's Skull",
+    "node_type": 3,
+    "node_coordinates": [
+      6.87,
+      8.99
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 17948,
+    "name": "Rhalgr's Streak",
+    "description": "Also known as Rhalgr's staff, this long-leafed medicinal herb is native to the highlands of Gyr Abania.<br><br>※Not included in the gathering log.",
+    "icon_id": 25507,
+    "node_id": 526,
+    "node_name": "Abalathia's Skull",
+    "node_type": 3,
+    "node_coordinates": [
+      6.87,
+      8.99
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 19934,
+    "name": "Torreya Log",
+    "description": "A rough-cut log of torreya timber.",
+    "icon_id": 22405,
+    "node_id": 527,
+    "node_name": "The High Bank",
+    "node_type": 2,
+    "node_coordinates": [
+      11.89,
+      12.73
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 19991,
+    "name": "Rhea",
+    "description": "A variety of ramie better suited to the climes of Far Eastern Othard.",
+    "icon_id": 21651,
+    "node_id": 528,
+    "node_name": "Onsal Hakair",
+    "node_type": 3,
+    "node_coordinates": [
+      19.72,
+      9.79
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 21086,
+    "name": "Azim Cotton Boll",
+    "description": "The white of Azim cotton is so bright that some compare it to staring at the sun itself.",
+    "icon_id": 25037,
+    "node_id": 528,
+    "node_name": "Onsal Hakair",
+    "node_type": 3,
+    "node_coordinates": [
+      19.72,
+      9.79
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 22417,
+    "name": "Nightsteel Ore",
+    "description": "Iron ore that has been exposed to the waters of a mineral spring, and undergone significant changes to both color and chemical makeup.",
+    "icon_id": 21203,
+    "node_id": 535,
+    "node_name": "East Othard Coastline",
+    "node_type": 0,
+    "node_coordinates": [
+      10.93,
+      22.56
+    ],
+    "zone_id": 2409,
+    "zone_map": "Othard/The Ruby Sea",
+    "zone_name": "The Ruby Sea",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 23179,
+    "name": "Hawk's Eye",
+    "description": "A blue-grey jewel consisting of many colored layers. When polished, it resembles the piercing eye of a raptor.",
+    "icon_id": 21228,
+    "node_id": 535,
+    "node_name": "East Othard Coastline",
+    "node_type": 0,
+    "node_coordinates": [
+      10.93,
+      22.56
+    ],
+    "zone_id": 2409,
+    "zone_map": "Othard/The Ruby Sea",
+    "zone_name": "The Ruby Sea",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 22418,
+    "name": "Silvergrace Ore",
+    "description": "A sizable piece of rock containing traces of a precious metal known as silvergrace.",
+    "icon_id": 21213,
+    "node_id": 536,
+    "node_name": "Nhaama's Retreat",
+    "node_type": 0,
+    "node_coordinates": [
+      24.14,
+      37.22
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 24255,
+    "name": "Azim Spring Water",
+    "description": "Water of uncommon clarity sourced from underground springs on the Azim Steppe.",
+    "icon_id": 22678,
+    "node_id": 536,
+    "node_name": "Nhaama's Retreat",
+    "node_type": 0,
+    "node_coordinates": [
+      24.14,
+      37.22
+    ],
+    "zone_id": 2411,
+    "zone_map": "Othard/The Azim Steppe",
+    "zone_name": "The Azim Steppe",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 22419,
+    "name": "Black Willow Log",
+    "description": "A rough-cut log of black willow timber.",
+    "icon_id": 22402,
+    "node_id": 537,
+    "node_name": "Pike Falls",
+    "node_type": 2,
+    "node_coordinates": [
+      14.89,
+      21.24
+    ],
+    "zone_id": 2406,
+    "zone_map": "Gyr Abania/The Fringes",
+    "zone_name": "The Fringes",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 23180,
+    "name": "Hardened Veteran Tree Sap",
+    "description": "A partially congealed ball of sticky sap extracted from an aged tree.",
+    "icon_id": 22638,
+    "node_id": 537,
+    "node_name": "Pike Falls",
+    "node_type": 2,
+    "node_coordinates": [
+      14.89,
+      21.24
+    ],
+    "zone_id": 2406,
+    "zone_map": "Gyr Abania/The Fringes",
+    "zone_name": "The Fringes",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 22420,
+    "name": "Hingan Flax",
+    "description": "A distant cousin to the flax found in the highlands of Coerthas, the stalk of this fibrous plant is used to create a yarn known in Hingashi as “true linen.”",
+    "icon_id": 21673,
+    "node_id": 538,
+    "node_name": "Mount Yorn",
+    "node_type": 3,
+    "node_coordinates": [
+      24.74,
+      36.11
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 24240,
+    "name": "Gyr Abanian Ore",
+    "description": "A naturally occurring chunk of lodestone.",
+    "icon_id": 21216,
+    "node_id": 555,
+    "node_name": "Virdjala",
+    "node_type": 0,
+    "node_coordinates": [
+      27.37,
+      30.25
+    ],
+    "zone_id": 2406,
+    "zone_map": "Gyr Abania/The Fringes",
+    "zone_name": "The Fringes",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 24241,
+    "name": "Evergleam Ore",
+    "description": "A decent-sized piece of rock containing a rare natural alloy of iron and chromium.",
+    "icon_id": 21223,
+    "node_id": 556,
+    "node_name": "Loch Seld",
+    "node_type": 0,
+    "node_coordinates": [
+      21.76,
+      13.53
+    ],
+    "zone_id": 2408,
+    "zone_map": "Gyr Abania/The Lochs",
+    "zone_name": "The Lochs",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 24242,
+    "name": "Urunday Log",
+    "description": "A rough-cut log of urunday timber.",
+    "icon_id": 22420,
+    "node_id": 557,
+    "node_name": "Rustrock",
+    "node_type": 2,
+    "node_coordinates": [
+      33.37,
+      10.63
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 24243,
+    "name": "Yanxian Cotton Boll",
+    "description": "These whimsical cotton flowers, found only in Yanxia, glimmer faintly like stars in the night.",
+    "icon_id": 21652,
+    "node_id": 558,
+    "node_name": "The Glittering Basin",
+    "node_type": 3,
+    "node_coordinates": [
+      28.35,
+      35.37
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 27805,
+    "name": "Gale Rock",
+    "description": "As the name suggests, this variety of stone is more strongly aspected than typical wind rock.",
+    "icon_id": 21473,
+    "node_id": 597,
+    "node_name": "The K'mul Astropolis",
+    "node_type": 0,
+    "node_coordinates": [
+      22.48,
+      11.87
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 13,
+    "name": "Water Crystal",
+    "description": "A crystalline manifestation of aetheric water energy.",
+    "icon_id": 20008,
+    "node_id": 597,
+    "node_name": "The K'mul Astropolis",
+    "node_type": 0,
+    "node_coordinates": [
+      22.48,
+      11.87
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 27806,
+    "name": "Solarite",
+    "description": "A deceptively plain stone that, when cracked, momentarily erupts with bright light.",
+    "icon_id": 21467,
+    "node_id": 599,
+    "node_name": "The Exarch Gate",
+    "node_type": 0,
+    "node_coordinates": [
+      35.47,
+      30.57
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      8
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 27807,
+    "name": "Shade Quartz",
+    "description": "Several small pieces of dark unpolished quartz.",
+    "icon_id": 21462,
+    "node_id": 601,
+    "node_name": "Komra",
+    "node_type": 1,
+    "node_coordinates": [
+      33.01,
+      18.54
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      16
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 27726,
+    "name": "Raw Hematite",
+    "description": "An uncut, unpolished stone containing what appears to be hematite.",
+    "icon_id": 21476,
+    "node_id": 603,
+    "node_name": "Governor's Row",
+    "node_type": 0,
+    "node_coordinates": [
+      33.97,
+      23.22
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27727,
+    "name": "Raw Diaspore",
+    "description": "An uncut, unpolished stone containing what appears to be diaspore.",
+    "icon_id": 21473,
+    "node_id": 604,
+    "node_name": "Sextuplet Shallow",
+    "node_type": 0,
+    "node_coordinates": [
+      26.48,
+      13.29
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27728,
+    "name": "Raw Lazurite",
+    "description": "An uncut, unpolished stone containing what appears to be lazurite.",
+    "icon_id": 21472,
+    "node_id": 605,
+    "node_name": "Cleric",
+    "node_type": 0,
+    "node_coordinates": [
+      19.76,
+      20.54
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27729,
+    "name": "Raw Triplite",
+    "description": "An uncut, unpolished stone containing what appears to be triplite.",
+    "icon_id": 21471,
+    "node_id": 606,
+    "node_name": "Ladle",
+    "node_type": 0,
+    "node_coordinates": [
+      20.0,
+      28.99
+    ],
+    "zone_id": 2955,
+    "zone_map": "Norvrandt/Amh Araeng",
+    "zone_name": "Amh Araeng",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27730,
+    "name": "Raw Petalite",
+    "description": "An uncut, unpolished stone containing what appears to be petalite.",
+    "icon_id": 21477,
+    "node_id": 607,
+    "node_name": "Weed",
+    "node_type": 0,
+    "node_coordinates": [
+      28.17,
+      33.21
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27731,
+    "name": "Raw Onyx",
+    "description": "An uncut, unpolished stone containing what appears to be onyx.",
+    "icon_id": 21231,
+    "node_id": 608,
+    "node_name": "The Caliban Gorge",
+    "node_type": 0,
+    "node_coordinates": [
+      15.99,
+      21.64
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27705,
+    "name": "Prismstone",
+    "description": "This peculiar type of stone shines with all the colors of the rainbow.",
+    "icon_id": 21232,
+    "node_id": 609,
+    "node_name": "Saint Fathric's Temple",
+    "node_type": 0,
+    "node_coordinates": [
+      30.59,
+      20.62
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 28717,
+    "name": "Beryllium Ore",
+    "description": "A decent-sized piece of rock containing the precious metal beryllium.",
+    "icon_id": 21455,
+    "node_id": 609,
+    "node_name": "Saint Fathric's Temple",
+    "node_type": 0,
+    "node_coordinates": [
+      30.59,
+      20.62
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 27704,
+    "name": "Tungsten Ore",
+    "description": "A decent-sized piece of rock containing the metal tungsten.",
+    "icon_id": 21203,
+    "node_id": 610,
+    "node_name": "Where the Dry Return",
+    "node_type": 0,
+    "node_coordinates": [
+      32.85,
+      7.69
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 27810,
+    "name": "Bog Sage",
+    "description": "The azure flowers of this plant brighten the landscape when in bloom, but its true value is in its leaves.",
+    "icon_id": 25009,
+    "node_id": 622,
+    "node_name": "The Bridges",
+    "node_type": 3,
+    "node_coordinates": [
+      31.65,
+      36.55
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      12
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 27809,
+    "name": "Sweet Marjoram",
+    "description": "A herb cultivated for both its medicinal uses and pleasant fragrance.",
+    "icon_id": 25015,
+    "node_id": 624,
+    "node_name": "The K'mul Astropolis",
+    "node_type": 3,
+    "node_coordinates": [
+      22.52,
+      13.11
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 27808,
+    "name": "White Clay",
+    "description": "Crumbly balls of white clay added to soil to improve both moisture retention and drainage.",
+    "icon_id": 22610,
+    "node_id": 626,
+    "node_name": "Tomra",
+    "node_type": 3,
+    "node_coordinates": [
+      18.66,
+      7.77
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      20
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 27833,
+    "name": "Broad Beans",
+    "description": "These large, spring green beans are easy to cultivate, and have served as a staple food for millennia.",
+    "icon_id": 25353,
+    "node_id": 628,
+    "node_name": "Phisor Lran",
+    "node_type": 3,
+    "node_coordinates": [
+      24.88,
+      36.83
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27836,
+    "name": "Peppermint",
+    "description": "This refreshing herb is suitable for use in cooking, essential oils, and tea.",
+    "icon_id": 25016,
+    "node_id": 629,
+    "node_name": "Embrasure",
+    "node_type": 3,
+    "node_coordinates": [
+      26.28,
+      20.68
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27822,
+    "name": "Russet Popoto",
+    "description": "An easy-to-peel variety of popoto with thin skin and a high starch content.",
+    "icon_id": 25204,
+    "node_id": 630,
+    "node_name": "The Dragging Tail",
+    "node_type": 3,
+    "node_coordinates": [
+      19.34,
+      16.92
+    ],
+    "zone_id": 2955,
+    "zone_map": "Norvrandt/Amh Araeng",
+    "zone_name": "Amh Araeng",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27828,
+    "name": "Mist Spinach",
+    "description": "A highly nutritious, deep-green vegetable.",
+    "icon_id": 25206,
+    "node_id": 631,
+    "node_name": "Bowrest",
+    "node_type": 3,
+    "node_coordinates": [
+      34.73,
+      21.56
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27835,
+    "name": "Lemonette",
+    "description": "A tiny lemon replete with sour juice.",
+    "icon_id": 25305,
+    "node_id": 632,
+    "node_name": "Sharptongue Drip",
+    "node_type": 2,
+    "node_coordinates": [
+      20.12,
+      27.35
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 27688,
+    "name": "Sandalwood Log",
+    "description": "A rough-cut log of sandalwood timber.",
+    "icon_id": 22401,
+    "node_id": 633,
+    "node_name": "Mjrl's Regret",
+    "node_type": 2,
+    "node_coordinates": [
+      24.74,
+      36.94
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 28716,
+    "name": "Sandalwood Sap",
+    "description": "A partially congealed ball of sticky sap extracted from a sandalwood tree.",
+    "icon_id": 22638,
+    "node_id": 633,
+    "node_name": "Mjrl's Regret",
+    "node_type": 2,
+    "node_coordinates": [
+      24.74,
+      36.94
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 27761,
+    "name": "Ethereal Cocoon",
+    "description": "As difficult to lay hands upon as bubbles on the water, from these cocoons can be spun a rare type of silk. ",
+    "icon_id": 21661,
+    "node_id": 634,
+    "node_name": "Inviolate Witness",
+    "node_type": 3,
+    "node_coordinates": [
+      26.48,
+      10.11
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 30486,
+    "name": "Brashgold Ore",
+    "description": "A decent-sized piece of rock rich in a highly durable, naturally occurring alloy.",
+    "icon_id": 21227,
+    "node_id": 681,
+    "node_name": "The Isle of Ken",
+    "node_type": 0,
+    "node_coordinates": [
+      4.74,
+      34.01
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 29968,
+    "name": "Fireheart Cobalt",
+    "description": "Seasoned miners will recognize this as a type of sulfide, its composition lending its surface a permanent sheen that makes it look like a glowing ember in the light.",
+    "icon_id": 21227,
+    "node_id": 681,
+    "node_name": "The Isle of Ken",
+    "node_type": 0,
+    "node_coordinates": [
+      4.74,
+      34.01
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 29970,
+    "name": "Purpure Shell Chip",
+    "description": "A shiny piece of Purpure carapace.",
+    "icon_id": 21469,
+    "node_id": 682,
+    "node_name": "Purpure",
+    "node_type": 1,
+    "node_coordinates": [
+      34.45,
+      31.43
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 29972,
+    "name": "Merbau Log",
+    "description": "A rough-cut log of merbau timber, bearing the wood's distinctive scent.",
+    "icon_id": 22423,
+    "node_id": 683,
+    "node_name": "Anden's Airs",
+    "node_type": 2,
+    "node_coordinates": [
+      36.53,
+      27.43
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 30485,
+    "name": "Tender Dill",
+    "description": "A small variety of dill characterized by its sweet fragrance. Finds use in both medicinal and culinary applications.",
+    "icon_id": 25036,
+    "node_id": 684,
+    "node_name": "White Oil Falls",
+    "node_type": 3,
+    "node_coordinates": [
+      28.45,
+      21.18
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 29978,
+    "name": "Imperial Fern",
+    "description": "Presumably named by one of history's many oppressed lower classes, this fern's appellation cannot but refer to the pretentious way in which it curls.",
+    "icon_id": 25038,
+    "node_id": 684,
+    "node_name": "White Oil Falls",
+    "node_type": 3,
+    "node_coordinates": [
+      28.45,
+      21.18
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32997,
+    "name": "Rarefied Larch Log",
+    "description": "You wonder if the fact that “larch log” is fun to say has anything to do with its inherent collectability.<br><br>※For collectable submissions only.",
+    "icon_id": 22403,
+    "node_id": 770,
+    "node_name": "Isari",
+    "node_type": 2,
+    "node_coordinates": [
+      5.96,
+      15.77
+    ],
+    "zone_id": 2409,
+    "zone_map": "Othard/The Ruby Sea",
+    "zone_name": "The Ruby Sea",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32999,
+    "name": "Rarefied Larch Sap",
+    "description": "Larch...sap. No, not nearly so fun to say as “larch log” but apparently just as collectable.<br><br>※For collectable submissions only.",
+    "icon_id": 22642,
+    "node_id": 770,
+    "node_name": "Isari",
+    "node_type": 2,
+    "node_coordinates": [
+      5.96,
+      15.77
+    ],
+    "zone_id": 2409,
+    "zone_map": "Othard/The Ruby Sea",
+    "zone_name": "The Ruby Sea",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 32998,
+    "name": "Rarefied Shiitake Mushroom",
+    "description": "Only the finest fungi are foraged for fancy Far Eastern feast tables.<br><br>※For collectable submissions only.",
+    "icon_id": 25401,
+    "node_id": 771,
+    "node_name": "Shoal Rock",
+    "node_type": 2,
+    "node_coordinates": [
+      33.11,
+      9.23
+    ],
+    "zone_id": 2409,
+    "zone_map": "Othard/The Ruby Sea",
+    "zone_name": "The Ruby Sea",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33000,
+    "name": "Rarefied Pine Resin",
+    "description": "Unsurprisingly, this exceptionally gooey mass is a prime ingredient in certain beetle-based adhesives.<br><br>※For collectable submissions only.",
+    "icon_id": 22638,
+    "node_id": 772,
+    "node_name": "Doma",
+    "node_type": 2,
+    "node_coordinates": [
+      18.7,
+      14.37
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33001,
+    "name": "Rarefied Pine Log",
+    "description": "Almost unnaturally straight and true, this log will hopefully be processed into lumber for a future masterpiece of carpentry...and not thrown into some chilly lordling's fireplace.<br><br>※For collectable submissions only.",
+    "icon_id": 22414,
+    "node_id": 772,
+    "node_name": "Doma",
+    "node_type": 2,
+    "node_coordinates": [
+      18.7,
+      14.37
+    ],
+    "zone_id": 2410,
+    "zone_map": "Othard/Yanxia",
+    "zone_name": "Yanxia",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33002,
+    "name": "Rarefied Pixie Apple",
+    "description": "One bite of this almost unbearably sweet fruit will have you flitting about like a pollen-drunk pixie.<br><br>※For collectable submissions only.",
+    "icon_id": 25308,
+    "node_id": 773,
+    "node_name": "The Woolen Way",
+    "node_type": 2,
+    "node_coordinates": [
+      4.04,
+      23.12
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33004,
+    "name": "Rarefied Miracle Apple Log",
+    "description": "The real miracle here is that any of these trees were left standing after a sudden and inexplicable surge in the demand for applewood staves.<br><br>※For collectable submissions only.",
+    "icon_id": 22404,
+    "node_id": 773,
+    "node_name": "The Woolen Way",
+    "node_type": 2,
+    "node_coordinates": [
+      4.04,
+      23.12
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33003,
+    "name": "Rarefied White Oak Log",
+    "description": "A difficult material to work with, any artisan would nevertheless be eager to craft an enduring handle or lasting piece of furniture from this marvelous hunk of hardwood.<br><br>※For collectable submissions only.",
+    "icon_id": 22407,
+    "node_id": 774,
+    "node_name": "The Chisel",
+    "node_type": 2,
+    "node_coordinates": [
+      27.95,
+      32.79
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33005,
+    "name": "Rarefied Sandteak Log",
+    "description": "After being carved and then covered with exquisitely woven wool, this attractive lump of timber could serve as the elegant display stand for some staggeringly expensive─and rarely worn─neckwear.<br><br>※For collectable submissions only.",
+    "icon_id": 22403,
+    "node_id": 775,
+    "node_name": "The Central Hills of Amber",
+    "node_type": 2,
+    "node_coordinates": [
+      18.6,
+      20.52
+    ],
+    "zone_id": 2955,
+    "zone_map": "Norvrandt/Amh Araeng",
+    "zone_name": "Amh Araeng",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33007,
+    "name": "Rarefied Amber Cloves",
+    "description": "Once dried and enshrined in a sturdy jar, these flavorsome flower buds will take pride of place on a master chef's spice shelf.<br><br>※For collectable submissions only.",
+    "icon_id": 25023,
+    "node_id": 775,
+    "node_name": "The Central Hills of Amber",
+    "node_type": 2,
+    "node_coordinates": [
+      18.6,
+      20.52
+    ],
+    "zone_id": 2955,
+    "zone_map": "Norvrandt/Amh Araeng",
+    "zone_name": "Amh Araeng",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33006,
+    "name": "Rarefied Kelp",
+    "description": "“Yes, an oriental breakfast is generally a simple affair, but that doesn't mean one should settle for any old seaweed in the sea.”<br><br>※For collectable submissions only.",
+    "icon_id": 25225,
+    "node_id": 776,
+    "node_name": "The Norvrandt Slope",
+    "node_type": 2,
+    "node_coordinates": [
+      37.5,
+      11.63
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33008,
+    "name": "Rarefied Coral",
+    "description": "“This is it! The perfect piece of coral to complement my perfect coral butterfly. My aquarium is complete!”<br><br>※For collectable submissions only.",
+    "icon_id": 29062,
+    "node_id": 776,
+    "node_name": "The Norvrandt Slope",
+    "node_type": 2,
+    "node_coordinates": [
+      37.5,
+      11.63
+    ],
+    "zone_id": 2958,
+    "zone_map": "Norvrandt/The Tempest",
+    "zone_name": "The Tempest",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 33009,
+    "name": "Rarefied Urunday Log",
+    "description": "Compared to your average cut of timber, the quality of this log is the difference between urunight and urunday.<br><br>※For collectable submissions only.",
+    "icon_id": 22420,
+    "node_id": 777,
+    "node_name": "Heather Falls",
+    "node_type": 2,
+    "node_coordinates": [
+      30.61,
+      6.85
+    ],
+    "zone_id": 2407,
+    "zone_map": "Gyr Abania/The Peaks",
+    "zone_name": "The Peaks",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 29976,
+    "name": "Ashen Alumen",
+    "description": "Unusually dark-hued alumen.",
+    "icon_id": 22604,
+    "node_id": 713,
+    "node_name": "Mount Biran Mines",
+    "node_type": 1,
+    "node_coordinates": [
+      20.18,
+      8.61
+    ],
+    "zone_id": 2955,
+    "zone_map": "Norvrandt/Amh Araeng",
+    "zone_name": "Amh Araeng",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 29974,
+    "name": "Duskblooms",
+    "description": "A flowering plant with tiny purple blooms.",
+    "icon_id": 25022,
+    "node_id": 714,
+    "node_name": "The Nabaath Severance",
+    "node_type": 3,
+    "node_coordinates": [
+      32.25,
+      33.55
+    ],
+    "zone_id": 2955,
+    "zone_map": "Norvrandt/Amh Araeng",
+    "zone_name": "Amh Araeng",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32955,
+    "name": "Hard Water",
+    "description": "To the layman, hard water may sound like a convoluted way to say “ice,” but experts would disagree. In any case, it is at least soft enough to be poured into and out of a bottle.",
+    "icon_id": 22689,
+    "node_id": 758,
+    "node_name": "The Duergar's Tewel",
+    "node_type": 0,
+    "node_coordinates": [
+      36.19,
+      12.29
+    ],
+    "zone_id": 2954,
+    "zone_map": "Norvrandt/Kholusia",
+    "zone_name": "Kholusia",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32952,
+    "name": "Solstice Stone",
+    "description": "A mysterious crystal of purest white.",
+    "icon_id": 21232,
+    "node_id": 759,
+    "node_name": "Voeburtenburg",
+    "node_type": 1,
+    "node_coordinates": [
+      35.71,
+      8.71
+    ],
+    "zone_id": 2956,
+    "zone_map": "Norvrandt/Il Mheg",
+    "zone_name": "Il Mheg",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32951,
+    "name": "Dolomite",
+    "description": "A semi-translucent rock containing the rare mineral dolomite.",
+    "icon_id": 21225,
+    "node_id": 760,
+    "node_name": "The Husk",
+    "node_type": 0,
+    "node_coordinates": [
+      7.59,
+      30.23
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32954,
+    "name": "Wattle Petribark",
+    "description": "Though this bark has a number of uses, being in an apparently semi-fossilized state does make it somewhat troublesome to work with.",
+    "icon_id": 22418,
+    "node_id": 761,
+    "node_name": "The Hour of Certain Durance",
+    "node_type": 2,
+    "node_coordinates": [
+      5.24,
+      26.56
+    ],
+    "zone_id": 2953,
+    "zone_map": "Norvrandt/Lakeland",
+    "zone_name": "Lakeland",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32950,
+    "name": "Silver Beech Log",
+    "description": "A rough-cut log of silver beech timber.",
+    "icon_id": 22412,
+    "node_id": 762,
+    "node_name": "Garik",
+    "node_type": 2,
+    "node_coordinates": [
+      16.13,
+      10.99
+    ],
+    "zone_id": 2955,
+    "zone_map": "Norvrandt/Amh Araeng",
+    "zone_name": "Amh Araeng",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 32953,
+    "name": "Raindrop Cotton Boll",
+    "description": "The cotton produced by this particular species is said to be as delicate to the touch as a raindrop. Unfortunately, this makes it rather difficult to pick without crushing the boll.",
+    "icon_id": 25040,
+    "node_id": 763,
+    "node_name": "The Isle of Consorts",
+    "node_type": 3,
+    "node_coordinates": [
+      33.75,
+      13.31
+    ],
+    "zone_id": 2957,
+    "zone_map": "Norvrandt/The Rak'tika Greatwood",
+    "zone_name": "The Rak'tika Greatwood",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 36285,
+    "name": "Lunar Quartz",
+    "description": "A grey rock tinged with a ghostly green hue.",
+    "icon_id": 21459,
+    "node_id": 827,
+    "node_name": "The Numbing Brand",
+    "node_type": 1,
+    "node_coordinates": [
+      21.68,
+      34.73
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 38937,
+    "name": "Earthen Quartz",
+    "description": "A rock with an elemental aspect leaning heavily towards earth.",
+    "icon_id": 21458,
+    "node_id": 827,
+    "node_name": "The Numbing Brand",
+    "node_type": 1,
+    "node_coordinates": [
+      21.68,
+      34.73
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 36286,
+    "name": "Ghostly Umbral Rock",
+    "description": "A rock with an elemental aspect leaning unnaturally towards umbral.",
+    "icon_id": 21472,
+    "node_id": 828,
+    "node_name": "Forum Patens",
+    "node_type": 0,
+    "node_coordinates": [
+      10.11,
+      15.31
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      20
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 36293,
+    "name": "Rarefied Raw Ametrine",
+    "description": "This multicolored beauty was born from the fusion of amethyst and citrine.<br><br>※For collectable submissions only.",
+    "icon_id": 21475,
+    "node_id": 829,
+    "node_name": "Psyche",
+    "node_type": 0,
+    "node_coordinates": [
+      32.51,
+      21.26
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36295,
+    "name": "Rarefied Sharlayan Rock Salt",
+    "description": "“Everyone talks so much about how salt <span class=\"emphasis\">tastes</span> and not enough about how it <span class=\"emphasis\">looks</span>.”<br><br>※For collectable submissions only.",
+    "icon_id": 22688,
+    "node_id": 829,
+    "node_name": "Psyche",
+    "node_type": 0,
+    "node_coordinates": [
+      32.51,
+      21.26
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36294,
+    "name": "Rarefied Bismuth Ore",
+    "description": "This mineral may look like a shiny rock, but when oxidized, it becomes a <span class=\"emphasis\">very</span> shiny rock.<br><br>※For collectable submissions only.",
+    "icon_id": 21217,
+    "node_id": 830,
+    "node_name": "The Drowning Brand",
+    "node_type": 0,
+    "node_coordinates": [
+      16.38,
+      32.65
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36296,
+    "name": "Rarefied Phrygian Gold Ore",
+    "description": "Not everything that glitters is gold─sometimes it is much more valuable.<br><br>※For collectable submissions only.",
+    "icon_id": 21206,
+    "node_id": 831,
+    "node_name": "Horrea Campi",
+    "node_type": 1,
+    "node_coordinates": [
+      12.79,
+      21.9
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36298,
+    "name": "Rarefied Eblan Alumen",
+    "description": "No one would call this alumen “rarefied” were it overabundant in the frozen north─certainly not for marketing purposes. Perish the thought!<br><br>※For collectable submissions only.",
+    "icon_id": 22616,
+    "node_id": 831,
+    "node_name": "Horrea Campi",
+    "node_type": 1,
+    "node_coordinates": [
+      12.79,
+      21.9
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36297,
+    "name": "Rarefied Blue Zircon",
+    "description": "The brilliance of this sample's blue hue remains nigh unparalleled in the natural world─particularly now that it has been removed from it.<br><br>※For collectable submissions only.",
+    "icon_id": 21472,
+    "node_id": 832,
+    "node_name": "The Twelve Wonders",
+    "node_type": 1,
+    "node_coordinates": [
+      8.25,
+      36.59
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36299,
+    "name": "Rarefied Annite",
+    "description": "Handling may cause this mineral to fracture or flake, so best not. What do you mean, “too late”?<br><br>※For collectable submissions only.",
+    "icon_id": 21226,
+    "node_id": 832,
+    "node_name": "The Twelve Wonders",
+    "node_type": 1,
+    "node_coordinates": [
+      8.25,
+      36.59
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36300,
+    "name": "Rarefied Pewter Ore",
+    "description": "Pewter? I barely know her!<br><br>※For collectable submissions only.",
+    "icon_id": 21211,
+    "node_id": 833,
+    "node_name": "Purusa",
+    "node_type": 1,
+    "node_coordinates": [
+      32.43,
+      24.96
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36216,
+    "name": "Rime Dolomite",
+    "description": "This sample displays the particular dolomitization characteristic of the frozen wilds of Ilsabard.",
+    "icon_id": 21225,
+    "node_id": 834,
+    "node_name": "Juturna Platform G",
+    "node_type": 0,
+    "node_coordinates": [
+      32.17,
+      34.89
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37279,
+    "name": "Raw Eblan Danburite",
+    "description": "An uncut, unpolished stone containing what appears to be Eblan danburite.",
+    "icon_id": 21477,
+    "node_id": 834,
+    "node_name": "Juturna Platform G",
+    "node_type": 0,
+    "node_coordinates": [
+      32.17,
+      34.89
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37694,
+    "name": "Prime Siderite",
+    "description": "A ferrous meteorite in apparent flux. Under the right conditions, it could become sublime.",
+    "icon_id": 21472,
+    "node_id": 834,
+    "node_name": "Juturna Platform G",
+    "node_type": 0,
+    "node_coordinates": [
+      32.17,
+      34.89
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37695,
+    "name": "Sublime Siderite",
+    "description": "This lucky siderite specimen has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 21486,
+    "node_id": 834,
+    "node_name": "Juturna Platform G",
+    "node_type": 0,
+    "node_coordinates": [
+      32.17,
+      34.89
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 36167,
+    "name": "Lunar Adamantite Ore",
+    "description": "Ore rich in lunar adamantite.",
+    "icon_id": 21224,
+    "node_id": 835,
+    "node_name": "Kydonia Knolls",
+    "node_type": 1,
+    "node_coordinates": [
+      9.53,
+      23.34
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 36179,
+    "name": "Rhodium Sand",
+    "description": "Sand consisting of tiny grains of rhodium.",
+    "icon_id": 21244,
+    "node_id": 836,
+    "node_name": "Ktisis Hyperboreia",
+    "node_type": 1,
+    "node_coordinates": [
+      13.57,
+      7.19
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 36287,
+    "name": "Ewer Clay",
+    "description": "Clay said to have been used to craft Thaliak's very own ewer.",
+    "icon_id": 21465,
+    "node_id": 849,
+    "node_name": "Logistikon Gamma",
+    "node_type": 3,
+    "node_coordinates": [
+      10.57,
+      34.81
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      8
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 38938,
+    "name": "Sophora Roots",
+    "description": "Tendrils of a perennial plant replete with earth aether.",
+    "icon_id": 25025,
+    "node_id": 849,
+    "node_name": "Logistikon Gamma",
+    "node_type": 3,
+    "node_coordinates": [
+      10.57,
+      34.81
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      8
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 36288,
+    "name": "Palm Chippings",
+    "description": "Bark from a Thavnairian palm tree.",
+    "icon_id": 22418,
+    "node_id": 850,
+    "node_name": "Pavana's Remorse",
+    "node_type": 2,
+    "node_coordinates": [
+      26.77,
+      15.67
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      12
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 36303,
+    "name": "Rarefied Palm Log",
+    "description": "The lack of rings makes this lumber impossible to date─or, as particularly aggravating naturalists might say, “stuck in the frond zone.”<br><br>※For collectable submissions only.",
+    "icon_id": 22410,
+    "node_id": 851,
+    "node_name": "The Hamsa Hatchery",
+    "node_type": 2,
+    "node_coordinates": [
+      14.39,
+      14.53
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36305,
+    "name": "Rarefied Coconut",
+    "description": "Though this deceptive drupe does not taste like cocoa and it is not a true nut, culinarians tend to overlook these offenses in light of its deliciousness. It is on thin ice with the botanists, however.<br><br>※For collectable submissions only.",
+    "icon_id": 25323,
+    "node_id": 851,
+    "node_name": "The Hamsa Hatchery",
+    "node_type": 2,
+    "node_coordinates": [
+      14.39,
+      14.53
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36304,
+    "name": "Rarefied Red Pine Log",
+    "description": "While this wood is more red-adjacent than truly red, “red-adjacent pine” does not exactly roll off the tongue.<br><br>※For collectable submissions only.",
+    "icon_id": 22403,
+    "node_id": 852,
+    "node_name": "The Pipe",
+    "node_type": 2,
+    "node_coordinates": [
+      35.07,
+      5.82
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36306,
+    "name": "Rarefied Sykon",
+    "description": "A succulent symbol of vitality, this fruit pairs nicely with some honey and stone cheese.<br><br>※For collectable submissions only.",
+    "icon_id": 25318,
+    "node_id": 853,
+    "node_name": "The Hungering Gardens",
+    "node_type": 2,
+    "node_coordinates": [
+      24.98,
+      5.64
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36308,
+    "name": "Rarefied Elder Nutmeg",
+    "description": "This sweet-scented spice is proven to help medicine go down. Consuming an entire spoonful, however, is not recommended.<br><br>※For collectable submissions only.",
+    "icon_id": 25021,
+    "node_id": 853,
+    "node_name": "The Hungering Gardens",
+    "node_type": 2,
+    "node_coordinates": [
+      24.98,
+      5.64
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36307,
+    "name": "Rarefied Dark Rye",
+    "description": "This hearty grain is a culinarian's delight─though much more so after the tiresome grinding step is complete.<br><br>※For collectable submissions only.",
+    "icon_id": 25359,
+    "node_id": 854,
+    "node_name": "Logistikon Beta",
+    "node_type": 3,
+    "node_coordinates": [
+      9.99,
+      22.36
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36309,
+    "name": "Rarefied Iceberg Lettuce",
+    "description": "This crisp, refreshing vegetable is often thought to be lacking in flavor, but those who enjoy the flavor of water doubtless find it absolutely overpowering.<br><br>※For collectable submissions only.",
+    "icon_id": 25219,
+    "node_id": 854,
+    "node_name": "Logistikon Beta",
+    "node_type": 3,
+    "node_coordinates": [
+      9.99,
+      22.36
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36310,
+    "name": "Rarefied AR-Caean Cotton Boll",
+    "description": "These bolls are so irresistibly soft that some folks can't help but pluck them and pop them in their ears. Caution: under no circumstances should AR-Caean cotton be placed near the ears.<br><br>※For collectable submissions only.",
+    "icon_id": 25032,
+    "node_id": 855,
+    "node_name": "The Ragnarok",
+    "node_type": 3,
+    "node_coordinates": [
+      9.47,
+      33.23
+    ],
+    "zone_id": 3712,
+    "zone_map": "The Sea of Stars/Ultima Thule",
+    "zone_name": "Ultima Thule",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 36195,
+    "name": "Mempisang Log",
+    "description": "A rough-cut log of mempisang timber.",
+    "icon_id": 22405,
+    "node_id": 856,
+    "node_name": "Lethe",
+    "node_type": 2,
+    "node_coordinates": [
+      33.17,
+      14.77
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 36207,
+    "name": "Golden Cocoon",
+    "description": "These shining cocoons are woven only by Thavnairian silkworms.",
+    "icon_id": 21682,
+    "node_id": 857,
+    "node_name": "The Shroud of the Samgha",
+    "node_type": 3,
+    "node_coordinates": [
+      25.3,
+      21.7
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37278,
+    "name": "Thavnairian Corn",
+    "description": "A selectively bred variant cultivated from the maize once brought to Thavnair from the New World. Valued for its nutritional value and alchemical uses alike.",
+    "icon_id": 25352,
+    "node_id": 857,
+    "node_name": "The Shroud of the Samgha",
+    "node_type": 3,
+    "node_coordinates": [
+      25.3,
+      21.7
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 36217,
+    "name": "Double-edged Herb",
+    "description": "Incredibly potent, but also incredibly hard to find without getting lost in the woods and meeting an untimely end.",
+    "icon_id": 25201,
+    "node_id": 858,
+    "node_name": "The Tube",
+    "node_type": 3,
+    "node_coordinates": [
+      28.11,
+      13.23
+    ],
+    "zone_id": 3712,
+    "zone_map": "The Sea of Stars/Ultima Thule",
+    "zone_name": "Ultima Thule",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37691,
+    "name": "Prime Crystalbloom",
+    "description": "This sap-coated plant has taken on a glossy, crystalline appearance, but it is yet in flux. Under the right conditions, it could become sublime.",
+    "icon_id": 25039,
+    "node_id": 858,
+    "node_name": "The Tube",
+    "node_type": 3,
+    "node_coordinates": [
+      28.11,
+      13.23
+    ],
+    "zone_id": 3712,
+    "zone_map": "The Sea of Stars/Ultima Thule",
+    "zone_name": "Ultima Thule",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37692,
+    "name": "Sublime Crystalbloom",
+    "description": "This peerless crystalbloom has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 25042,
+    "node_id": 858,
+    "node_name": "The Tube",
+    "node_type": 3,
+    "node_coordinates": [
+      28.11,
+      13.23
+    ],
+    "zone_id": 3712,
+    "zone_map": "The Sea of Stars/Ultima Thule",
+    "zone_name": "Ultima Thule",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37817,
+    "name": "Raw Rutilated Quartz",
+    "description": "An uncut, unpolished stone containing what appears to be rutilated quartz.",
+    "icon_id": 21474,
+    "node_id": 338,
+    "node_name": "Tertium",
+    "node_type": 1,
+    "node_coordinates": [
+      31.95,
+      17.36
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 38934,
+    "name": "Raw Zoisite",
+    "description": "An uncut, unpolished stone containing what appears to be zoisite.",
+    "icon_id": 21472,
+    "node_id": 338,
+    "node_name": "Tertium",
+    "node_type": 1,
+    "node_coordinates": [
+      31.95,
+      17.36
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37820,
+    "name": "Ilmenite",
+    "description": "A hunk of moon ore rich in titanium.",
+    "icon_id": 21205,
+    "node_id": 346,
+    "node_name": "Sinus Tormenti",
+    "node_type": 0,
+    "node_coordinates": [
+      29.63,
+      22.4
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39237,
+    "name": "Prime Achondrite",
+    "description": "A meteorite primarily comprised of olivine and pyroxene. Under the right conditions, it could become sublime.",
+    "icon_id": 21210,
+    "node_id": 346,
+    "node_name": "Sinus Tormenti",
+    "node_type": 0,
+    "node_coordinates": [
+      29.63,
+      22.4
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39238,
+    "name": "Sublime Achondrite",
+    "description": "This superior chunk of achondrite has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 21247,
+    "node_id": 346,
+    "node_name": "Sinus Tormenti",
+    "node_type": 0,
+    "node_coordinates": [
+      29.63,
+      22.4
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37822,
+    "name": "Ash Diatomite",
+    "description": "Soil rich in diatoms and cultivated in Labyrinthos to superior quality.",
+    "icon_id": 22634,
+    "node_id": 400,
+    "node_name": "The Central Circuit",
+    "node_type": 1,
+    "node_coordinates": [
+      11.15,
+      21.42
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39909,
+    "name": "Prime Chloroschist",
+    "description": "A crystalline sample cultivated in the exacting environment of Labyrinthos. Under the right conditions, it could become sublime.",
+    "icon_id": 21252,
+    "node_id": 400,
+    "node_name": "The Central Circuit",
+    "node_type": 1,
+    "node_coordinates": [
+      11.15,
+      21.42
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39910,
+    "name": "Sublime Chloroschist",
+    "description": "This glorious chunk of chloroschist has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 21337,
+    "node_id": 400,
+    "node_name": "The Central Circuit",
+    "node_type": 1,
+    "node_coordinates": [
+      11.15,
+      21.42
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37818,
+    "name": "Paldao Log",
+    "description": "A rough-cut log of paldao timber.",
+    "icon_id": 22414,
+    "node_id": 463,
+    "node_name": "The Twelve Wonders",
+    "node_type": 2,
+    "node_coordinates": [
+      9.83,
+      29.85
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39234,
+    "name": "Prime Sphongos",
+    "description": "A spongy mushroom imbued with fascinating life energy. Under the right conditions, it could become sublime.",
+    "icon_id": 25408,
+    "node_id": 463,
+    "node_name": "The Twelve Wonders",
+    "node_type": 2,
+    "node_coordinates": [
+      9.83,
+      29.85
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39235,
+    "name": "Sublime Sphongos",
+    "description": "This magnificent sphongos has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 25411,
+    "node_id": 463,
+    "node_name": "The Twelve Wonders",
+    "node_type": 2,
+    "node_coordinates": [
+      9.83,
+      29.85
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37819,
+    "name": "Haritaki",
+    "description": "A Thavnairian nut often used in dyeing and tanning practices.",
+    "icon_id": 25017,
+    "node_id": 627,
+    "node_name": "The Shroud of the Samgha",
+    "node_type": 2,
+    "node_coordinates": [
+      29.13,
+      26.87
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39906,
+    "name": "Prime Haritaki",
+    "description": "A lustrous leaf of the plant born from the popular Thavnairian nut. Under the right conditions, it could become sublime.",
+    "icon_id": 25015,
+    "node_id": 627,
+    "node_name": "The Shroud of the Samgha",
+    "node_type": 2,
+    "node_coordinates": [
+      29.13,
+      26.87
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39907,
+    "name": "Sublime Haritaki",
+    "description": "This spectacular sprig of haritaki has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 25043,
+    "node_id": 627,
+    "node_name": "The Shroud of the Samgha",
+    "node_type": 2,
+    "node_coordinates": [
+      29.13,
+      26.87
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 37821,
+    "name": "Bayberry",
+    "description": "A small branch of wax myrtle clipped from a shrub in Labyrinthos.",
+    "icon_id": 25015,
+    "node_id": 695,
+    "node_name": "Mornveil Forest",
+    "node_type": 2,
+    "node_coordinates": [
+      28.15,
+      11.41
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 38933,
+    "name": "Mornveil Tree Bark",
+    "description": "The quality of this bark is undeniable and likely due to the hospitable surrounds of Labyrinthos.",
+    "icon_id": 22418,
+    "node_id": 695,
+    "node_name": "Mornveil Forest",
+    "node_type": 2,
+    "node_coordinates": [
+      28.15,
+      11.41
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39708,
+    "name": "Maghemite",
+    "description": "Originating in Thavnair, this iron oxide is often utilized as a pigment for its rusty red hue.",
+    "icon_id": 22656,
+    "node_id": 932,
+    "node_name": "Pavana's Remorse",
+    "node_type": 1,
+    "node_coordinates": [
+      24.46,
+      13.07
+    ],
+    "zone_id": 3709,
+    "zone_map": "Ilsabard/Thavnair",
+    "zone_name": "Thavnair",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39706,
+    "name": "Softsilver Ore",
+    "description": "A decent-sized piece of rock containing a naturally occurring mix of silver and quicksilver.",
+    "icon_id": 21227,
+    "node_id": 933,
+    "node_name": "Ostrakon Deka-okto",
+    "node_type": 0,
+    "node_coordinates": [
+      16.98,
+      29.39
+    ],
+    "zone_id": 3712,
+    "zone_map": "The Sea of Stars/Ultima Thule",
+    "zone_name": "Ultima Thule",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 41416,
+    "name": "Prime Fossilized Dragon's Scale",
+    "description": "This remnant of ancient draconic life was unearthed in Ultima Thule. Under the right conditions, it could become sublime.",
+    "icon_id": 22251,
+    "node_id": 933,
+    "node_name": "Ostrakon Deka-okto",
+    "node_type": 0,
+    "node_coordinates": [
+      16.98,
+      29.39
+    ],
+    "zone_id": 3712,
+    "zone_map": "The Sea of Stars/Ultima Thule",
+    "zone_name": "Ultima Thule",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 41417,
+    "name": "Sublime Fossilized Dragon's Scale",
+    "description": "This uncanny fossilized dragon's scale has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 22266,
+    "node_id": 933,
+    "node_name": "Ostrakon Deka-okto",
+    "node_type": 0,
+    "node_coordinates": [
+      16.98,
+      29.39
+    ],
+    "zone_id": 3712,
+    "zone_map": "The Sea of Stars/Ultima Thule",
+    "zone_name": "Ultima Thule",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39707,
+    "name": "Raw Spodumene",
+    "description": "An uncut, unpolished stone containing what appears to be spodumene.",
+    "icon_id": 21475,
+    "node_id": 934,
+    "node_name": "Lethe",
+    "node_type": 0,
+    "node_coordinates": [
+      30.29,
+      18.3
+    ],
+    "zone_id": 3713,
+    "zone_map": "The World Unsundered/Elpis",
+    "zone_name": "Elpis",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39709,
+    "name": "Field Mustard",
+    "description": "The oil extracted from the seeds of this vivid yellow flower has various practical applications, not the least of which is as a reagent for curing skins and hides.",
+    "icon_id": 22696,
+    "node_id": 935,
+    "node_name": "Regio Urbanissima",
+    "node_type": 3,
+    "node_coordinates": [
+      17.78,
+      12.49
+    ],
+    "zone_id": 3710,
+    "zone_map": "Ilsabard/Garlemald",
+    "zone_name": "Garlemald",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39710,
+    "name": "Lovingbloom",
+    "description": "A prize “flower” grown in the nightmare fungal garden of Lovingway's Darlings.",
+    "icon_id": 25413,
+    "node_id": 936,
+    "node_name": "Lovingway's Darlings",
+    "node_type": 3,
+    "node_coordinates": [
+      25.88,
+      20.42
+    ],
+    "zone_id": 3711,
+    "zone_map": "The Sea of Stars/Mare Lamentorum",
+    "zone_name": "Mare Lamentorum",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 39705,
+    "name": "Dark Cherry Log",
+    "description": "A rough-cut log of dark cherry timber.",
+    "icon_id": 22408,
+    "node_id": 937,
+    "node_name": "The Central Circuit",
+    "node_type": 2,
+    "node_coordinates": [
+      19.06,
+      35.93
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 41413,
+    "name": "Prime Kukuru Beans",
+    "description": "This bean is born of a kukuru tree cultivated within Labyrinthos's precisely controlled climate. Under the right conditions, it could become sublime.",
+    "icon_id": 25314,
+    "node_id": 937,
+    "node_name": "The Central Circuit",
+    "node_type": 2,
+    "node_coordinates": [
+      19.06,
+      35.93
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 41414,
+    "name": "Sublime Kukuru Beans",
+    "description": "This wondrous kukuru bean has gone from prime to sublime through a process you don't understand and aren't going to worry about. What's important is that it promises an impressive yield from aetherial reduction.",
+    "icon_id": 25329,
+    "node_id": 937,
+    "node_name": "The Central Circuit",
+    "node_type": 2,
+    "node_coordinates": [
+      19.06,
+      35.93
+    ],
+    "zone_id": 3708,
+    "zone_map": "The Northern Empty/Labyrinthos",
+    "zone_name": "Labyrinthos",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 43931,
+    "name": "Electrocoal",
+    "description": "An ore containing trace amounts of electrope.",
+    "icon_id": 21205,
+    "node_id": 1014,
+    "node_name": "East Yyasulani",
+    "node_type": 1,
+    "node_coordinates": [
+      26.73,
+      12.21
+    ],
+    "zone_id": 4509,
+    "zone_map": "Xak Tural/Heritage Found",
+    "zone_name": "Heritage Found",
+    "et_times": [
+      20
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 43932,
+    "name": "Brightwind Ore",
+    "description": "Prolonged exposure to wind and sunlight has allowed this stone to absorb a great deal of aether.",
+    "icon_id": 21212,
+    "node_id": 1015,
+    "node_name": "The Knowable",
+    "node_type": 1,
+    "node_coordinates": [
+      10.51,
+      11.09
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 46247,
+    "name": "Levin Quartz",
+    "description": "Unpolished stone imbued with aetheric lightning energy.",
+    "icon_id": 21461,
+    "node_id": 1015,
+    "node_name": "The Knowable",
+    "node_type": 1,
+    "node_coordinates": [
+      10.51,
+      11.09
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      0
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 43933,
+    "name": "Goldbranch",
+    "description": "Though it appears withered at first glance, this glimmering branch is very much alive─or rather, it <span class=\"emphasis\">was</span>, before being torn from its natural environment.",
+    "icon_id": 22416,
+    "node_id": 1016,
+    "node_name": "Eshceyaani Wilds",
+    "node_type": 3,
+    "node_coordinates": [
+      16.25,
+      10.45
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      4
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 43934,
+    "name": "Volcanic Grass",
+    "description": "Raised in nutrient-rich volcanic loam, this rare herbage is densely packed with aether.",
+    "icon_id": 25035,
+    "node_id": 1017,
+    "node_name": "Matchlock Menagerie",
+    "node_type": 3,
+    "node_coordinates": [
+      26.93,
+      7.37
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      16
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 46248,
+    "name": "Calamus Root",
+    "description": "Rootstalk thrumming with strong lightning energy.",
+    "icon_id": 22707,
+    "node_id": 1017,
+    "node_name": "Matchlock Menagerie",
+    "node_type": 3,
+    "node_coordinates": [
+      26.93,
+      7.37
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      16
+    ],
+    "duration_et_hours": 4,
+    "limit_type": "Ephemeral"
+  },
+  {
+    "item_id": 43919,
+    "name": "Rarefied Raw Dark Amber",
+    "description": "The gemstone of choice for dark goldsmiths.<br><br>※For collectable submissions only.",
+    "icon_id": 21270,
+    "node_id": 1022,
+    "node_name": "Uyuyub'",
+    "node_type": 0,
+    "node_coordinates": [
+      7.01,
+      7.39
+    ],
+    "zone_id": 4506,
+    "zone_map": "Yok Tural/Kozama'uka",
+    "zone_name": "Kozama'uka",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43920,
+    "name": "Rarefied Titanium Gold Ore",
+    "description": "There's gold in these hills! Titanium gold, that is.<br><br>※For collectable submissions only.",
+    "icon_id": 21212,
+    "node_id": 1023,
+    "node_name": "Eshceyaani Wilds",
+    "node_type": 0,
+    "node_coordinates": [
+      9.25,
+      24.16
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43921,
+    "name": "Rarefied Magnesite Ore",
+    "description": "In addition to its crafting purposes, this ore can be used to deter burglars, provided your aim is true.<br><br>※For collectable submissions only.",
+    "icon_id": 21205,
+    "node_id": 1023,
+    "node_name": "Eshceyaani Wilds",
+    "node_type": 0,
+    "node_coordinates": [
+      9.25,
+      24.16
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 44233,
+    "name": "Rarefied White Gold Ore",
+    "description": "For those who seek to smelt only the whitest and goldest of white gold.<br><br>※For collectable submissions only.",
+    "icon_id": 21217,
+    "node_id": 1024,
+    "node_name": "East Yyasulani",
+    "node_type": 0,
+    "node_coordinates": [
+      34.57,
+      8.27
+    ],
+    "zone_id": 4509,
+    "zone_map": "Xak Tural/Heritage Found",
+    "zone_name": "Heritage Found",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43922,
+    "name": "Rarefied Ra'Kaznar Ore",
+    "description": "The perfect smithing material for someone with a penchant for black and purple color schemes.<br><br>※For collectable submissions only.",
+    "icon_id": 21231,
+    "node_id": 1024,
+    "node_name": "East Yyasulani",
+    "node_type": 0,
+    "node_coordinates": [
+      34.57,
+      8.27
+    ],
+    "zone_id": 4509,
+    "zone_map": "Xak Tural/Heritage Found",
+    "zone_name": "Heritage Found",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43923,
+    "name": "Rarefied Ash Soil",
+    "description": "This faintly warm mixture of ash and soil was harvested from an active volcano by a true daredevil of a gatherer.<br><br>※For collectable submissions only.",
+    "icon_id": 21233,
+    "node_id": 1025,
+    "node_name": "Arena of Valor",
+    "node_type": 1,
+    "node_coordinates": [
+      25.0,
+      17.34
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43926,
+    "name": "Rarefied Mountain Flax",
+    "description": "With this, perhaps you can craft yourself a nice pair of hiking boots to replace the ones you wore out climbing this mountain in the first place.<br><br>※For collectable submissions only.",
+    "icon_id": 25033,
+    "node_id": 1026,
+    "node_name": "Larh Tortoh",
+    "node_type": 3,
+    "node_coordinates": [
+      5.9,
+      23.78
+    ],
+    "zone_id": 4505,
+    "zone_map": "Yok Tural/Urqopacha",
+    "zone_name": "Urqopacha",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43927,
+    "name": "Rarefied Sweet Kukuru Bean",
+    "description": "A true chocolate connoisseur will accept no less than this, the sweetest of all kukuru beans, for their sinfully indulgent sachertortes.<br><br>※For collectable submissions only.",
+    "icon_id": 25314,
+    "node_id": 1027,
+    "node_name": "The Ja Tiika Heartland",
+    "node_type": 2,
+    "node_coordinates": [
+      36.88,
+      34.83
+    ],
+    "zone_id": 4507,
+    "zone_map": "Yok Tural/Yak T'el",
+    "zone_name": "Yak T'el",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43928,
+    "name": "Rarefied Dark Mahogany Log",
+    "description": "“Bring me the darkest mahogany you have! Darker, I say! <span class=\"emphasis\">Darker</span>!”<br><br>※For collectable submissions only.",
+    "icon_id": 22426,
+    "node_id": 1027,
+    "node_name": "The Ja Tiika Heartland",
+    "node_type": 2,
+    "node_coordinates": [
+      36.88,
+      34.83
+    ],
+    "zone_id": 4507,
+    "zone_map": "Yok Tural/Yak T'el",
+    "zone_name": "Yak T'el",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 44234,
+    "name": "Rarefied Acacia Bark",
+    "description": "Used in the tanning of the finest quality hide for a leather so durable, the poor gargantua may one day forgive you for slaying it.<br><br>※For collectable submissions only.",
+    "icon_id": 22418,
+    "node_id": 1028,
+    "node_name": "Pyariyoanaan Plain",
+    "node_type": 2,
+    "node_coordinates": [
+      31.69,
+      20.44
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43929,
+    "name": "Rarefied Acacia Log",
+    "description": "Take this to a skilled carpenter to be processed, and by day's end, you could be the proud owner of a first-rate fork.<br><br>※For collectable submissions only.",
+    "icon_id": 22404,
+    "node_id": 1028,
+    "node_name": "Pyariyoanaan Plain",
+    "node_type": 2,
+    "node_coordinates": [
+      31.69,
+      20.44
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 43930,
+    "name": "Rarefied Windsbalm Bay Leaf",
+    "description": "A tisane brewed from this exceptional bay leaf would afford a weaver enough energy to sew nearly three dozen muffed mets. Enjoy in moderation.<br><br>※For collectable submissions only.",
+    "icon_id": 25009,
+    "node_id": 1029,
+    "node_name": "The Knowable",
+    "node_type": 3,
+    "node_coordinates": [
+      8.75,
+      7.49
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Unspoiled"
+  },
+  {
+    "item_id": 44139,
+    "name": "Turali Alumen",
+    "description": "Quarried from the peaks of Urqopacha, this colorful mineral is prized by leatherworkers for its use in tanning hides.",
+    "icon_id": 22673,
+    "node_id": 1030,
+    "node_name": "Naryor Gorna",
+    "node_type": 1,
+    "node_coordinates": [
+      37.08,
+      29.59
+    ],
+    "zone_id": 4505,
+    "zone_map": "Yok Tural/Urqopacha",
+    "zone_name": "Urqopacha",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 44136,
+    "name": "Fine Silver Ore",
+    "description": "A decent-sized piece of rock containing large quantities of silver.",
+    "icon_id": 21223,
+    "node_id": 1031,
+    "node_name": "Yawtanane Grasslands",
+    "node_type": 0,
+    "node_coordinates": [
+      36.69,
+      28.05
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 44135,
+    "name": "Harmonite Ore",
+    "description": "A decent-sized piece of rock containing iron mixed with traces of nickel and cobalt.",
+    "icon_id": 21221,
+    "node_id": 1032,
+    "node_name": "The Knowable",
+    "node_type": 0,
+    "node_coordinates": [
+      9.33,
+      15.21
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 44845,
+    "name": "Alexandrian Ore",
+    "description": "A decent-sized piece of rock containing metal composites unique to Alexandria.",
+    "icon_id": 21491,
+    "node_id": 1032,
+    "node_name": "The Knowable",
+    "node_type": 0,
+    "node_coordinates": [
+      9.33,
+      15.21
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 44137,
+    "name": "Ipe Log",
+    "description": "A rough-cut log of ipe timber.",
+    "icon_id": 22415,
+    "node_id": 1033,
+    "node_name": "The Glostfired Bank",
+    "node_type": 2,
+    "node_coordinates": [
+      7.43,
+      33.07
+    ],
+    "zone_id": 4506,
+    "zone_map": "Yok Tural/Kozama'uka",
+    "zone_name": "Kozama'uka",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 44140,
+    "name": "Nopaliflower",
+    "description": "A vibrant flower harvested from a cactus in the Shaaloani wilderness.",
+    "icon_id": 22697,
+    "node_id": 1034,
+    "node_name": "Eshceyaani Wilds",
+    "node_type": 2,
+    "node_coordinates": [
+      10.87,
+      31.13
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 44138,
+    "name": "Blackseed Cotton Boll",
+    "description": "These fibrous cotton flowers originated in ocean waters long forgotten.",
+    "icon_id": 25032,
+    "node_id": 1035,
+    "node_name": "Arena of Valor",
+    "node_type": 3,
+    "node_coordinates": [
+      28.43,
+      17.42
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 44844,
+    "name": "Optical Fibergrass",
+    "description": "The fibrous tendrils that form this peculiar grass have exceptional light-transmitting properties.",
+    "icon_id": 22699,
+    "node_id": 1035,
+    "node_name": "Arena of Valor",
+    "node_type": 3,
+    "node_coordinates": [
+      28.43,
+      17.42
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 45970,
+    "name": "Raw Rhodochrosite",
+    "description": "An uncut, unpolished stone containing what appears to be rhodochrosite.",
+    "icon_id": 21471,
+    "node_id": 1188,
+    "node_name": "Uyuyub'",
+    "node_type": 1,
+    "node_coordinates": [
+      12.03,
+      17.64
+    ],
+    "zone_id": 4506,
+    "zone_map": "Yok Tural/Kozama'uka",
+    "zone_name": "Kozama'uka",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 45969,
+    "name": "Octahedrite",
+    "description": "A chunk of mineral not dissimilar to the meteorites that litter the forest floor in Yak T'el.",
+    "icon_id": 21203,
+    "node_id": 1189,
+    "node_name": "The Cerulean Cexudross",
+    "node_type": 0,
+    "node_coordinates": [
+      17.96,
+      36.96
+    ],
+    "zone_id": 4507,
+    "zone_map": "Yok Tural/Yak T'el",
+    "zone_name": "Yak T'el",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 45973,
+    "name": "Fulgurite",
+    "description": "A chunk of vitrified minerals formed by a lightning strike.",
+    "icon_id": 21492,
+    "node_id": 1190,
+    "node_name": "Everkeep Ward",
+    "node_type": 1,
+    "node_coordinates": [
+      14.01,
+      16.84
+    ],
+    "zone_id": 4509,
+    "zone_map": "Xak Tural/Heritage Found",
+    "zone_name": "Heritage Found",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 46244,
+    "name": "Desert Lapis Ore",
+    "description": "An uncut, unpolished stone containing what appears to be desert lapis.",
+    "icon_id": 21472,
+    "node_id": 1190,
+    "node_name": "Everkeep Ward",
+    "node_type": 1,
+    "node_coordinates": [
+      14.01,
+      16.84
+    ],
+    "zone_id": 4509,
+    "zone_map": "Xak Tural/Heritage Found",
+    "zone_name": "Heritage Found",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 45968,
+    "name": "Cordia Log",
+    "description": "A rough-cut log of cordia timber.",
+    "icon_id": 22414,
+    "node_id": 1191,
+    "node_name": "The Xobr'it Cinderfield",
+    "node_type": 2,
+    "node_coordinates": [
+      35.77,
+      22.34
+    ],
+    "zone_id": 4507,
+    "zone_map": "Yok Tural/Yak T'el",
+    "zone_name": "Yak T'el",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 46243,
+    "name": "Cordia Sap",
+    "description": "A partially congealed ball of sticky sap extracted from a cordia tree.",
+    "icon_id": 22687,
+    "node_id": 1191,
+    "node_name": "The Xobr'it Cinderfield",
+    "node_type": 2,
+    "node_coordinates": [
+      35.77,
+      22.34
+    ],
+    "zone_id": 4507,
+    "zone_map": "Yok Tural/Yak T'el",
+    "zone_name": "Yak T'el",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 45971,
+    "name": "Shaaloani Coffee",
+    "description": "These rich, dark-roasted coffee beans are often used as a tanning agent.",
+    "icon_id": 27501,
+    "node_id": 1192,
+    "node_name": "Pyariyoanaan Plain",
+    "node_type": 3,
+    "node_coordinates": [
+      34.99,
+      16.27
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 45972,
+    "name": "Cochineal Pigment",
+    "description": "A vivid red pigment is derived from the tiny insects that cluster upon nopales to feed.",
+    "icon_id": 25011,
+    "node_id": 1193,
+    "node_name": "East Yyasulani",
+    "node_type": 2,
+    "node_coordinates": [
+      34.25,
+      20.66
+    ],
+    "zone_id": 4509,
+    "zone_map": "Xak Tural/Heritage Found",
+    "zone_name": "Heritage Found",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 49209,
+    "name": "Rose Garnet Ore",
+    "description": "An uncut, unpolished stone containing what appears to be rose garnet.",
+    "icon_id": 21475,
+    "node_id": 1296,
+    "node_name": "Yawtanane Grasslands",
+    "node_type": 1,
+    "node_coordinates": [
+      23.58,
+      27.11
+    ],
+    "zone_id": 4508,
+    "zone_map": "Xak Tural/Shaaloani",
+    "zone_name": "Shaaloani",
+    "et_times": [
+      0,
+      12
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 49208,
+    "name": "Dense Aluminum Ore",
+    "description": "A decent-sized piece of rock containing traces of highly dense aluminum.",
+    "icon_id": 21206,
+    "node_id": 1297,
+    "node_name": "Archeo Alexandria",
+    "node_type": 0,
+    "node_coordinates": [
+      23.68,
+      27.95
+    ],
+    "zone_id": 4509,
+    "zone_map": "Xak Tural/Heritage Found",
+    "zone_name": "Heritage Found",
+    "et_times": [
+      10,
+      22
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 49212,
+    "name": "Windspath Water",
+    "description": "Filled to the brim with pleasantly smooth, almost entirely mineral-free water.",
+    "icon_id": 22678,
+    "node_id": 1298,
+    "node_name": "The Knowable",
+    "node_type": 0,
+    "node_coordinates": [
+      8.17,
+      14.15
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      2,
+      14
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 49210,
+    "name": "Carnauba Leaf",
+    "description": "A palm frond containing a naturally occurring wax used by all manner of artisans.",
+    "icon_id": 22709,
+    "node_id": 1299,
+    "node_name": "Uyuyub'",
+    "node_type": 2,
+    "node_coordinates": [
+      14.71,
+      10.21
+    ],
+    "zone_id": 4506,
+    "zone_map": "Yok Tural/Kozama'uka",
+    "zone_name": "Kozama'uka",
+    "et_times": [
+      4,
+      16
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 49211,
+    "name": "Urqopacha Flax",
+    "description": "Highly sought fibers sourced from a mere handful of locations in Urqopacha.",
+    "icon_id": 25033,
+    "node_id": 1300,
+    "node_name": "Larh Tortoh",
+    "node_type": 3,
+    "node_coordinates": [
+      5.24,
+      25.18
+    ],
+    "zone_id": 4505,
+    "zone_map": "Yok Tural/Urqopacha",
+    "zone_name": "Urqopacha",
+    "et_times": [
+      6,
+      18
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  },
+  {
+    "item_id": 49207,
+    "name": "Fulgurpine Log",
+    "description": "A rough-cut log of fulgurpine timber. Caution is advised when handling due to the potent lightning energy suffusing its fibers.",
+    "icon_id": 22427,
+    "node_id": 1301,
+    "node_name": "The Knowable",
+    "node_type": 2,
+    "node_coordinates": [
+      8.49,
+      9.55
+    ],
+    "zone_id": 4510,
+    "zone_map": "Unlost World/Living Memory",
+    "zone_name": "Living Memory",
+    "et_times": [
+      8,
+      20
+    ],
+    "duration_et_hours": 2,
+    "limit_type": "Legendary"
+  }
+]
