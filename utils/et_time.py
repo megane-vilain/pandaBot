@@ -66,34 +66,12 @@ def should_notify(reminder, user_timezone) -> bool:
 
     return False
 
-def build_reminder_text(alert: GatheringReminder) -> str:
-    et_str = format_et_hours(alert.et_hours)
-    duration_et_minutes = _et_hours_real_minutes(alert.duration_et_hours)
-    return (
-        f"**{alert.item_name}** spawns at **{et_str}**\n"
-        f"Window: **{alert.duration_et_hours}h ET** - Last for {format_real_minutes(duration_et_minutes)}"
-    )
-
 def _discord_timestamp(timestamp: int) -> str:
     return f"<t:{timestamp}:R>"
 
 def _et_hours_to_real_seconds(duration_et_hours: float) -> float:
     duration_et_seconds = duration_et_hours * 3600
     return duration_et_seconds / ET_MULTIPLIER
-
-def _et_hours_real_minutes(duration_et_hours: float) -> float:
-    return _et_hours_to_real_seconds(duration_et_hours) / 60
-
-def format_real_minutes(minutes_float: float) -> str:
-
-    total_seconds = int(minutes_float * 60)
-
-    minutes, seconds = divmod(
-        total_seconds,
-        60
-    )
-
-    return f"{minutes}min and {seconds:02}sec"
 
 def _et_to_datetime(target_hour, user_timezone: ZoneInfo):
     now_real = datetime.now(user_timezone)
