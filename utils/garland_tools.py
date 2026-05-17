@@ -1,5 +1,9 @@
 from garlandtools import GarlandTools
+from et_time import format_et_hours
 from models import GatheringItem, GatheringNode
+import json
+
+GATHERING_ITEMS_PATH = "gathering_items.json"
 
 def get_gathering_item(api: GarlandTools, item_id: int, map_path: str):
     item_response = api.item(item_id)
@@ -46,10 +50,51 @@ def get_gathering_item(api: GarlandTools, item_id: int, map_path: str):
         id = item["id"],
         name = item["name"],
         description = item["description"],
-        icon = item["icon"],
+        icon_id= item["icon"],
         map = map_path,
         zone = map_name,
         node = gathering_node
     )
 
     return gathering_item
+
+def load_gathering_items(
+    path: str = GATHERING_ITEMS_PATH,
+) -> tuple[list[GatheringItem], dict[int, GatheringItem]]:
+    """
+    Load gathering items from JSON file.
+
+    Returns:
+        (items_list, items_by_id)
+    """
+    with open(path, encoding="utf-8") as f:
+        raw: list[dict] = json.load(f)
+
+    items = []
+    for entry in raw:
+        et_times = entry["et_times"]
+
+        node = GatheringNode(
+            id=entry["node_id"],
+            name=entry["node_name"],
+            coordinates=entry["node_coordinates"],
+            type=entry["node_type"],
+            node_duration=entry["duration_et_hours"],
+            time=set(et_times),
+            time_formatted=format_et_hours(et_times),
+        )
+
+        item = GatheringItem(
+            id=entry["item_id"],
+            name=entry["name"],
+            description=entry["description"],
+            map=entry["zone_map"],
+            zone=entry["zone_name"],
+            node=node,
+            icon_id=entry["icon_id"],
+        )
+
+        items.append(item)
+
+    items_by_id = {item.id: item for item in items}
+    return items, items_by_id

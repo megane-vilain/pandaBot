@@ -5,9 +5,6 @@ from models import GatheringReminder
 
 ET_MULTIPLIER = 3600 / 175
 
-LOCAL_TZ = ZoneInfo("Europe/Paris")
-
-
 def format_et_hours(et_hours: set[int]) -> str:
     return " & ".join(f"{h} ET" for h in et_hours)
 
@@ -59,7 +56,7 @@ def should_notify(reminder, user_timezone) -> bool:
 
     # Check if any spawn is within alert_before_minutes (real time)
     for et_hour in reminder.et_hours:
-        next_spawn = _et_to_timezone(et_hour, user_timezone)
+        next_spawn = _et_to_datetime(et_hour, user_timezone)
         seconds_until = (next_spawn - now_real).total_seconds()
 
         alert_window_real = reminder.alert_before_minutes * 60
@@ -71,19 +68,34 @@ def should_notify(reminder, user_timezone) -> bool:
 
 def build_reminder_text(alert: GatheringReminder) -> str:
     et_str = format_et_hours(alert.et_hours)
-    item_label = f"Item #{alert.item_name}"
+    duration_et_minutes = _et_hours_real_minutes(alert.duration_et_hours)
     return (
-        f"**{item_label}** spawns at **{et_str}**\n"
-        f"Window: **{alert.duration_et_hours}h ET**"
+        f"**{alert.item_name}** spawns at **{et_str}**\n"
+        f"Window: **{alert.duration_et_hours}h ET** - Last for {format_real_minutes(duration_et_minutes)}"
     )
 
 def _discord_timestamp(timestamp: int) -> str:
     return f"<t:{timestamp}:R>"
 
-def _et_hours_to_real_seconds(et_seconds: float) -> float:
-    return et_seconds / ET_MULTIPLIER
+def _et_hours_to_real_seconds(duration_et_hours: float) -> float:
+    duration_et_seconds = duration_et_hours * 3600
+    return duration_et_seconds / ET_MULTIPLIER
 
-def _et_to_timezone(target_hour, user_timezone: ZoneInfo):
+def _et_hours_real_minutes(duration_et_hours: float) -> float:
+    return _et_hours_to_real_seconds(duration_et_hours) / 60
+
+def format_real_minutes(minutes_float: float) -> str:
+
+    total_seconds = int(minutes_float * 60)
+
+    minutes, seconds = divmod(
+        total_seconds,
+        60
+    )
+
+    return f"{minutes}min and {seconds:02}sec"
+
+def _et_to_datetime(target_hour, user_timezone: ZoneInfo):
     now_real = datetime.now(user_timezone)
     now_real_ts = now_real.timestamp()
 
@@ -121,8 +133,7 @@ def _check_active(et_times: list[int], duration_et_hours: int):
     Returns a tuple of (is_active, remaining_real_timedelta | None).
     """
     current_et = _current_et_datetime()
-    duration_et_seconds = duration_et_hours * 3600
-    duration_real_seconds = _et_hours_to_real_seconds(duration_et_seconds)
+    duration_real_seconds = _et_hours_to_real_seconds(duration_et_hours)
 
     for hour in et_times:
         # Build the ET datetime for this spawn on the current ET day
@@ -158,13 +169,13 @@ def convert(et_times, duration_et_hours, user_timezone: ZoneInfo):
     is_active, end_time = _check_active(et_times, duration_et_hours)
 
     if is_active:
-        return "Currently active", f"End {_discord_timestamp(end_time)}"
+        return "Currently active", f"{_discord_timestamp(end_time)}"
 
-    occurrences = [_et_to_timezone(hour, user_timezone) for hour in et_times]
+    occurrences = [_et_to_datetime(hour, user_timezone) for hour in et_times]
     next_occurrence = min(occurrences)
 
 
     return (
         next_occurrence.strftime("%H:%M:%S %Z"),
-        f"Available {_discord_timestamp(int(next_occurrence.timestamp()))}"
+        f"Spawns {_discord_timestamp(int(next_occurrence.timestamp()))}"
     )
