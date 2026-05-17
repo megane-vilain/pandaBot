@@ -299,7 +299,7 @@ class GarlandCog(commands.Cog):
         await self.bot.wait_until_ready()
 
     @app_commands.autocomplete(resource=gathering_node_autocomplete)
-    @app_commands.command(name="gather")
+    @app_commands.command(name="gather", description="Give information on a resource")
     async def gather(self, interaction: discord.Interaction, resource: str):
 
         await interaction.response.defer()# noqa
@@ -433,7 +433,7 @@ class GarlandCog(commands.Cog):
         return output
 
     @app_commands.autocomplete(resource=gathering_node_autocomplete)
-    @app_commands.command(name="notify")
+    @app_commands.command(name="notify", description="Enable or disable notification for a resource")
     async def notify(self, interaction: discord.Interaction, resource: str):
         await interaction.response.defer()# noqa
 
@@ -463,7 +463,7 @@ class GarlandCog(commands.Cog):
             self.gt_reminder_service.create_alert(gathering_item_reminder)
             await interaction.followup.send(f"🔔 Alerts on for {gathering_item.name}")
 
-    @app_commands.command(name="alerts")
+    @app_commands.command(name="alerts", description="List all alerts")
     async def alerts(self, interaction: discord.Interaction):  # noqa
         alerts = await self.gt_reminder_service.get_user_alerts(interaction.user.id)
 

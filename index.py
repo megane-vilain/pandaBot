@@ -35,8 +35,8 @@ async def main():
 
 
     async with bot:
-        await bot.load_extension('cogs.misc')
-        await bot.add_cog(ReminderCog(bot, timezone_service, reminder_service))
+        #await bot.load_extension('cogs.misc')
+        #await bot.add_cog(ReminderCog(bot, timezone_service, reminder_service))
         await bot.add_cog(TimezoneCog(bot, timezone_service))
         await bot.add_cog(GarlandCog(bot, gt_reminder_service, timezone_service))
 
