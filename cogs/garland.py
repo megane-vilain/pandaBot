@@ -58,7 +58,9 @@ class RemoveButton(discord.ui.Button):
         self.doc_id = doc_id
 
     async def callback(self, interaction: discord.Interaction) -> None:
-        self.view.gathering_item.alert = await self.view.gt_alert_service.delete_reminder(self.doc_id)
+        await self.view.gt_alert_service.delete_reminder(self.doc_id)
+        if type(self.parent) != AlertActionRow:
+            self.view.gathering_item.alert = None
         await self.view._refresh(interaction)# noqa
 
 class NotifyButton(discord.ui.Button):
